@@ -5,7 +5,7 @@
 | Website                   | Link                                           |
 |---------------------------|------------------------------------------------|
 | Discord          | [https://discord.gg/stonekeep](https://discord.gg/stonekeep) |
-| Code                      | [https://github.com/Darkrp-community/OpenKeep](https://github.com/Darkrp-community/OpenKeep)    |
+| Code                      | [https://github.com/Darkrp-community/Stonelin](https://github.com/Darkrp-community/Stonelin)    |
 | Wiki (Under Construction)                      | [https://wiki.stonekeep.xyz](https://wiki.stonekeep.xyz) |
 
 ## LICENSE

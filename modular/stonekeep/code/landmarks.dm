@@ -151,7 +151,7 @@
 	name = "steel key"
 	desc = "Dwarven craftsmanship."
 	lockid = "outpost"
-
+	icon_state = "mazekey"
 
 /*	..................   Dwarf Underdweller Corpse   ................... */
 /obj/effect/mob_spawn/human/corpse/damaged/underdweller
@@ -234,6 +234,10 @@
 
 /obj/effect/landmark/start/sk_nitemaster
 	name = "Nitemaster"
+	icon_state = "arrow"
+
+/obj/effect/landmark/start/sk_guildmaster
+	name = "Guild Master"
 	icon_state = "arrow"
 
 

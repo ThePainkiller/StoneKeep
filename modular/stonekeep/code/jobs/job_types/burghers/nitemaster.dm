@@ -33,6 +33,8 @@
 		shoes = /obj/item/clothing/shoes/shortboots
 		armor = /obj/item/clothing/shirt/dress/stewarddress
 		cloak = /obj/item/clothing/cloak/cape/silk/dark
+	if(isdarkelf(H))
+		mask = /obj/item/clothing/face/spectacles/delf
 	ADD_TRAIT(H, TRAIT_GOODLOVER, TRAIT_GENERIC)
 	H.grant_language(/datum/language/thievescant)
 	to_chat(H, "<span class='info'>I can gesture in thieves' cant with ,t before my speech.</span>")
@@ -50,7 +52,8 @@
 		H.change_stat("speed", 1)
 		H.change_stat("intelligence", 1)
 		H.change_stat("perception", 2)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/forgery_bathmaiden)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/forgery_nitemaiden)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/forgery_adventurer)
 	if(H.gender == MALE)
 		head = /obj/item/clothing/head/roguehood/brown
 		armor = /obj/item/clothing/armor/leather/jacket/niteman
@@ -61,12 +64,20 @@
 				H.dna.species.soundpack_m = new /datum/voicepack/male/zeth()
 
 /*	.................   Unique Nitemaster recipes   ................... */
-/datum/crafting_recipe/forgery_bathmaiden
+/datum/crafting_recipe/forgery_nitemaiden
 	name = "Forge nitemaiden license"
 	time = 4 SECONDS
 	req_table = TRUE
 	tools = /obj/item/natural/feather
 	reqs = list(/obj/item/paper = 1)
-	result = /obj/item/paper/feldsher_certificate/fake
+	result = /obj/item/paper/certificate/fake_health
 	category = CAT_NONE
 
+/datum/crafting_recipe/forgery_adventurer
+	name = "Forge adventurer license"
+	time = 4 SECONDS
+	req_table = TRUE
+	tools = /obj/item/natural/feather
+	reqs = list(/obj/item/paper = 1)
+	result = /obj/item/paper/certificate/adventurer_fake
+	category = CAT_NONE

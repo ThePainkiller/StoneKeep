@@ -1,13 +1,4 @@
-
-/datum/job/stonekeep/priest
-	title = "Priest"
-	flag = SK_PRIEST
-	department_flag = CHURCHMEN
-	faction = FACTION_STATION
-	total_positions = 1
-	spawn_positions = 1
-
-	f_title = "Priestess"
+/datum/job/priest
 	allowed_races = list(
 		"Humen",
 		"Elf",
@@ -15,20 +6,19 @@
 		"Dwarf",
 		"Aasimar"
 	)
-	tutorial = "You are a devoted follower of Astrata. The divine is all that matters in an immoral world. The Sun Queen and her pantheon rule over all, and you will preach their wisdom to Vanderlin. It is up to you to shephard the flock into a Ten-fearing future."
-	whitelist_req = FALSE
+	tutorial = "You are a devoted follower of Astrata. The divine is all that matters in an immoral world. The Sun Queen and her pantheon rule over all, and you will preach their wisdom. It is up to you to shephard the flock into a Ten-fearing future."
+	display_order = PRIEST_ORDER
+	department_flag = CHURCHMEN
+	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
+	flag = PRIEST
+	faction = FACTION_STATION
+	total_positions = 1
+	spawn_positions = 1
+
 	bypass_lastclass = TRUE
 	outfit = /datum/outfit/job/stonekeep/priest
-
-	display_order = PRIEST_ORDER
-	give_bank_account = 100
-	cmode_music = 'sound/music/cmode/church/CombatAstrata.ogg'
 	min_pq = 0
 	selection_color = "#c2a45d"
-	spells = list(
-		/obj/effect/proc_holder/spell/self/convertrole/templar,
-		/obj/effect/proc_holder/spell/self/convertrole/monk
-	)
 
 /datum/outfit/job/stonekeep/priest/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -45,12 +35,9 @@
 	beltl = /obj/item/storage/keyring/priest
 	belt = /obj/item/storage/belt/leather/rope
 	armor = /obj/item/clothing/shirt/robe/priest
+	r_hand = /obj/item/weapon/polearm/woodstaff/aries
 	backl = /obj/item/storage/backpack/satchel
 	backpack_contents = list(/obj/item/needle = 1, /obj/item/storage/belt/pouch/coins/rich = 1 )
-
-	var/obj/item/weapon/polearm/woodstaff/aries/P = new()
-	H.put_in_hands(P, forced = TRUE)
-
 
 	if(H.mind)
 		if(H.patron != /datum/patron/divine/astrata) // For some stupid reason this was checking for Dendor before.

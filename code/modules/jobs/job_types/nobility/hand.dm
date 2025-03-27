@@ -1,4 +1,4 @@
-/datum/job/hand
+/*datum/job/hand
 	title = "Hand"
 	tutorial = "You owe everything to your liege. \
 	You are the most trusted of the ruler- their sibling, in fact. \
@@ -41,6 +41,9 @@
 	H.invisibility = INVISIBILITY_MAXIMUM
 	H.become_blind("advsetup")
 
+	if(GLOB.keep_doors.len > 0)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(know_keep_door_password), H), 50)
+	ADD_TRAIT(H, TRAIT_KNOWKEEPPLANS, TRAIT_GENERIC)
 	addtimer(CALLBACK(src, PROC_REF(know_agents), H), 50)
 
 /datum/job/hand/proc/know_agents(mob/living/carbon/human/H)
@@ -179,3 +182,12 @@
 
 	ADD_TRAIT(H, TRAIT_NOBLE, TRAIT_GENERIC)
 	H.verbs |= /mob/living/carbon/human/proc/torture_victim
+
+
+
+
+
+
+
+
+*/

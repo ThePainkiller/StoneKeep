@@ -1,4 +1,4 @@
-/datum/job/captain
+/*datum/job/captain
 	title = "Captain"
 	tutorial = "Law and Order, your divine reason for existence. \
 	You have been given command over the garrison to help keep order and peace within the city, \
@@ -90,7 +90,7 @@
 	desc = "Recruit someone to your cause."
 	overlay_state = "recruit_bog"
 	antimagic_allowed = TRUE
-	charge_max = 100
+	recharge_time = 100
 	/// Role given if recruitment is accepted
 	var/new_role = "Beggar"
 	/// Faction shown to the user in the recruitment prompt
@@ -183,3 +183,22 @@
 	recruitment_message = "Join the Forest Garrison, %RECRUIT!"
 	accept_message = "I swear to protect the forest!"
 	refuse_message = "I refuse."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/

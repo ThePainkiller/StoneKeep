@@ -105,8 +105,7 @@
 /*	..................   Zizombie Farmer Enemy    ................... */
 /obj/effect/spawner/map_spawner/enemy_fifty/zizombie_peasant
 	spawned = list(
-//		/obj/structure/idle_enemy/zizombie_farmer = 100
-		/mob/living/carbon/human/species/zizombie/npc/peasant = 100
+		/mob/living/simple_animal/hostile/zizombie = 100
 		)
 
 /*	..................   Hairy Spider Enemy   ................... */
@@ -119,10 +118,10 @@
 /*	..................   Savage Orc Enemy    ................... */
 /obj/effect/spawner/map_spawner/enemy_fifty/orc_warrior
 	spawned = list(
-//		/obj/structure/idle_enemy/savage_orc = 65,
-//		/obj/structure/idle_enemy/savage_orc_looter = 35
-		/mob/living/carbon/human/species/orc/skilled/savage = 65,
-		/mob/living/carbon/human/species/orc/skilled/looter = 35
+		/mob/living/simple_animal/hostile/orc/savage = 40,
+		/mob/living/simple_animal/hostile/orc/savage/chopper = 30,
+		/mob/living/simple_animal/hostile/orc/savage/bow = 20,
+		/mob/living/simple_animal/hostile/orc/savage/looter = 10
 		)
 
 /obj/effect/spawner/map_spawner/orc_warlord_carbon

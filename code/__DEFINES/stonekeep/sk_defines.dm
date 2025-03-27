@@ -1,9 +1,21 @@
 #define ALL_STONEKEEP_PLAYER_RACES		list("Humen", "Half-Elf", "Dark Elf", "Elf", "Dwarf","Tiefling", "Aasimar", "Changeling","Skylancer","Ogrun","Undine")	// the normal lineup sans Rakshari who are not generally available
 #define ALL_STONEKEEP_RACES_NORMALSPRITE		list("Humen", "Half-Elf", "Dark Elf", "Elf", "Tiefling", "Aasimar", "Changeling","Skylancer","Ogrun")	// for clothes without dwarf sprites
 
+
+#define CTAG_SKMERCENARY 	"CAT_SKMERCENART"  		// Mercenary classes
+
 #define isgoblin(A) (is_species(A, /datum/species/goblin))
 
 #ifdef MATURESERVER
+
+#define VALID_HUNTING_AREAS list(\
+	/area/rogue/outdoors/bog,/area/rogue/outdoors/woods )
+
+proc/is_valid_hunting_area(area/A)
+	for(var/i in VALID_HUNTING_AREAS)
+		if(istype(A, i))
+			return TRUE
+	return FALSE
 
 GLOBAL_LIST_INIT(outlaw_quotes, world.file2list("strings/rt/outlawlines.txt"))
 GLOBAL_LIST_INIT(outlaw_aggro, world.file2list("strings/rt/outlawaggrolines.txt"))
@@ -18,6 +30,7 @@ GLOBAL_LIST_EMPTY(mountainevil_starts)
 #define CTAG_NITEMAIDEN		"CAT_NITEMAIDEN" 		// 2 choices, bathhouse only or inn focus.
 #define CTAG_SKHAND			"CAT_SKHAND"
 #define CTAG_SKWOODSMAN		"CAT_SKWOODSMAN"
+#define CTAG_OLDVETERAN		"CAT_OLDVETERAN"
 
 /mob/living/carbon/human
 	// Another Boolean. But this time entirely for Kaizoku content to define those whom Abyssariads considers 'impure', and for champions.
@@ -38,9 +51,8 @@ GLOBAL_LIST_EMPTY(mountainevil_starts)
 #define SK_JESTER		(1<<7)
 
 #define SK_SHERIFF		(1<<0)
-#define SK_VETERAN		(1<<1)
-#define SK_GUARD		(1<<2)
-#define SK_SQUIRE		(1<<3)
+#define SK_GUARD		(1<<1)
+#define SK_SQUIRE		(1<<2)
 
 #define SK_PRIEST		(1<<0)
 #define SK_ACOLYTE		(1<<1)
@@ -51,10 +63,11 @@ GLOBAL_LIST_EMPTY(mountainevil_starts)
 
 #define SK_MERCHANT		(1<<0)
 #define SK_INNKEEP		(1<<1)
-#define SK_FELDSHER		(1<<2)
-#define SK_BLACKSMITH	(1<<3)
-#define SK_MASON		(1<<4)
-#define SK_NITEMAN		(1<<5)
+#define SK_GUILDMASTER	(1<<2)
+#define SK_FELDSHER		(1<<3)
+#define SK_BLACKSMITH	(1<<4)
+#define SK_MASON		(1<<5)
+#define SK_NITEMAN		(1<<6)
 
 #define SK_ELDER		(1<<0)
 #define SK_SOILSON		(1<<1)
@@ -82,7 +95,6 @@ GLOBAL_LIST_EMPTY(mountainevil_starts)
 #define JESTER_ORDER		9
 
 #define SHERIFF_ORDER		11
-#define VETERAN_ORDER		12
 #define GARRISON_ORDER		13
 #define SQUIRE_ORDER		15
 
@@ -94,6 +106,7 @@ GLOBAL_LIST_EMPTY(mountainevil_starts)
 #define ADEPT_ORDER			28
 
 #define MERCHANT_ORDER		31
+#define GUILDMASTER_ORDER	32
 #define INNKEEP_ORDER		33
 #define FELDSHER_ORDER		34
 #define BLACKSMITH_ORDER	35

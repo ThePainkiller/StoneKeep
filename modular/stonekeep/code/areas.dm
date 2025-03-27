@@ -69,7 +69,7 @@
 
 
 /area/rogue/outdoors/rtfield/plague_district
-	ambush_mobs = list(/mob/living/carbon/human/species/human/northern/bum/skilled/madman = 40, /mob/living/carbon/human/species/zizombie/npc/peasant = 40)
+	ambush_mobs = list(/mob/living/carbon/human/species/human/northern/bum/skilled/madman = 40, /mob/living/simple_animal/hostile/zizombie = 40)
 	first_time_text = "PLAGUE DISTRICT"
 	color = "#d4da75"
 	name = "danger (plague district)"
@@ -206,13 +206,24 @@
 				/mob/living/carbon/human/species/goblin/skilled/ambush/cave = 5,
 				/mob/living/simple_animal/hostile/retaliate/mole = 10)
 
+/area/rogue/indoors/towerofwise
+	name = "danger (tower of the wise)"
+	icon_state = "cave"
 
 /area/rogue/indoors/cave/volf
-	name = "volf cave"
+	name = "danger (volf cave)"
+	icon_state = "cave"
+
+/area/rogue/indoors/cave/bear
+	name = "danger (bear cave)"
+	icon_state = "cave"
+
+/area/rogue/indoors/shelter/woods/spider
+	name = "danger (spider nest)"
 	icon_state = "cave"
 
 /area/rogue/indoors/cave/spider
-	name = "spider cave"
+	name = "danger (spider cave)"
 	icon_state = "cave"
 
 /area/rogue/outdoors/town/amphitheatre
@@ -222,8 +233,8 @@
 	name = "catacombs"
 	icon_state = "cavewet"
 	first_time_text = "The Catacombs"
-	ambientsounds = AMB_CAVEWATER
-	ambientnight = AMB_CAVEWATER
+//	ambientsounds = AMB_CAVEWATER
+//	ambientnight = AMB_CAVEWATER
 	spookysounds = SPOOKY_CAVE
 	spookynight = SPOOKY_CAVE
 	droning_sound = 'sound/music/area/caves.ogg'
@@ -248,9 +259,9 @@
 
 /area/rogue/under/catacombs/dwarfoutpost/orcy
 	ambush_types = list(
-				/turf/open/floor/blocks/newstone/alt)
+				/turf/open/water/cleanshallow)
 	ambush_mobs = list(
-				/mob/living/carbon/human/species/orc/skilled/savage = 50)
+				/mob/living/simple_animal/hostile/orc/savage/chopper = 50)
 
 /area/rogue/under/town/caverogue/saltmine
 	name = "salt mine"

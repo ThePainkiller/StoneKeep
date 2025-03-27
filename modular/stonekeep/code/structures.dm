@@ -59,10 +59,6 @@
 	brightness = 8
 	bulb_power = 1.2
 
-/obj/machinery/light/fueled/torchholder/empty
-	lacks_torch = TRUE
-	pixel_y = 32
-
 /obj/machinery/light/fueled/torchholder/cold
 	unlit_torch = TRUE
 	pixel_y = 32
@@ -262,19 +258,26 @@
 
 //AKA cryosleep.
 
-/obj/structure/far_travel //Shamelessly jury-rigged from the way Fallout13 handles this.
+/obj/structure/far_travel //Shamelessly jury-rigged from the way Fallout13 handles this and shamelessly borrowed from AzurePeak's further iteraiton of this system
 	name = "far travel"
-	desc = "Anywhere is better than here.\n(Drag your sprite onto this to exit the round!)"
-	icon = 'modular/stonekeep/icons/turfs.dmi'
+	desc = "Your heart yearns to wander.\n(Drag your sprite onto this to exit the round!)"
+	icon = 'modular/stonekeep/icons/misc.dmi'
 	icon_state = "fartravel"
-	layer = BELOW_OBJ_LAYER
-	density = FALSE
+	layer = TABLE_LAYER
+	density = TRUE
 	anchored = TRUE
 	resistance_flags = INDESTRUCTIBLE | LAVA_PROOF | FIRE_PROOF | UNACIDABLE | ACID_PROOF
 	var/in_use = FALSE
+	var/static/list/uncryoable = list(
+		/datum/job/lord,
+		/datum/job/hand,
+		/datum/job/prince,
+		/datum/job/consort,
+		/datum/job/priest,
+		/datum/job/captain,
+	)
 
-/obj/structure/far_travel/MouseDrop_T(atom/dropping, mob/user)
-	. = ..()
+/obj/structure/train/MouseDrop_T(atom/dropping, mob/user)
 	if(!isliving(user) || user.incapacitated())
 		return //No ghosts or incapacitated folk allowed to do this.
 	if(!ishuman(dropping))
@@ -282,26 +285,31 @@
 	if(in_use) // Someone's already going in.
 		return
 	var/mob/living/carbon/human/departing_mob = dropping
-	var/datum/job/mob_job
 	if(departing_mob != user && departing_mob.client)
-		to_chat(user, "<span class='warning'>This one retains their free will. It's their choice if they want to leave or not.</span>")
+		to_chat(user, span_warning("This one retains their free will. It's their choice if they want to leave for Kingsfield or not."))
+		return //prevents people from forceghosting others
+	if(departing_mob.stat == DEAD)
+		say("The dead cannot leave on a journey, ensure they get a proper burial in these lands.")
 		return
-	if(alert("Are you sure you want to [departing_mob == user ? "depart for good (you" : "send this person away (they"] will be removed from the current round)?", "Departing", "Confirm", "Cancel") != "Confirm")
-		return
+	if(is_type_in_list(departing_mob.mind?.assigned_role, uncryoable))
+		var/title = departing_mob.gender == FEMALE ? "lady" : "lord"
+		say("Surely you jest, my [title], you have a kingdom to rule over!")
+		return //prevents noble roles from cryoing as per request of Aberra
+	if(alert("Are you sure you want to [departing_mob == user ? "leave for Kingsfield (you" : "send this person to Kingfield (they"] will be removed from the current round, the job slot freed)?", "Departing", "Confirm", "Cancel") != "Confirm")
+		return //doublechecks that people actually want to leave the round
 	if(user.incapacitated() || QDELETED(departing_mob) || (departing_mob != user && departing_mob.client) || get_dist(src, dropping) > 2 || get_dist(src, user) > 2)
 		return //Things have changed since the alert happened.
-	user.visible_message("<span class='warning'>[user] [departing_mob == user ? "is trying to depart from these lands!" : "is trying to send [departing_mob] away!"]</span>", "<span class='notice'>You [departing_mob == user ? "are trying to depart from these lands." : "are trying to send [departing_mob] away."]</span>")
-	in_use = TRUE
-	if(!do_after(user, 50, target = src))
+	say("[user] [departing_mob == user ? "is departing for Kingsfield" : "is sending [departing_mob] to Kingsfield!"]")
+	in_use = TRUE //Just sends a simple message to chat that some-one is leaving
+	if(!do_after(user, 5 SECONDS, src))
 		in_use = FALSE
 		return
 	in_use = FALSE
-	update_icon()
+	update_icon() //the section below handles roles and admin logging
 	var/dat = "[key_name(user)] has despawned [departing_mob == user ? "themselves" : departing_mob], job [departing_mob.job], at [AREACOORD(src)]. Contents despawned along:"
 	if(departing_mob.mind)
-		mob_job = SSjob.GetJob(departing_mob.mind.assigned_role)
-		if(mob_job)
-			mob_job.current_positions = max(0, mob_job.current_positions - 1)
+		var/datum/job/mob_job = departing_mob.mind.assigned_role
+		mob_job.adjust_current_positions(-1)
 	if(!length(departing_mob.contents))
 		dat += " none."
 	else
@@ -311,25 +319,12 @@
 			content = departing_mob.contents[i]
 			dat += ", [content.name]"
 		dat += "."
-	if(departing_mob.mind)
-		departing_mob.mind.unknow_all_people()
-		for(var/datum/mind/MF in get_minds())
-			departing_mob.mind.become_unknown_to(MF)
-	GLOB.chosen_names -= departing_mob.real_name
-//	LAZYREMOVE(GLOB.actors_list, departing_mob.mobid)	If actors added re-enable ROGTODO
-//	LAZYREMOVE(GLOB.roleplay_ads, departing_mob.mobid)
 	message_admins(dat)
 	log_admin(dat)
-	if(departing_mob.stat == DEAD)
-		departing_mob.visible_message("<span class='notice'>[user] sends the body of [departing_mob] away. They're someone else's problem now.</span>")
-	else
-		departing_mob.visible_message("<span class='notice'>[departing_mob == user ? "Out of their own volition, " : "Ushered by [user], "][departing_mob] leaves these lands.</span>")
+	say(span_notice("[departing_mob == user ? "Out of their own volition, " : "Ushered by [user], "][departing_mob] is departing from Vanderlin."))
+	var/mob/dead/new_player/newguy = new()
+	newguy.ckey = departing_mob.ckey
 	qdel(departing_mob)
-// Trellises
-/obj/structure/trellise
-	icon = 'modular/stonekeep/icons/structure.dmi'
-	icon_state = "trellise_empty"
-
 
 
 
@@ -440,9 +435,28 @@
 	layer = ABOVE_NORMAL_TURF_LAYER
 
 /obj/structure/fluff/walldeco/weaversign
-	name = "weaver sign"
+	name = "weaver"
 	icon = 'modular/stonekeep/icons/structure.dmi'
 	icon_state = "weaver"
+
+/obj/structure/fluff/walldeco/advsign
+	name = "adventurers guild"
+	icon = 'modular/stonekeep/icons/structure.dmi'
+	icon_state = "advguild"
+
+/obj/structure/fluff/walldeco/sign_inn
+	name = "the Drunken Saiga"
+	icon = 'modular/stonekeep/icons/structure.dmi'
+	icon_state = "innsaiga"
+
+/obj/structure/fluff/walldeco/banner_drakon
+	name = "banner of the drakon"
+	icon = 'modular/stonekeep/icons/structure.dmi'
+	icon_state = "drakonbanner"
+	pixel_y = 32
+
+/obj/structure/fluff/walldeco/banner_drakon/alt
+	icon_state = "drakonbanner_alt"
 
 /obj/structure/fluff/walldeco/xylixhint
 	icon_state = "wall_funny"
@@ -471,7 +485,9 @@
 /obj/structure/fermentation_keg
 	icon = 'modular/stonekeep/icons/brewing.dmi'
 
-
+/obj/structure/barricade
+	attacked_sound = list('sound/combat/hits/onwood/woodimpact (1).ogg','sound/combat/hits/onwood/woodimpact (2).ogg')
+	destroy_sound = 'sound/combat/hits/onwood/destroywalldoor.ogg'
 
 // =================================================================
 // =========================	FLORA	============================
@@ -495,6 +511,7 @@
 /obj/structure/flora/tree/neu/acacia
 	name = "dead tree"
 	icon_state = "acacia_dead"
+	opacity = FALSE
 /obj/structure/flora/tree/neu/acacia/Initialize()
 	. = ..()
 	icon_state = "acacia_dead"
@@ -504,6 +521,7 @@
 	name = "pine tree"
 	desc = "A smell of amber and pine needles linger."
 	icon_state = "pine"
+	opacity = FALSE
 /obj/structure/flora/tree/neu/pine/Initialize()
 	. = ..()
 	icon_state = "pine"
@@ -513,6 +531,7 @@
 	name = "dead tree"
 	desc = "A faint smell of amber and pine needles linger."
 	icon_state = "pine_dead"
+	opacity = FALSE
 /obj/structure/flora/tree/neu/pine_dead/Initialize()
 	. = ..()
 	icon_state = "pine_dead"
@@ -527,6 +546,7 @@
 	static_debris = list(/obj/item/grown/log/tree/stick = 1)
 	pixel_x = -16
 	alpha = 255
+	opacity = FALSE
 /obj/structure/flora/tree/neu/bush/Initialize()
 	. = ..()
 	icon_state = "deadbush_[rand(1,3)]"
@@ -601,6 +621,66 @@
 	timer = 10 MINUTES
 	stressadd = -3
 	desc = span_green("I feel at peace.")
+
+
+/obj/structure/flora/shroom_tree_neu
+	name = "shroom"
+	desc = "A huge inedible mushroom, prized by dwarves for their shroomwood."
+	icon = 'modular/stonekeep/icons/pigflora64.dmi'
+	icon_state = "shroomtree_1"
+	var/base_icon_state = "shroomtree"
+	opacity = 0
+	density = 0
+	max_integrity = 120
+	blade_dulling = DULLING_CUT
+	pixel_x = -16
+	layer = 4.81
+	attacked_sound = 'sound/misc/woodhit.ogg'
+	destroy_sound = 'sound/misc/woodhit.ogg'
+	static_debris = list( /obj/item/grown/log/tree/small = 1)
+	dir = SOUTH
+
+/obj/structure/flora/shroom_tree_neu/Initialize()
+	. = ..()
+	icon_state = "[base_icon_state]_][rand(1,4)]"
+	pixel_x += rand(2,-2)
+	pixel_y += rand(2,-2)
+
+/obj/structure/flora/shroom_tree_neu/CanPass(atom/movable/mover, turf/target)
+	if(istype(mover) && (mover.pass_flags & PASSGRILLE))
+		return 1
+	if(get_dir(loc, target) == dir)
+		return 0
+	return 1
+
+/obj/structure/flora/shroom_tree_neu/CheckExit(atom/movable/mover as mob|obj, turf/target)
+	if(istype(mover) && (mover.pass_flags & PASSGRILLE))
+		return 1
+	if(get_dir(mover.loc, target) == dir)
+		return 0
+	return 1
+
+/obj/structure/flora/shroom_tree_neu/fire_act(added, maxstacks)
+	if(added > 5)
+		return ..()
+
+/obj/structure/flora/shroom_tree_neu/obj_destruction(damage_flag)
+	var/obj/structure/S = new /obj/structure/table/wood/treestump/shroomstumpneu(loc)
+	S.icon_state = "[base_icon_state]stump"
+	. = ..()
+
+/obj/structure/table/wood/treestump/shroomstumpneu
+	name = "shroom stump"
+	desc = "It was a very happy shroom. Not anymore."
+	icon_state = "shroomtreestump"
+	desc = "Here once stood a mighty nether-cap, you feel a great sadness."
+	opacity = 0
+	icon = 'modular/stonekeep/icons/pigflora64.dmi'
+	alpha = 255
+	pixel_x = -16
+	climb_offset = 14
+	stump_loot = /obj/item/reagent_containers/food/snacks/truffles
+
 
 // =========================================================================
 // =========================	MATTHIOS IDOL	============================
@@ -737,3 +817,8 @@
 
 /obj/structure/fluff/statue/xylix/frown
 	icon_state = "xylix_frown"
+
+
+/obj/structure/bars/cemetery
+	plane = -5
+	layer = 3

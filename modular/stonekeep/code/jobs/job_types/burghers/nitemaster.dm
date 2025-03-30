@@ -23,6 +23,7 @@
 	outfit = /datum/outfit/job/stonekeep/nitemaster
 	display_order = NITEMAN_ORDER
 	give_bank_account = 120
+	cmode_music = 'sound/music/cmode/combat_hellish2.ogg'
 
 /datum/outfit/job/stonekeep/nitemaster/pre_equip(mob/living/carbon/human/H)
 	..()
@@ -54,8 +55,8 @@
 		H.change_stat("speed", 1)
 		H.change_stat("intelligence", 1)
 		H.change_stat("perception", 2)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/forgery_nitemaiden)
-	H.mind.teach_crafting_recipe(/datum/crafting_recipe/forgery_adventurer)
+		H.mind.teach_crafting_recipe(/datum/crafting_recipe/forgery_nitemaiden)
+		H.mind.teach_crafting_recipe(/datum/crafting_recipe/forgery_adventurer)
 	if(H.gender == MALE)
 		head = /obj/item/clothing/head/roguehood/brown
 		armor = /obj/item/clothing/armor/leather/jacket/niteman

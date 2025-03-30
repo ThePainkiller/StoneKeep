@@ -2,6 +2,9 @@
 // ==============================================================
 /*	..................   Areas   ................... */
 
+/area/rogue/outdoors/town
+	first_time_text = "Stonehill Hamlet"
+
 /area/rogue/indoors/town/hamlet
 	name = "indoors"
 	alpha = 150
@@ -195,7 +198,7 @@
 	ambush_mobs = list(
 				/mob/living/simple_animal/hostile/retaliate/wolf = 40,
 				/mob/living/simple_animal/hostile/retaliate/spider/hairy = 10)
-	first_time_text = "MURDER WOODS"
+	first_time_text = "MURDER- WOODS"
 	converted_type = /area/rogue/indoors/shelter/woods
 
 
@@ -215,6 +218,9 @@
 				/mob/living/carbon/human/species/goblin/skilled/ambush/cave = 5,
 				/mob/living/simple_animal/hostile/retaliate/mole = 10)
 
+/area/rogue/under/town/caverogue/deep
+	first_time_text = "DEEP MINESHAFT"
+
 /area/rogue/indoors/towerofwise
 	name = "danger (tower of the wise)"
 	icon_state = "cave"
@@ -222,6 +228,8 @@
 /area/rogue/indoors/cave/volf
 	name = "danger (volf cave)"
 	icon_state = "cave"
+	ambush_mobs = list(
+				/mob/living/simple_animal/hostile/retaliate/wolf)
 
 /area/rogue/indoors/cave/bear
 	name = "danger (bear cave)"

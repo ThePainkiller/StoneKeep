@@ -182,13 +182,13 @@
 	icon_state = "certificate"
 
 
+
 // =================================================================================
 /*------\
 | Items |
 \------*/
 
-/obj/item/clothing/head/peaceflower
-	icon = 'modular/stonekeep/icons/misc.dmi'
+
 
 /obj/item/reagent_containers/glass/bucket/pot/copper
 	icon = 'modular/stonekeep/icons/cooking.dmi'
@@ -518,7 +518,7 @@
 */
 // =============================================================================
 // ================		DARK ELF DARKLING SYSTEM		========================
-
+/* disabled for now, annoying to make darkling component actually work ROGTODO
 /datum/status_effect/debuff/darkling_glare
 	id = "darkling_glare"
 	alert_type = /atom/movable/screen/alert/status_effect/debuff/darkling_glare
@@ -570,7 +570,7 @@
 	name = "Darkling"
 	desc = "You are at home in the dark. Unbothered. In your lane. Moisturized."
 	icon_state = "stressg"
-
+*/
 
 
 
@@ -884,75 +884,10 @@
 
 
 
-
-
-
 /obj/item/reagent_containers/glass/bottle
 	dropshrink = 0.7
 
 
-/*	could not get this to work. Randomiszes where travel tiles appear, from BS/RW branch, see their map for examples.
-GLOBAL_LIST_EMPTY(travel_tile_locations)
-
-/obj/effect/landmark/travel_tile_location
-	name = "travel tile location"
-
-/obj/effect/landmark/travel_tile_location/Initialize()
-	. = ..()
-	GLOB.travel_tile_locations += src
-
-/obj/effect/landmark/travel_tile_location/Destroy()
-	GLOB.travel_tile_locations -= src
-	. = ..()
-
-GLOBAL_LIST_EMPTY(travel_spawn_points)
-
-/obj/effect/landmark/travel_spawn_point
-	name = "travel spawn point"
-	icon_state = "generic_event"
-	var/taken = FALSE
-
-/obj/effect/landmark/travel_spawn_point/Initialize()
-	. = ..()
-	GLOB.travel_spawn_points += src
-
-/obj/effect/landmark/travel_spawn_point/Destroy()
-	GLOB.travel_spawn_points -= src
-	. = ..()
-
-/proc/get_free_travel_spawn_point()
-	var/list/shuffled = shuffle(GLOB.travel_spawn_points)
-	for(var/obj/effect/landmark/travel_spawn_point/point as anything in shuffled)
-		if(point.taken)
-			continue
-		point.taken = TRUE
-		return point.loc
-	return null
-
-/proc/create_travel_tiles(atom/location, travel_id, travel_goes_to_id, required_trait, tile_path)
-	for(var/obj/effect/landmark/travel_tile_location/landmark as anything in GLOB.travel_tile_locations)
-		if(get_dist(location, landmark) > 5)
-			continue
-		// Create travel tile here
-		var/obj/structure/fluff/traveltile/tile = new tile_path(landmark.loc)
-		tile.aportalid = travel_id
-		tile.aportalgoesto = travel_goes_to_id
-		tile.required_trait = required_trait
-		tile.hide_if_needed()
-
-/datum/controller/subsystem/mapping/proc/spawn_random_travel_tiles()
-	spawn_random_travel_transition("vampexit", "vampin", TRAIT_VAMPMANSION, /obj/structure/fluff/traveltile/vampire)
-	spawn_random_travel_transition("banditexit", "banditin", TRAIT_BANDITCAMP, /obj/structure/fluff/traveltile/bandit)
-//Uncomment to have random transitions, instead of in the sewers exclusively. Duh.
-//	spawn_random_travel_transition("goblinexit", "goblinin", TRAIT_GOBLINCAMP, /obj/structure/fluff/traveltile/goblin)
-
-/datum/controller/subsystem/mapping/proc/spawn_random_travel_transition(travel_id, travel_goes_to_id, required_trait, path)
-	var/atom/location = get_free_travel_spawn_point()
-	if(!location)
-		log_world("Unable to find spot for random travel transition: [travel_id] [travel_goes_to_id]")
-		return
-	create_travel_tiles(location, travel_id, travel_goes_to_id, required_trait, path)
-*/
 
 
 // =========================================================
@@ -1031,6 +966,11 @@ GLOBAL_LIST_EMPTY(travel_spawn_points)
 	icon_state = "spikekey"
 	lockid = "tollhouse"
 
+/obj/item/key/adventurersguild
+	name = "guild key"
+	desc = "This key is stamped with the Adventurers Guild emblem, two gauntlets shaking hands."
+	icon_state = "mazekey"
+	lockid = "adventurer"
 
 /obj/item/storage/keyring/nitemaster
 	keys = list(/obj/item/key/nitemaster, /obj/item/key/bathhouse)
@@ -1169,3 +1109,43 @@ GLOBAL_LIST_EMPTY(travel_spawn_points)
 		goldilocks = null
 
 
+/datum/component/storage/concrete/grid/cloak
+	max_w_class = WEIGHT_CLASS_SMALL
+	screen_max_rows = 2
+	screen_max_columns = 1
+
+
+/obj/item/clothing/ring/adventurer/copper
+	name = "copper certification"
+	desc = "The wearer is rated as a novice adventurer."
+	icon = 'modular/stonekeep/icons/misc.dmi'
+	icon_state = "copper"
+	sellprice = 2
+
+/obj/item/clothing/ring/adventurer/bronze
+	name = "bronze certification"
+	desc = "The wearer is rated as a proven adventurer."
+	icon = 'modular/stonekeep/icons/misc.dmi'
+	icon_state = "bronze"
+	sellprice = 2
+
+/obj/item/clothing/ring/adventurer/iron
+	name = "iron certification"
+	desc = "The wearer is rated as a skilled adventurer."
+	icon = 'modular/stonekeep/icons/misc.dmi'
+	icon_state = "iron"
+	sellprice = 2
+
+/obj/item/clothing/ring/adventurer/silver
+	name = "silver certification"
+	desc = "The wearer is rated as a experienced adventurer."
+	icon = 'modular/stonekeep/icons/misc.dmi'
+	icon_state = "silver"
+	sellprice = 2
+
+/obj/item/clothing/ring/adventurer/gold
+	name = "gold certification"
+	desc = "The wearer is rated as a very skilled adventurer."
+	icon = 'modular/stonekeep/icons/misc.dmi'
+	icon_state = "gold"
+	sellprice = 2

@@ -14,7 +14,7 @@
 		"Aasimar",
 	)
 	tutorial = "It is a simple life you live, your basic understanding of life is something many would be envious of if they knew how perfect it was. You know a good day's work, the sweat on your brow is yours: Famines and plague may take its toll, but you know how to celebrate life well. Till the soil and produce fresh food for those around you, and maybe youll be more than an unsung hero someday."
-	cmode_music = 'sound/music/cmode/towner/CombatTowner.ogg'
+	cmode_music = 'sound/music/cmode/combat_guard.ogg'
 
 	f_title = "Soilbride"
 	outfit = /datum/outfit/job/stonekeep/soilson
@@ -65,7 +65,7 @@
 	else
 		head = /obj/item/clothing/head/armingcap
 		if(prob(50))
-			head = /obj/item/clothing/head/shawl
+			head = /obj/item/clothing/head/roguehood/shawl
 		armor = /obj/item/clothing/shirt/dress/gen/random
 		shirt = /obj/item/clothing/shirt/undershirt
 		shoes = /obj/item/clothing/shoes/simpleshoes

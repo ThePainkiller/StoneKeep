@@ -7,7 +7,7 @@
 	faction = FACTION_STATION
 	total_positions = 0
 	spawn_positions = 0
-
+	display_order = JDO_HAND
 	allowed_sexes = list(MALE, FEMALE)
 	allowed_races = list(
 		"Humen",

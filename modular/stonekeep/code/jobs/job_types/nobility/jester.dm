@@ -1,4 +1,4 @@
-/datum/job/stonekeep/jester
+/datum/job/jester
 	title = "Jester"
 	flag = SK_JESTER
 	department_flag = NOBLEMEN
@@ -25,6 +25,8 @@
 	display_order = 10
 	min_pq = -20
 	give_bank_account = TRUE
+
+	cmode_music = 'sound/music/cmode/combat_jester.ogg'
 
 /datum/outfit/job/stonekeep/jester/pre_equip(mob/living/carbon/human/H)
 	..()

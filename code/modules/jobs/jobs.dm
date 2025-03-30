@@ -10,7 +10,7 @@ GLOBAL_LIST_INIT(noble_positions, list(
 	/datum/job/butler::title,
 	/datum/job/minor_noble::title,
 	/datum/job/stonekeep/courtwizard::title,
-	/datum/job/stonekeep/jester::title,
+	/datum/job/jester::title,
 ))
 GLOBAL_PROTECT(noble_positions)
 
@@ -67,20 +67,16 @@ GLOBAL_LIST_INIT(peasant_positions, list(
 	/datum/job/butcher::title,
 	/datum/job/cook::title,
 	/datum/job/carpenter::title,
-	/datum/job/jester::title,
 	/datum/job/hunter::title,
 	/datum/job/fisher::title,
 	/datum/job/cheesemaker::title,
-
 	/datum/job/mercenary::title,
 	/datum/job/bard::title,
 	/datum/job/prisoner::title,
 	/datum/job/vagrant::title,
 	/datum/job/bandit::title,
-	/datum/job/stonekeep/cook::title,
 	/datum/job/stonekeep/nitemaiden::title,
 	/datum/job/stonekeep/soilson::title,
-	/datum/job/stonekeep/stevedore::title,
 	/datum/job/stonekeep/weaver::title,
 	/datum/job/stonekeep/woodsman::title,
 ))

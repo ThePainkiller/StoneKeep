@@ -15,22 +15,21 @@
 	category_tags = list(CTAG_SKMERCENARY)
 	maximum_possible_slots = 5
 
-
 /datum/outfit/job/stonekeep/merc/boltslinger/pre_equip(mob/living/carbon/human/H)
 	..()
 	shoes = /obj/item/clothing/shoes/boots/leather
 	head = /obj/item/clothing/head/helmet/kettle/slit
-	gloves = /obj/item/clothing/gloves/angle
+	wrists = /obj/item/clothing/wrists/bracers/splint
 	belt = /obj/item/storage/belt/leather/mercenary
-	armor = /obj/item/clothing/armor/gambeson/heavy
+	armor = /obj/item/clothing/armor/leather/splint
 	beltr = /obj/item/weapon/sword/short
 	beltl = /obj/item/ammo_holder/quiver/bolts
 	backr = /obj/item/gun/ballistic/revolver/grenadelauncher/crossbow
 	backl = /obj/item/weapon/shield/tower
 	shirt = /obj/item/clothing/shirt/undershirt/random
 	pants = /obj/item/clothing/pants/tights/random
-	neck = /obj/item/clothing/neck/chaincoif
-	backpack_contents = list(/obj/item/storage/belt/pouch/coins/poor, /obj/item/weapon/knife/hunting)
+	neck = /obj/item/storage/belt/pouch/coins/poor
+	backpack_contents = list(/obj/item/weapon/knife/hunting)
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
@@ -51,4 +50,7 @@
 		H.change_stat("perception", 3)
 		H.change_stat("endurance", 1)
 		H.change_stat("strength", 1)
+		H.cmode_music = 'sound/music/cmode/combat_guard.ogg'
 	ADD_TRAIT(H, TRAIT_MEDIUMARMOR, TRAIT_GENERIC)
+	if(H.dna.species.id == "dwarf")
+		H.cmode_music = 'sound/music/cmode/combat_dwarf.ogg'

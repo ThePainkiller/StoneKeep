@@ -96,8 +96,80 @@
 	id = "sump_goblins"
 	mappath = "_maps/map_files/stonehamlet/templates/sumpgrotto_1.dmm"
 
+// ===================================================================================
+/*	..................   Xylix Maze	................... */
+/*	..................      ................... */
+/obj/effect/landmark/map_load_mark/xylixmaze_eone
+	name = "arrow trap room"
+	templates = list( "xme_1", "xme_2", "xme_3" )
+/datum/map_template/xylix_arrowtraproomi
+	name = "arrow trap room"
+	id = "xme_1"
+	mappath = "_maps/map_files/stonehamlet/templates/xylix/xme_1.dmm"
+/datum/map_template/xylix_arrowtraproomii
+	name = "arrow trap room"
+	id = "xme_2"
+	mappath = "_maps/map_files/stonehamlet/templates/xylix/xme_2.dmm"
+/datum/map_template/xylix_arrowtraproomiii
+	name = "arrow trap room"
+	id = "xme_3"
+	mappath = "_maps/map_files/stonehamlet/templates/xylix/xme_3.dmm"
 
+/obj/effect/landmark/map_load_mark/xylixmaze_etwo
+	name = "water trap room"
+	templates = list( "xmee_1", "xmee_2", "xmee_3" )
+/datum/map_template/xylix_watertraproomi
+	name = "water trap room"
+	id = "xmee_1"
+	mappath = "_maps/map_files/stonehamlet/templates/xylix/xmee_1.dmm"
+/datum/map_template/xylix_watertraproomii
+	name = "water trap room"
+	id = "xmee_2"
+	mappath = "_maps/map_files/stonehamlet/templates/xylix/xmee_2.dmm"
+/datum/map_template/xylix_watertraproomiii
+	name = "water trap room"
+	id = "xmee_3"
+	mappath = "_maps/map_files/stonehamlet/templates/xylix/xmee_3.dmm"
 
+/obj/effect/landmark/map_load_mark/xylixmaze_ethree
+	name = "chess trap room"
+	templates = list( "xmeee_1", "xmeee_2" )
+/datum/map_template/xylix_chesstraproomi
+	name = "chess trap room"
+	id = "xmeee_1"
+	mappath = "_maps/map_files/stonehamlet/templates/xylix/xmeee_1.dmm"
+/datum/map_template/xylix_chesstraproomii
+	name = "chess trap room"
+	id = "xmeee_2"
+	mappath = "_maps/map_files/stonehamlet/templates/xylix/xmeee_2.dmm"
+
+/obj/effect/landmark/map_load_mark/xylixmaze_none
+	name = "smallmaze room"
+	templates = list( "xmn_1", "xmn_2", "xmn_3" )
+/datum/map_template/xylix_smazeroomi
+	name = "smallmaze room"
+	id = "xmn_1"
+	mappath = "_maps/map_files/stonehamlet/templates/xylix/xmn_1.dmm"
+/datum/map_template/xylix_smazeroomii
+	name = "smallmaze room"
+	id = "xmn_2"
+	mappath = "_maps/map_files/stonehamlet/templates/xylix/xmn_2.dmm"
+/datum/map_template/xylix_smazeroomiii
+	name = "smallmaze room"
+	id = "xmn_3"
+	mappath = "_maps/map_files/stonehamlet/templates/xylix/xmn_3.dmm"
+
+/obj/effect/landmark/map_load_mark/xylixmaze_ntwo
+	name = "cage room"
+	templates = list( "xmnn_1", "xmnn_2" )
+/datum/map_template/xylix_cageroomi
+	name = "cage room"
+	id = "xmnn_1"
+	mappath = "_maps/map_files/stonehamlet/templates/xylix/xmnn_1.dmm"
+/datum/map_template/xylix_cageroomii
+	name = "cage room"
+	id = "xmnn_2"
+	mappath = "_maps/map_files/stonehamlet/templates/xylix/xmnn_2.dmm"
 
 // ===================================================================================
 /*	..................   Dwarf Outpost Landmark sub-spawners  ................... */

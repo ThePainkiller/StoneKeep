@@ -517,6 +517,34 @@
 	user.update_sight()
 
 
+/obj/item/clothing/head/helmet/nocpriest
+	name = "moon headdress"
+	desc = "A silver crest, displaying the Moon Prince."
+	icon = 'modular/stonekeep/icons/clothing.dmi'
+	mob_overlay_icon = 'modular/stonekeep/icons/onmob/64x64.dmi'
+	icon_state = "nocpriest"
+	bloody_icon = 'icons/effects/blood64x64.dmi'
+	bloody_icon_state = "helmetblood_big"
+	worn_x_dimension = 64
+	worn_y_dimension = 64
+	equip_sound = 'sound/foley/equip/cloak_equip.ogg'
+	pickup_sound = 'sound/foley/equip/cloak_take_off.ogg'
+	break_sound = 'sound/foley/breaksound.ogg'
+	drop_sound = 'sound/foley/dropsound/armor_drop.ogg'
+	blocksound = PLATEHIT
+	smeltresult = /obj/item/ingot/silver
+	anvilrepair = FALSE
+	sewrepair = TRUE
+	sellprice = 50
+
+	armor = ARMOR_LEATHER_BAD
+	body_parts_covered = HEAD|HAIR|EARS|NOSE
+	prevent_crits = CUT_AND_MINOR_CRITS
+	max_integrity = INTEGRITY_STRONG
+
+
+
+
 // =============================================================================
 // ==============================	CLOAKS	====================================
 
@@ -798,7 +826,7 @@
 //................ Sheriff Brigandine ............... //
 /obj/item/clothing/armor/brigandine/sheriff
 	detail_tag = "_det"
-	detail_color = COLOR_WHITE
+	detail_color = CLOTHING_ROYAL_PURPLE
 
 /obj/item/clothing/armor/brigandine/sheriff/update_icon()
 	cut_overlays()
@@ -1475,9 +1503,17 @@
 	color = "#d8d9d8"
 	adventurer_artefact = TRUE
 
-/obj/item/reagent_containers/glass/bottle/elfred/artefact
-	desc = "A bottle gilded with a silver cork-seal and covered in webs. Obviously some old and rare wine."
+/obj/item/reagent_containers/glass/bottle/tieflingwine_artefact
+	name = "rare winebottle"
+	list_reagents = list(/datum/reagent/consumable/ethanol/tiefling/delectable = 70)
+	desc = "Fragile glass bottle filled with a deep ruby red wine, glittering strangely."
 	adventurer_artefact = TRUE
+
 /obj/item/clothing/neck/psycross/silver/dendor/artefact
 	desc = "Nature is a body of which we are but its entrails. This amulet is old and worn, once belonging to a very devout Dendorite who sacrificed themselves to the tree-dwelling predators of their home when age made them unfit for survival."
+	adventurer_artefact = TRUE
+
+/obj/item/weapon/knife/dagger/steel/dirk/artefact
+	name = "dirk"
+	desc = "A rare ornamental dagger made of blacksteel."
 	adventurer_artefact = TRUE

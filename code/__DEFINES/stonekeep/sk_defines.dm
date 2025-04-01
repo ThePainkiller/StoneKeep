@@ -1,4 +1,4 @@
-#define ALL_STONEKEEP_PLAYER_RACES		list("Humen", "Half-Elf", "Dark Elf", "Elf", "Dwarf","Tiefling", "Aasimar", "Rakshari", "Half-orc", "Changeling","Skylancer","Ogrun","Undine")	// the normal lineup sans Rakshari who are not generally available
+#define ALL_STONEKEEP_PLAYER_RACES		list("Humen", "Half-Elf", "Dark Elf", "Elf", "Dwarf","Tiefling", "Aasimar", "Half-orc", "Changeling","Skylancer","Ogrun","Undine")	// the normal lineup sans Rakshari who are not generally available
 #define ALL_STONEKEEP_RACES_NORMALSPRITE		list("Humen", "Half-Elf", "Dark Elf", "Elf", "Tiefling", "Aasimar", "Changeling","Skylancer","Ogrun")	// for clothes without dwarf sprites
 #define ALL_RACES_FOR_REAL			list("human", "rakshari", "dwarf", "elf", "tiefling", "aasimar", "halforc", "orc", "zizombie", "kobold",  "abyssariad")
 

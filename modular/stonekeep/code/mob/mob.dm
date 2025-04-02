@@ -381,3 +381,11 @@
 /mob/living/carbon/human/species/goblin/npc/ambush/hell/after_creation()
 	. = ..()
 	faction = list("zizo")
+
+
+/mob/living/simple_animal/hostile/retaliate/wolf/xylix
+	icon_state = "spiritw"
+	icon_living = "spiritw"
+	icon_dead = null
+	color = "#a58ba2"
+

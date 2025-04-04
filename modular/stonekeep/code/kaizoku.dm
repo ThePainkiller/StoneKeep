@@ -282,6 +282,7 @@ get_accent_list()
 	use_static = TRUE
 
 
+// KAIZOKU SPRITE ACCESSORIES HERE TEMP? ROGTODO
 //Female Kaizoku hair below.
 
 /datum/sprite_accessory/hair/kaizoku/empress
@@ -383,47 +384,14 @@ get_accent_list()
 	gender = NEUTER
 	specuse = list("abyssariad")
 
-
-/datum/sprite_accessory/detail
-	name = ""
-	icon_state = null
-	gender = NEUTER
-	icon = 'icons/roguetown/mob/detail.dmi'
-	use_static = TRUE
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "abyssariad")
-
-/datum/sprite_accessory/detail/irezumi
-	name = "Blademaster Irezumi"
-	icon_state = "blademaster"
-	specuse = list("human", "abyssariad") //Humens are getting irezumis due to heartfelt.
-
-/datum/sprite_accessory/detail/irezumi/champion
-	name = "Champion Irezumi"
-	icon_state = "champion"
-
-/datum/sprite_accessory/detail/irezumi/monk
-	name = "Monk Irezumi"
-	icon_state = "monk"
-
-/datum/sprite_accessory/detail/irezumi/seduction
-	name = "Eyes Irezumi"
-	icon_state = "seduction"
-
-/datum/sprite_accessory/detail/irezumi/seductionalt
-	name = "Side-eyes Irezumi"
-	icon_state = "seductionalt"
-
-/datum/sprite_accessory/detail/irezumi/warrior
-	name = "Abyss Warrior Irezumi"
-	icon_state = "warrior"
+//Abyssariad accessories.
 
 //kaizoku bodyparts
-
 /datum/sprite_accessory/tails/human/onetail
 	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
 	name = "Onetail"
 	icon_state = "onetail"
-	specuse = list("changeling")
+	specuse = list("human", "dwarf", "elf", "aasimar", "abyssariad", "Changeling", "changeling")
 	gender = NEUTER
 	color_src = HAIR
 	offsetti = TRUE
@@ -432,64 +400,15 @@ get_accent_list()
 	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
 	name = "Upright"
 	icon_state = "upright"
-	specuse = list("changeling")
+	specuse = list("human", "dwarf","aasimar", "abyssariad", "Changeling", "changeling")
 	color_src = HAIR
-	offsetti = TRUE
-/*
-/datum/sprite_accessory/ears/lying
-	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
-	name = "Lying"
-	icon_state = "lying"
-	specuse = list("changeling")
-	color_src = HAIR
-	offsetti = TRUE
-/datum/sprite_accessory/ears/twotails
-	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
-	name = "twotails"
-	icon_state = "twotails"
-	specuse = list("changeling")
-	color_src = HAIR
-	offsetti = TRUE
-/datum/sprite_accessory/ears/threetails
-	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
-	name = "threetails"
-	icon_state = "threetails"
-	specuse = list("changeling")
-	color_src = HAIR
-	offsetti = TRUE
-*/
-
-
-/datum/sprite_accessory/tails/human/tenguv //Wings DO NOT WORK, so I set it as tails. If you want to fix that, go ahead.
-	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
-	name = "TenguV"
-	icon_state = "tenguv"
-	specuse = list("tengu")
-	gender = NEUTER
-	color_src = HAIR
-	offsetti = TRUE
-
-/datum/sprite_accessory/ears/tengus
-	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
-	name = "TenguS"
-	icon_state = "tengus"
-	specuse = list("tengu")
-	color_src = HAIR
-	offsetti = TRUE
-
-/datum/sprite_accessory/ears/oni
-	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
-	name = "ogrun"
-	icon_state = "oni"
-	specuse = list("ogrun")
-	color_src = SKINCOLOR
 	offsetti = TRUE
 
 /datum/sprite_accessory/tails/human/oni //Yes. It's a fucking tail now, I'm bullshitting my way out of this tiefling problem until we got horns fixed.
 	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
 	name = "Onihorn"
 	icon_state = "onihorn"
-	specuse = list("ogrun")
+	specuse = list("abyssariad", "Ogrun", "ogrun")
 	color_src = 0
 	offsetti = TRUE
 	gender = NEUTER
@@ -498,18 +417,78 @@ get_accent_list()
 	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
 	name = "Kappav"
 	icon_state = "kappav"
-	specuse = list("undine")
+	specuse = list("abyssariad", "Kappa", "Undine")
 	gender = NEUTER
 	color_src = HAIR
+	offsetti = TRUE
+
+/datum/sprite_accessory/tails/human/tenguv //Wings DO NOT WORK, so I set it as tails. If you want to fix that, go ahead.
+	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
+	name = "TenguV"
+	icon_state = "tenguv"
+	specuse = list("abyssariad", "Tengu", "Skylancer")
+	gender = NEUTER
+	color_src = HAIR
+	offsetti = TRUE
+
+/datum/sprite_accessory/ears/tengus
+	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
+	name = "TenguS"
+	icon_state = "tengus"
+	specuse = list("abyssariad", "Tengu", "Skylancer")
+	color_src = HAIR
+	offsetti = TRUE
+
+/datum/sprite_accessory/ears/oni
+	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
+	name = "Ogrun"
+	icon_state = "oni"
+	specuse = list("abyssariad", "Ogrun", "ogrun")
+	color_src = SKINCOLOR
 	offsetti = TRUE
 
 /datum/sprite_accessory/ears/kappae
 	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
 	name = "Kappae"
 	icon_state = "kappae"
-	specuse = list("undine")
+	specuse = list("abyssariad", "Kappa", "Undine")
 	color_src = SKINCOLOR
 	offsetti = TRUE
+
+
+/datum/sprite_accessory/detail
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc", "abyssariad")
+
+/datum/sprite_accessory/detail/irezumi
+	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
+	name = "Blademaster Irezumi"
+	icon_state = "blademaster"
+	specuse = list("human", "abyssariad") //Humens are getting irezumis due to heartfelt.
+
+/datum/sprite_accessory/detail/irezumi/champion
+	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
+	name = "Champion Irezumi"
+	icon_state = "champion"
+
+/datum/sprite_accessory/detail/irezumi/monk
+	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
+	name = "Monk Irezumi"
+	icon_state = "monk"
+
+/datum/sprite_accessory/detail/irezumi/seduction
+	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
+	name = "Eyes Irezumi"
+	icon_state = "seduction"
+
+/datum/sprite_accessory/detail/irezumi/seductionalt
+	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
+	name = "Side-eyes Irezumi"
+	icon_state = "seductionalt"
+
+/datum/sprite_accessory/detail/irezumi/warrior
+	icon = 'modular/stonekeep/kaizoku/icons/body_details/attachment.dmi'
+	name = "Abyss Warrior Irezumi"
+	icon_state = "warrior"
 
 
 /datum/outfit/job/stonekeep/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -521,11 +500,20 @@ get_accent_list()
 					H.verbs |= /mob/proc/throatsing
 					H.cmode_music = list('modular/stonekeep/kaizoku/sound/combat/combat_changeling.ogg','modular/stonekeep/kaizoku/sound/combat/combat_stormwarrior.ogg','modular/stonekeep/kaizoku/sound/combat/combat_searaider.ogg','modular/stonekeep/kaizoku/sound/combat/combat_oldtides.ogg','modular/stonekeep/kaizoku/sound/combat/combat_decapitator.ogg','modular/stonekeep/kaizoku/sound/combat/combat_emperor.ogg','modular/stonekeep/kaizoku/sound/combat/combat_traditional.ogg','modular/stonekeep/kaizoku/sound/combat/combat_navalretainers.ogg','modular/stonekeep/kaizoku/sound/combat/combat_kyudo.ogg')
 					ADD_TRAIT(H, TRAIT_KAIZOKU, TRAIT_GENERIC)
+				if(H.dna.species.name == "Ogrun")
+					H.dna.features["ears"] = "Ogrun"
+					H.dna.features["tail_human"] = "Onihorn"
 				if(H.dna.species.name == "Changeling")
 					ADD_TRAIT(H, TRAIT_STRONGBITE, TRAIT_GENERIC) // When their Skull-bending "wag system" comes about, it will be their debuff to counter this.
+					H.dna.features["ears"] = "Upright"
+					H.dna.features["tail_human"] = "Onetail"
 				if(H.dna.species.name == "Skylancer")
 					H.verbs |= /mob/proc/birdcall
+					H.dna.features["ears"] = "TenguS"
+					H.dna.features["tail_human"] = "TenguV"
 				if(H.dna.species.name == "Undine")
+					H.dna.features["ears"] = "Kappae"
+					H.dna.features["tail_human"] = "Kappav"
 					H.cmode_music = list('modular/stonekeep/kaizoku/sound/combat/combat_changeling.ogg','modular/stonekeep/kaizoku/sound/combat/combat_stormwarrior.ogg','modular/stonekeep/kaizoku/sound/combat/combat_searaider.ogg','modular/stonekeep/kaizoku/sound/combat/combat_oldtides.ogg','modular/stonekeep/kaizoku/sound/combat/combat_decapitator.ogg','modular/stonekeep/kaizoku/sound/combat/combat_emperor.ogg','modular/stonekeep/kaizoku/sound/combat/combat_traditional.ogg','modular/stonekeep/kaizoku/sound/combat/combat_navalretainers.ogg','modular/stonekeep/kaizoku/sound/combat/combat_kyudo.ogg')
 					ADD_TRAIT(H, TRAIT_KAIZOKU, TRAIT_GENERIC)
 					H.mind.teach_crafting_recipe(/datum/crafting_recipe/reinforcedarmor)

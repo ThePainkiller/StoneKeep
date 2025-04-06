@@ -6,9 +6,7 @@
 
 
 
-#define NORMAL_TOWNER_RACES 	list("Humen","Elf","Half-Elf","Dwarf")
-#define EXPANDED_TOWNER_RACES 	list("Humen","Elf","Aasimar","Half-Elf","Dwarf")
-#define PEASANT_RACES 			list("Humen","Aasimar","Half-Elf","Dwarf")
+
 
 
 // =================================================================================
@@ -168,6 +166,22 @@
 /datum/species/human/northern/get_possible_surnames(gender = MALE)
 	var/static/list/last_names = world.file2list('strings/rt/names/human/humnorlast.txt')
 	return last_names
+
+/datum/species/human/northern/get_skin_list()
+	return sortList(list(
+		"Grenzelhoft" = SKIN_COLOR_ICECAP, // - (Pale)
+		"Lowlander" = SKIN_COLOR_ARCTIC, // - (White 1)
+		"Mainlander" = SKIN_COLOR_TUNDRA, // - (White 2)
+		"Highlander" = SKIN_COLOR_CONTINENTAL, // - (White 3)
+		"Valorian" = SKIN_COLOR_TEMPERATE, // - (White 4)
+		"Heartfelt" = SKIN_COLOR_COASTAL, // - (Latin)
+		"Steppe" = SKIN_COLOR_SUBTROPICAL, // - (Mediterranean)
+		"Islander" = SKIN_COLOR_TROPICALDRY, // - (Mediterranean 2)
+		"Southlander" = SKIN_COLOR_TROPICALWET, // - (Latin 2)
+		"Zybantu" = SKIN_COLOR_DESERT, //  - (Middle-east)
+		"Crimson Lands" = SKIN_COLOR_CRIMSONLANDS, // - (Black)
+	))
+
 
 
 // =================================================================================

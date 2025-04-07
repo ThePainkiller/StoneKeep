@@ -5722,6 +5722,10 @@
 /obj/item/book/advice_weaving,
 /turf/open/floor/ruinedwood/spiralfade,
 /area/rogue/indoors/town/manor/stone)
+"iiH" = (
+/obj/machinery/light/fueled/wallfire/candle/r,
+/turf/open/floor/ruinedwood/spiral,
+/area/rogue/indoors)
 "iiZ" = (
 /turf/closed/wall/mineral/wooddark/end{
 	dir = 4;
@@ -8834,6 +8838,10 @@
 /obj/structure/flora/rock/pile,
 /turf/open/floor/naturalstone,
 /area/rogue/under/cave/abandoned_mine)
+"mwq" = (
+/obj/machinery/light/fueled/wallfire/candle/l,
+/turf/open/floor/ruinedwood/spiral,
+/area/rogue/indoors)
 "mwW" = (
 /obj/effect/spawner/map_spawner/outlawtree,
 /turf/open/floor/dirt,
@@ -9791,6 +9799,10 @@
 /obj/effect/landmark/start/sk_mason,
 /turf/open/floor/herringbone,
 /area/rogue/indoors/shelter/town/dwarf)
+"nKu" = (
+/obj/structure/flora/tree/neu/bush,
+/turf/open/floor/grass,
+/area/rogue/outdoors/rtfield/hamlet)
 "nLq" = (
 /obj/item/reagent_containers/powder/flour,
 /obj/structure/closet/crate/chest/old_crate,
@@ -11165,6 +11177,7 @@
 /obj/structure/fluff/walldeco/moon{
 	pixel_x = 32
 	},
+/obj/structure/fluff/railing/border,
 /turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "pCY" = (
@@ -58554,7 +58567,7 @@ kTh
 kTh
 kTh
 kTh
-wiK
+nKu
 kTh
 kTh
 kTh
@@ -58575,7 +58588,7 @@ bWX
 bWX
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -59343,7 +59356,7 @@ kTh
 kTh
 kTh
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -59748,7 +59761,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -59785,7 +59798,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -60160,7 +60173,7 @@ kTh
 kTh
 kTh
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -60563,7 +60576,7 @@ bWX
 bWX
 bWX
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -60743,8 +60756,8 @@ shr
 shr
 shr
 shr
-nCK
-nCK
+shr
+shr
 shr
 shr
 wiK
@@ -60769,7 +60782,7 @@ kTh
 kTh
 kTh
 kTh
-wiK
+nKu
 kTh
 kTh
 kTh
@@ -61348,7 +61361,7 @@ shr
 shr
 shr
 shr
-nCK
+shr
 nCK
 nCK
 nCK
@@ -61573,7 +61586,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -61772,7 +61785,7 @@ kTh
 kTh
 kTh
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -61798,7 +61811,7 @@ kTh
 brc
 kTh
 kTh
-aNL
+nKu
 kTh
 kTh
 kTh
@@ -61982,7 +61995,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -62201,15 +62214,11 @@ kTh
 kTh
 kTh
 kTh
-wiK
-kTh
-kTh
-kTh
-wiK
 kTh
 kTh
 kTh
 kTh
+nKu
 kTh
 kTh
 kTh
@@ -62217,6 +62226,10 @@ kTh
 kTh
 kTh
 kTh
+kTh
+kTh
+kTh
+nKu
 kTh
 kTh
 kTh
@@ -62605,7 +62618,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+wiK
 wiK
 kTh
 kTh
@@ -63638,7 +63651,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 brc
@@ -65636,7 +65649,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 tED
 kTh
@@ -66849,7 +66862,7 @@ kTh
 wiK
 kTh
 kTh
-kTh
+nKu
 ekS
 aNL
 oVL
@@ -67055,7 +67068,7 @@ kTh
 ekS
 kTh
 xdV
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -67675,7 +67688,7 @@ ckV
 ckV
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -67841,7 +67854,7 @@ kTh
 kTh
 kTh
 kTh
-brc
+nKu
 kTh
 brc
 kTh
@@ -67882,7 +67895,7 @@ kTh
 kTh
 bWX
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -68030,11 +68043,11 @@ nCK
 nCK
 bWX
 kTh
+nKu
 kTh
 kTh
 kTh
-kTh
-wiK
+nKu
 kTh
 kTh
 kTh
@@ -68271,7 +68284,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -68478,7 +68491,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -68656,7 +68669,7 @@ kTh
 kTh
 kTh
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -69489,7 +69502,7 @@ kTh
 kTh
 kTh
 kTh
-brc
+nKu
 kTh
 brc
 kTh
@@ -70243,7 +70256,7 @@ ckV
 kTh
 brc
 kTh
-wiK
+nKu
 kTh
 kTh
 kTh
@@ -70650,7 +70663,7 @@ bWX
 kTh
 kTh
 kTh
-aNL
+nKu
 kTh
 uXT
 nCK
@@ -70938,7 +70951,7 @@ xdV
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 shr
 shr
@@ -71122,7 +71135,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -71357,7 +71370,7 @@ kTh
 kTh
 bWX
 kTh
-kTh
+nKu
 kTh
 kTh
 bWX
@@ -71619,6 +71632,7 @@ kTh
 wiK
 bWX
 bWX
+nKu
 kTh
 kTh
 kTh
@@ -71628,8 +71642,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
-kTh
+nKu
 kTh
 ckV
 ckV
@@ -71643,13 +71656,13 @@ kTh
 kTh
 aNL
 kTh
-bWX
+nKu
 kTh
 kTh
 kTh
 wiK
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -71812,7 +71825,7 @@ oMm
 xzw
 xzw
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -71843,13 +71856,13 @@ kTh
 kTh
 wiK
 kTh
-bWX
+nKu
 bWX
 kTh
 kTh
 wiK
 kTh
-kTh
+nKu
 kTh
 kTh
 bLW
@@ -71932,7 +71945,7 @@ epD
 brc
 kTh
 kTh
-tXy
+nKu
 kTh
 kTh
 kTh
@@ -72016,7 +72029,7 @@ kTh
 kTh
 kTh
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -72047,7 +72060,7 @@ kTh
 kTh
 kTh
 bWX
-bWX
+nKu
 kTh
 kTh
 kTh
@@ -72156,13 +72169,13 @@ wiK
 kTh
 kTh
 kTh
+nKu
 kTh
 kTh
 kTh
 kTh
 kTh
-kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -72360,7 +72373,7 @@ kTh
 kTh
 kTh
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -72430,7 +72443,7 @@ ckV
 ckV
 ckV
 ckV
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -72819,7 +72832,7 @@ kTh
 kTh
 wiK
 kTh
-kTh
+nKu
 ckV
 ckV
 ckV
@@ -73255,7 +73268,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -73624,7 +73637,7 @@ oMm
 mwW
 bWX
 bWX
-kTh
+nKu
 kTh
 ckV
 ckV
@@ -73661,7 +73674,7 @@ kTh
 kTh
 ckV
 oVL
-wiK
+nKu
 kTh
 kTh
 kTh
@@ -74032,7 +74045,7 @@ ckV
 ckV
 ckV
 kTh
-kTh
+nKu
 bWX
 kTh
 wiK
@@ -74440,7 +74453,7 @@ kTh
 kTh
 kTh
 wiK
-kTh
+wiK
 kTh
 kTh
 wiK
@@ -74877,7 +74890,7 @@ kTh
 bWX
 kTh
 kTh
-kTh
+nKu
 oid
 oid
 nCK
@@ -75056,7 +75069,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 xdV
 dfI
@@ -75601,7 +75614,7 @@ bWX
 bWX
 bWX
 bWX
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -75838,7 +75851,7 @@ shr
 shr
 shr
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -76206,7 +76219,7 @@ kTh
 kTh
 kTh
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -76403,7 +76416,7 @@ wiK
 wiK
 kTh
 kTh
-wiK
+nKu
 kTh
 kTh
 kTh
@@ -76655,7 +76668,7 @@ kTh
 kTh
 ckV
 ckV
-brc
+nKu
 kTh
 brc
 kTh
@@ -77050,7 +77063,7 @@ shr
 shr
 wiK
 kTh
-kTh
+wiK
 kTh
 kTh
 kTh
@@ -77657,10 +77670,10 @@ wiK
 kTh
 kTh
 kTh
+wiK
 kTh
 kTh
-kTh
-kTh
+wiK
 kTh
 ckV
 ckV
@@ -77819,7 +77832,7 @@ wiK
 kTh
 kTh
 kTh
-wiK
+nKu
 kTh
 bWX
 kTh
@@ -78084,7 +78097,7 @@ bWX
 bWX
 kTh
 oid
-kTh
+nKu
 bWX
 sNs
 sNs
@@ -78265,7 +78278,7 @@ wiK
 wiK
 brc
 kTh
-kTh
+nKu
 xdV
 brc
 ckV
@@ -78669,7 +78682,7 @@ brc
 brc
 kTh
 kTh
-kTh
+wiK
 kTh
 xdV
 ckV
@@ -79438,11 +79451,11 @@ kTh
 kTh
 kTh
 kTh
-wiK
+nKu
 kTh
 kTh
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -79835,7 +79848,7 @@ kTh
 brc
 kTh
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -80093,7 +80106,7 @@ bWX
 kTh
 kTh
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -80240,7 +80253,7 @@ kTh
 bWX
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -80286,7 +80299,7 @@ brc
 kTh
 kTh
 kTh
-kTh
+wiK
 xdV
 brc
 ckV
@@ -81038,12 +81051,12 @@ brc
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 brc
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -81093,7 +81106,7 @@ kTh
 kTh
 kTh
 kTh
-bWX
+dDy
 bWX
 kTh
 brc
@@ -81291,7 +81304,7 @@ shr
 shr
 shr
 kTh
-kTh
+wiK
 kTh
 kTh
 kTh
@@ -81309,7 +81322,7 @@ brc
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -81695,13 +81708,13 @@ shr
 shr
 shr
 shr
-kTh
+nKu
 kTh
 kTh
 brc
 kTh
 kTh
-kTh
+wiK
 kTh
 ckV
 ckV
@@ -81899,7 +81912,7 @@ shr
 shr
 kTh
 kTh
-brc
+nKu
 kTh
 brc
 kTh
@@ -82123,7 +82136,7 @@ kTh
 bWX
 bWX
 bWX
-kTh
+nKu
 kTh
 bWX
 sNs
@@ -82311,7 +82324,7 @@ kTh
 kTh
 ckV
 ckV
-brc
+nKu
 kTh
 kTh
 kTh
@@ -82506,7 +82519,7 @@ shr
 shr
 kTh
 kTh
-kTh
+wiK
 kTh
 kTh
 wiK
@@ -82712,7 +82725,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 ckV
 ckV
@@ -82932,7 +82945,7 @@ kTh
 kTh
 kTh
 kTh
-oWx
+nKu
 kTh
 bWX
 sNs
@@ -83260,7 +83273,7 @@ brc
 kTh
 kTh
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -83457,7 +83470,7 @@ brc
 oVL
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -83720,7 +83733,7 @@ shr
 shr
 kTh
 kTh
-kTh
+nKu
 brc
 kTh
 kTh
@@ -83865,6 +83878,7 @@ kTh
 kTh
 kTh
 kTh
+nKu
 kTh
 kTh
 kTh
@@ -83872,8 +83886,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
-wiK
+nKu
 kTh
 kTh
 kTh
@@ -84462,7 +84475,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 bWX
@@ -84529,7 +84542,7 @@ shr
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -84878,7 +84891,7 @@ kTh
 kTh
 kTh
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -85465,7 +85478,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -85750,7 +85763,7 @@ kTh
 ckV
 ckV
 kTh
-brc
+nKu
 bWX
 bWX
 bWX
@@ -85872,7 +85885,7 @@ kTh
 brc
 kTh
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -86286,7 +86299,7 @@ kTh
 kTh
 kTh
 xdV
-kTh
+nKu
 kTh
 wiK
 kTh
@@ -86348,7 +86361,7 @@ shr
 shr
 shr
 kTh
-kTh
+nKu
 kTh
 brc
 kTh
@@ -86755,7 +86768,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -87161,7 +87174,7 @@ kTh
 brc
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 ckV
@@ -87700,7 +87713,7 @@ kTh
 bWX
 bWX
 kTh
-brc
+nKu
 kTh
 kTh
 kTh
@@ -87976,7 +87989,7 @@ brc
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 lcI
@@ -88317,7 +88330,7 @@ kTh
 wiK
 kTh
 kTh
-kTh
+nKu
 ckV
 ckV
 kTh
@@ -88933,7 +88946,7 @@ ckV
 ckV
 kTh
 kTh
-kTh
+nKu
 brc
 kTh
 kTh
@@ -89130,7 +89143,7 @@ kTh
 brc
 kTh
 kTh
-kTh
+nKu
 kTh
 ckV
 ckV
@@ -89949,7 +89962,7 @@ kTh
 wiK
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 wiK
@@ -90141,7 +90154,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -90506,7 +90519,7 @@ bWX
 kTh
 kTh
 kTh
-wiK
+nKu
 kTh
 kTh
 kTh
@@ -90549,7 +90562,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 ckV
 kTh
 kTh
@@ -90715,7 +90728,7 @@ kTh
 kTh
 wiK
 wiK
-kTh
+wiK
 wiK
 wiK
 wiK
@@ -90753,7 +90766,7 @@ kTh
 brc
 kTh
 ckV
-kTh
+nKu
 kTh
 wiK
 wiK
@@ -90917,7 +90930,7 @@ kTh
 kTh
 kTh
 wiK
-kTh
+wiK
 wiK
 kTh
 wiK
@@ -91356,7 +91369,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 ckV
 kTh
@@ -91928,7 +91941,7 @@ kTh
 kTh
 kTh
 kTh
-kTh
+nKu
 kTh
 kTh
 kTh
@@ -92164,7 +92177,7 @@ shr
 shr
 kTh
 kTh
-kTh
+nKu
 ckV
 ckV
 kTh
@@ -100738,7 +100751,7 @@ shr
 shr
 shr
 shr
-nCK
+shr
 shr
 shr
 shr
@@ -101144,8 +101157,8 @@ shr
 shr
 nCK
 nCK
-sNs
-sNs
+nCK
+shr
 shr
 shr
 sNs
@@ -101344,7 +101357,7 @@ shr
 shr
 shr
 shr
-nCK
+shr
 sNs
 sNs
 sNs
@@ -101749,7 +101762,7 @@ shr
 shr
 shr
 shr
-sNs
+shr
 sNs
 sNs
 sNs
@@ -115653,8 +115666,8 @@ sNs
 sNs
 sNs
 sNs
-sNs
-sNs
+ril
+xDJ
 sNs
 sNs
 sNs
@@ -140733,7 +140746,7 @@ shr
 shr
 shr
 shr
-nCK
+shr
 shr
 shr
 shr
@@ -141136,10 +141149,10 @@ shr
 shr
 shr
 shr
-shr
 nCK
 nCK
-sNs
+nCK
+nCK
 shr
 shr
 shr
@@ -142150,7 +142163,7 @@ shr
 shr
 shr
 shr
-sNs
+shr
 sNs
 sNs
 sNs
@@ -181134,7 +181147,7 @@ shr
 shr
 nCK
 nCK
-sNs
+nCK
 shr
 shr
 shr
@@ -181537,7 +181550,7 @@ shr
 shr
 shr
 shr
-shr
+sNs
 sNs
 sNs
 sNs
@@ -182551,7 +182564,7 @@ shr
 shr
 shr
 shr
-sNs
+shr
 sNs
 sNs
 sNs
@@ -200312,7 +200325,7 @@ ehE
 roo
 cpr
 syU
-syU
+mwq
 syU
 oJJ
 ehE
@@ -200716,7 +200729,7 @@ ehE
 roo
 syU
 syU
-syU
+iiH
 aeB
 oJJ
 ehE

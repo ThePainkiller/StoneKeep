@@ -16,8 +16,7 @@
 /obj/structure/rack/shelf
 	icon = 'modular/stonekeep/icons/structure.dmi'
 
-/obj/structure/flora/grass/thorn_bush
-	alpha = 200
+
 
 /obj/structure/throne
 	name = "throne"
@@ -198,9 +197,9 @@
 	smooth = 0
 	climb_offset = 8
 
-/obj/structure/fluff/walldeco/customflag
-	name = "royal flag"
-
+/obj/structure/table/stone_small/gravekeeper
+	name = "body preparation slate"
+	color = "#b4b4b6"
 
 // Temple pillars. Default is offset to north
 /obj/structure/fluff/walldeco/pillar
@@ -369,9 +368,7 @@
 	dir = pick(GLOB.cardinals)
 	. = ..()
 
-/obj/structure/table/stone_small/gravekeeper
-	name = "body preparation slate"
-	color = "#b4b4b6"
+
 
 /obj/structure/giantfur
 	layer = BELOW_OPEN_DOOR_LAYER
@@ -400,6 +397,7 @@
 		open_up()
 
 
+
 /obj/structure/chair/pew/left
 	name = "pew"
 
@@ -421,9 +419,12 @@
 	return !density
 
 
-
 // =============================================================================
 // =========================	WALL DECORATIONS	============================
+
+
+/obj/structure/fluff/walldeco/customflag
+	name = "royal flag"
 
 /obj/structure/fluff/walldeco/fakeshelf
 	name = ""
@@ -540,6 +541,9 @@
 // =================================================================
 // =========================	FLORA	============================
 
+/obj/structure/flora/grass/thorn_bush
+	alpha = 200
+
 /obj/structure/flora/grass/update_icon()
 	. = ..()
 	alpha = 220
@@ -592,11 +596,12 @@
 	max_integrity = 80
 	destroy_sound = 'sound/misc/woodhit.ogg'
 	static_debris = list(/obj/item/grown/log/tree/stick = 1)
-	pixel_x = -28
-	pixel_y = 6
+//	pixel_x = -28
+//	pixel_y = 6
 	alpha = 255
 	opacity = FALSE
-	density = FALSE
+	density = TRUE
+	pass_flags = PASSTABLE
 /obj/structure/flora/tree/neu/bush/Initialize()
 	. = ..()
 	icon_state = "deadbush_[rand(1,3)]"
@@ -723,6 +728,10 @@
 	pixel_x = -16
 	climb_offset = 14
 	stump_loot = /obj/item/reagent_containers/food/snacks/truffles
+
+/obj/structure/flora/grass/swampweed
+	icon = 'modular/stonekeep/icons/pigflora.dmi'
+
 
 
 // =========================================================================
@@ -931,11 +940,6 @@
 			playsound(user, pick('sound/foley/waterwash (1).ogg','sound/foley/waterwash (2).ogg'), 80, FALSE)
 			return
 	else ..()
-
-
-
-/obj/structure/flora/grass/swampweed
-	icon = 'modular/stonekeep/icons/pigflora.dmi'
 
 
 

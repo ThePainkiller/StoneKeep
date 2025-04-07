@@ -16,8 +16,8 @@
 	spawnableAtoms = list(/obj/structure/flora/tree = 1,
 							/obj/structure/flora/tree/neu/bush = 1,
 							/obj/structure/flora/grass/bush_meagre = 1,
-							/obj/structure/flora/rogueflower/random = 1,
-							/obj/structure/flora/grass = 10,
+							/obj/structure/flora/rogueflower/random = 2,
+							/obj/structure/flora/grass = 20,
 							/obj/structure/table/wood/treestump = 1,
 							/obj/item/natural/rock = 1,
 							/obj/item/natural/stone = 4,
@@ -209,7 +209,7 @@
 	allowed_turfs = list(/turf/open/floor/grass)
 	excluded_turfs = list(/turf/open/floor/grass/mixyel)
 	allowed_areas = list(/area/rogue/outdoors/woods)
-	spawnableAtoms = list(/obj/structure/flora/tree = 1,
+	spawnableAtoms = list(/obj/structure/flora/newtree = 1,
 							/obj/structure/flora/grass/bush_meagre = 4,
 							/obj/structure/flora/grass = 30,
 							/obj/structure/flora/grass/herb/random = 0.5,
@@ -224,7 +224,7 @@
 	allowed_turfs = list(/turf/open/floor/grass/mixyel)
 	excluded_turfs = list(/turf/open/floor/grass/mixyel/under_tree)
 	allowed_areas = list(/area/rogue/outdoors/woods)
-	spawnableAtoms = list(/obj/structure/flora/tree = 1,
+	spawnableAtoms = list(
 							/obj/structure/flora/grass/bush_meagre = 3,
 							/obj/structure/flora/grass = 20,
 							/obj/structure/flora/rogueflower/random = 1,

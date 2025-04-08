@@ -111,6 +111,7 @@
 	shoes = /obj/item/clothing/shoes/boots
 	backl = /obj/item/storage/backpack/satchel/black
 
+
 /*------VERBS-----*/
 
 // NEW VERBS
@@ -118,13 +119,13 @@
 	set name = "Demand Submission"
 	set category = "VAMPIRE"
 	if(SSmapping.retainer.king_submitted)
-		to_chat(src, span_warning("I am already the Master of Vanderlin."))
+		to_chat(src, span_warning("I am already the Master of these lands."))
 		return
 
 	var/mob/living/carbon/ruler = SSticker.rulermob
 
 	if(!ruler || (get_dist(src, ruler) > 1))
-		to_chat(src, span_warning("The Master of Vanderlin is not beside me."))
+		to_chat(src, span_warning("The Master of these lands is not beside me."))
 		return
 
 	if(ruler.stat <= CONSCIOUS)

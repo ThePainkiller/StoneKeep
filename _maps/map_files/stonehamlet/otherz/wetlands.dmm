@@ -1496,6 +1496,10 @@
 "Pk" = (
 /turf/open/floor/sandstone/shaded,
 /area/rogue/under/xylix)
+"PE" = (
+/obj/structure/flora/shroom_tree_neu,
+/turf/open/floor/dirt/muddie,
+/area/rogue/outdoors/bog/wetlands)
 "PM" = (
 /turf/open/floor/dirt/muddie,
 /area/rogue/outdoors/bog/wetlands/gator)
@@ -47291,8 +47295,8 @@ WH
 WH
 wP
 wP
-wP
-wP
+at
+at
 at
 gN
 wP
@@ -47494,7 +47498,7 @@ wP
 wP
 wP
 wP
-wP
+at
 at
 wP
 wP
@@ -52982,7 +52986,7 @@ wJ
 wJ
 WH
 WH
-WH
+wP
 at
 wP
 wP
@@ -53184,9 +53188,9 @@ wJ
 wJ
 wJ
 wJ
-wJ
 wP
-wP
+at
+at
 wP
 wP
 wP
@@ -53386,10 +53390,10 @@ wJ
 wJ
 wJ
 wJ
-wJ
-WH
-gN
 wP
+at
+PE
+at
 at
 at
 wP
@@ -53588,8 +53592,8 @@ wJ
 wJ
 wJ
 WH
-WH
-WH
+wP
+at
 wP
 at
 at
@@ -53789,8 +53793,8 @@ wJ
 wJ
 wJ
 WH
-WH
-WH
+wP
+wP
 wP
 wP
 WH

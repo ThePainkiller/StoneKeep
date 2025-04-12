@@ -491,7 +491,7 @@ get_accent_list()
 	icon_state = "warrior"
 
 
-/datum/outfit/job/stonekeep/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+/datum/outfit/job/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
 	if(H.mind)
 		if(H.dna)

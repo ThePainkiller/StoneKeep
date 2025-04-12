@@ -455,6 +455,12 @@
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
+/datum/sprite_accessory/hair/consort
+	name = "Consort"
+	icon_state = "consort_f"
+	gender = FEMALE
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
 /datum/sprite_accessory/hair/cotton_elf
 	name = "Cotton"
 	icon_state = "cotton_e"
@@ -782,11 +788,7 @@
 	gender = NEUTER
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-/datum/sprite_accessory/hair/inari
-	name = "Inari"
-	icon_state = "inari"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
 
 /datum/sprite_accessory/hair/fluffy
 	name = "Fluffy"
@@ -829,7 +831,7 @@
 
 
 /datum/sprite_accessory/hair/long_over_eye_alt
-	name = "Long Over Eye (Alt)"
+	name = "Long Over Eye"
 	icon_state = "long_over_eye_alt"
 	gender = NEUTER
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")

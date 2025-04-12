@@ -17,6 +17,7 @@
 			H.set_patron(/datum/patron/divine/noc)
 
 
+
 	head = /obj/item/clothing/head/helmet/nocpriest
 	neck = /obj/item/clothing/neck/psycross/noc
 	wrists = /obj/item/clothing/wrists/nocwrappings

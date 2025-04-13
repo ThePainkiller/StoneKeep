@@ -503,12 +503,6 @@
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-/datum/sprite_accessory/hair/felfhair_fatherless
-	name = "Fatherless"
-	icon_state = "fatherless_elf_f"
-	gender = FEMALE
-	specuse = list("elf")
-
 /datum/sprite_accessory/hair/grumpy_f
 	name = "Grumpy"
 	icon_state = "grumpy_f"

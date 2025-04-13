@@ -453,6 +453,8 @@
 
 
 /turf/open/floor/hay
+	name = "hay"
+	desc = "Mostly clean straw provides padding and insulation from the cold."
 	icon = 'modular/stonekeep/icons/turfs.dmi'
 	icon_state = "hay"
 	footstep = FOOTSTEP_GRASS

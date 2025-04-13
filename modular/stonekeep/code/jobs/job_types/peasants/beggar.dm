@@ -2,6 +2,7 @@
 	title = "Beggar"
 	flag = SK_BEGGAR
 //	flag = APPRENTICE	ROGTODO again, their apprenrtice system, is it something good or bad.
+	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	department_flag = PEASANTS
 	total_positions = 15
 	spawn_positions = 15
@@ -17,6 +18,7 @@
 	)
 	outfit = /datum/outfit/job/stonekeep/beggar
 	banned_leprosy = FALSE
+	bypass_lastclass = TRUE
 
 	tutorial = "The smell of filth and sweat no longer bother you, the glances of disgust or pity others give you familiar  ; the only reason you've not dead in a mud pit already is because you are tough as a old leather sole, hardned by ratbites, sticks and stones."
 	display_order = BEGGAR_ORDER

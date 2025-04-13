@@ -159,7 +159,7 @@ get_accent_list()
 	name = "abyssal ishigaki wall"
 	desc = "Made from large, interlocking uncut stones without the use of mortar, so a castle is built above it. However, many make simple walls out of it."
 	icon = 	'modular/stonekeep/kaizoku/icons/wallset/abyssalstone.dmi'
-	icon_state = "abyssabyssal"
+	icon_state = "abyssal"
 	sheet_type = /obj/item/natural/stone
 	break_sound = 'sound/combat/hits/onstone/stonedeath.ogg'
 	attacked_sound = list('sound/combat/hits/onstone/wallhit.ogg', 'sound/combat/hits/onstone/wallhit2.ogg', 'sound/combat/hits/onstone/wallhit3.ogg')

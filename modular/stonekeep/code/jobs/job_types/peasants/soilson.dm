@@ -1,4 +1,4 @@
-/datum/job/stonekeep/soilson
+/datum/job/farmer
 	title = "Soilson"
 	flag = SK_SOILSON
 	department_flag = PEASANTS

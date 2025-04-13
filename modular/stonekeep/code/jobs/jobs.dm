@@ -21,7 +21,7 @@ The word serf means something completely different than what the original maker 
 /datum/job/adventurer
 	flag = SK_ADVENTURER	// STONEKEEP EDIT
 	department_flag = OUTSIDERS	// STONEKEEP EDIT
-	allowed_races = ALL_RACES_FOR_REAL// STONEKEEP EDIT
+	allowed_races = ALL_RACES_BY_NAME	// STONEKEEP EDIT
 	display_order = ADVENTURER_ORDER	// STONEKEEP EDIT
 	min_pq = 0	// STONEKEEP EDIT
 	selection_color = "#d7d8df"		// STONEKEEP EDIT

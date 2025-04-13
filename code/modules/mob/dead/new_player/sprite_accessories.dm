@@ -414,7 +414,7 @@
 	name = "Amazon"
 	icon_state = "amazon_f"
 	gender = FEMALE
-	specuse = list("aasimar", "human")
+	specuse = list("aasimar")
 
 /datum/sprite_accessory/hair/archivist
 	name = "Archivist"
@@ -645,11 +645,7 @@
 	gender = FEMALE
 	specuse = list("elf", "tiefling")
 
-/datum/sprite_accessory/hair/singlebraid
-	name = "Single Braid"
-	icon_state = "singlebraid"
-	gender = FEMALE
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
 
 /datum/sprite_accessory/hair/soilbride
 	name = "Soilbride"
@@ -711,7 +707,11 @@
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-
+/datum/sprite_accessory/hair/willow
+	name = "Willow"
+	icon_state = "willow"
+	gender = FEMALE
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
 
 

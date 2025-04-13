@@ -733,6 +733,9 @@
 /obj/structure/flora/grass/water/reeds,
 /turf/open/floor/dirt/muddie,
 /area/rogue/outdoors/bog/wetlands/gator)
+"oP" = (
+/turf/open/floor/blocks/moss,
+/area/rogue/outdoors/bog/wetlands)
 "pa" = (
 /turf/closed/wall/mineral/roofwall/center,
 /area/rogue/under/cave)
@@ -1256,6 +1259,10 @@
 /obj/structure/well/climb_down,
 /turf/open/floor/dirt,
 /area/rogue/outdoors/bog)
+"FC" = (
+/obj/structure/well/fountain/mana,
+/turf/open/floor/blocks/moss,
+/area/rogue/outdoors/bog/wetlands)
 "FO" = (
 /obj/structure/flora/rock/pebbles,
 /turf/open/floor/dirt,
@@ -71100,7 +71107,7 @@ PM
 PM
 at
 WH
-WH
+ON
 WH
 WH
 WH
@@ -71301,10 +71308,10 @@ PM
 PM
 WH
 WH
-WH
-nP
-WH
-WH
+ON
+ON
+oP
+ON
 wP
 WH
 wJ
@@ -71503,9 +71510,9 @@ PM
 PM
 PM
 WH
-WH
-WH
-WH
+oP
+oP
+ON
 wJ
 WH
 WH
@@ -71704,10 +71711,10 @@ Mi
 Hs
 Hs
 PM
-WH
-WH
-WH
-WH
+ON
+oP
+FC
+oP
 WH
 WH
 WH
@@ -71906,11 +71913,11 @@ Hs
 Hs
 Hs
 at
-WH
-WH
-wP
-WH
-wJ
+ON
+oP
+oP
+oP
+ON
 WH
 WH
 WH
@@ -72109,9 +72116,9 @@ uY
 Hs
 at
 at
-WH
-wP
-WH
+ON
+ON
+ON
 WH
 WH
 WH

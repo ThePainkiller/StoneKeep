@@ -1683,10 +1683,7 @@
 /turf/open/floor/blocks,
 /area/rogue/outdoors/exposed/under/basement)
 "cBu" = (
-/obj/structure/well/fountain{
-	layer = 1;
-	pixel_x = -16
-	},
+/obj/structure/well/fountain/mana,
 /turf/open/floor/grass,
 /area/rogue/outdoors/exposed/townhamlet)
 "cBQ" = (

@@ -123,7 +123,7 @@
 	force =  DAMAGE_STAFF
 	force_wielded =  DAMAGE_STAFF_WIELD-1
 	possible_item_intents = list(POLEARM_BASH)
-	gripped_intents = list(POLEARM_BASH,/datum/intent/mace/smash/wood)
+	gripped_intents = list(/datum/intent/mace/smash/wood, POLEARM_BASH)
 	name = "wooden staff"
 	desc = "The ultimate tool of travel for weary wanderers, support your weight or crack the heads that don't support you."
 	icon_state = "woodstaff"
@@ -158,7 +158,7 @@
 //................ Iron-shod Staff ............... //
 /obj/item/weapon/polearm/woodstaff/quarterstaff/iron
 	force_wielded =  DAMAGE_STAFF_WIELD
-	gripped_intents = list(POLEARM_BASH,/datum/intent/mace/smash)
+	gripped_intents = list(/datum/intent/mace/smash, POLEARM_BASH)
 	name = "iron quarterstaff"
 	desc = "A perfect tool for bounty hunters who prefer their prisoners broken and bruised but not slain. This reinforced staff is capable of clubbing even an armed opponent into submission with some carefully placed strikes."
 	icon_state = "ironstaff"
@@ -167,7 +167,7 @@
 
 /obj/item/weapon/polearm/woodstaff/quarterstaff/steel
 	force_wielded =  DAMAGE_STAFF_WIELD+1
-	gripped_intents = list(POLEARM_BASH,/datum/intent/mace/smash)
+	gripped_intents = list(/datum/intent/mace/smash, POLEARM_BASH)
 	name = "steel quarterstaff"
 	desc = "An unusual sight, a knightly combat staff made out of worked steel and reinforced wood. It is a heavy and powerful weapon, more than capable of beating the living daylights out of any brigand."
 	icon_state = "steelstaff"

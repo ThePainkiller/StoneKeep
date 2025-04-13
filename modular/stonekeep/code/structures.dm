@@ -1002,3 +1002,8 @@
 	icon_state = "passage1"
 	density = FALSE
 
+
+/obj/structure/chair/bench/couch/redright_middle
+	icon = 'modular/stonekeep/icons/structure.dmi'
+	icon_state = "redcouch_alt_middle"
+

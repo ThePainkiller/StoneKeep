@@ -231,8 +231,12 @@
 // =============================================================================
 // ========================		WEATHER EDITS		============================
 
+/obj/item/flashlight/flare/torch
+	var/openflame = TRUE
+
 /obj/item/flashlight/flare/torch/lantern
 	dropshrink = 0.7
+	openflame = FALSE
 /obj/item/flashlight/flare/torch/lantern/getonmobprop(tag)
 	. = ..()
 	if(tag)
@@ -286,10 +290,8 @@
 /obj/item/flashlight/flare/torch/weather_act_on(weather_trait, severity)
 	if(weather_trait != PARTICLEWEATHER_RAIN)
 		return
-	extinguish()
-
-/obj/item/flashlight/flare/torch/lantern/weather_act_on(weather_trait, severity)
-	return
+	if(openflame)
+		extinguish()
 
 /obj/machinery/light/fueled/firebowl/standing/weather_act_on(weather_trait, severity)
 	if(weather_trait != PARTICLEWEATHER_RAIN)

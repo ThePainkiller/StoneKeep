@@ -77,7 +77,6 @@ GLOBAL_LIST_INIT(peasant_positions, list(
 	/datum/job/vagrant::title,
 	/datum/job/bandit::title,
 	/datum/job/stonekeep/nitemaiden::title,
-	/datum/job/stonekeep/soilson::title,
 	/datum/job/stonekeep/weaver::title,
 	/datum/job/stonekeep/woodsman::title,
 ))

@@ -547,7 +547,7 @@
 /turf/closed/wall/mineral/sbrick_nonsmooth
 	name = "stonebrick wall"
 	desc = ""
-	icon = 'icons/turf/roguewall.dmi'
+	icon = 'icons/turf/walls.dmi'
 	icon_state = "stonebrick"
 	smooth = SMOOTH_MORE
 	blade_dulling = DULLING_BASH

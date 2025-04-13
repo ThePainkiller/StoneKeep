@@ -11,6 +11,7 @@
 	slot_flags = null
 
 /obj/item/weapon/polearm/eaglebeak
+	icon = 'icons/roguetown/weapons/64.dmi'
 	slot_flags = null
 
 /obj/item/weapon/polearm/eaglebeak/lucerne/poleaxe

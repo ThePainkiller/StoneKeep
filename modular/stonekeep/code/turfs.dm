@@ -323,7 +323,7 @@
 						/turf/open/floor/snow/rough)
 
 /turf/open/floor/grass/hell
-	icon = 'icons/turf/roguefloor.dmi'
+	icon = 'icons/turf/floors.dmi'
 
 
 /*	..................   Snow   ................... */
@@ -336,12 +336,12 @@
 	neighborlay = "snowpatchy"
 
 /turf/open/floor/snow
-	icon = 'modular/stonekeep/icons/turfs.dmi'
+	icon = 'icons/turf/floors.dmi'
 	canSmoothWith = list(
 						/turf/open/floor/snow/rough)
 
 /turf/open/floor/snow/rough
-	icon = 'icons/turf/roguefloor.dmi'
+	icon = 'icons/turf/floors.dmi'
 
 
 
@@ -547,7 +547,7 @@
 /turf/closed/wall/mineral/sbrick_nonsmooth
 	name = "stonebrick wall"
 	desc = ""
-	icon = 'icons/turf/roguewall.dmi'
+	icon = 'icons/turf/walls.dmi'
 	icon_state = "stonebrick"
 	smooth = SMOOTH_MORE
 	blade_dulling = DULLING_BASH

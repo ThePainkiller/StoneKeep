@@ -208,7 +208,7 @@
 /*	..................  Grave Spawner  ................... */
 /obj/effect/spawner/map_spawner/graverandom
 	icon_state = "gravecovered"
-	icon = 'icons/turf/roguefloor.dmi'
+	icon = 'icons/turf/floors.dmi'
 	alpha = 200
 	color = "#00ff11"
 	probby = 50

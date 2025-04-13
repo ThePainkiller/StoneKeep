@@ -284,7 +284,7 @@
 		/datum/job/captain,
 	)
 
-/obj/structure/train/MouseDrop_T(atom/dropping, mob/user)
+/obj/structure/far_travel/MouseDrop_T(atom/dropping, mob/user)
 	if(!isliving(user) || user.incapacitated())
 		return //No ghosts or incapacitated folk allowed to do this.
 	if(!ishuman(dropping))
@@ -328,7 +328,7 @@
 		dat += "."
 	message_admins(dat)
 	log_admin(dat)
-	say(span_notice("[departing_mob == user ? "Out of their own volition, " : "Ushered by [user], "][departing_mob] is departing from Vanderlin."))
+	say(span_notice("[departing_mob == user ? "Out of their own volition, " : "Ushered by [user], "][departing_mob] is departing."))
 	var/mob/dead/new_player/newguy = new()
 	newguy.ckey = departing_mob.ckey
 	qdel(departing_mob)

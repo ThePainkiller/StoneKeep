@@ -72,7 +72,7 @@
 		H.mind?.adjust_skillrank(/datum/skill/combat/knives, 1, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/reading, 5, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/sneaking, 2, TRUE)
-		H.mind?.adjust_skillrank(/datum/skill/misc/stealing, 6, TRUE)
-		H.mind?.adjust_skillrank(/datum/skill/misc/lockpicking, 2, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/misc/stealing, 2, TRUE)
+		H.mind?.adjust_skillrank(/datum/skill/misc/lockpicking, 1, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/misc/riding, 1, TRUE)
 

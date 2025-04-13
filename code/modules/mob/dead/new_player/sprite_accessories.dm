@@ -81,7 +81,7 @@
 	// each race gets four unique haircuts
 	// dwarf - miner, gnomish, boss, hearth
 	// elf - son, fancy, mysterious, long
-	// human - adventurer, dark knight, graceful, squire, pigtails, noblesse
+	// human - adventurer, graceful, squire, pigtails, noblesse
 	// dual - nomadic, shrine
 	// aasimar - amazon, topknot, martial, forsaken
 	// tiefling - junia, performer, tribal, lover
@@ -150,13 +150,7 @@
 	gender = MALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-/datum/sprite_accessory/hair/dark_knight
-	name = "Dark Knight"
-	icon_state = "darkknight"
-	gender = MALE
-	specuse = list("human")
-
-/datum/sprite_accessory/hair/head/dave
+/datum/sprite_accessory/hair/dave
 	name = "Dave"
 	icon_state = "dave"
 	gender = MALE
@@ -292,6 +286,12 @@
 	gender = MALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
+/datum/sprite_accessory/hair/raider
+	name = "Raider"
+	icon_state = "raider"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
 /datum/sprite_accessory/hair/rogue
 	name = "Rogue"
 	icon_state = "rogue"
@@ -334,6 +334,12 @@
 	icon_state = "squire" // original name shaved_european
 	gender = MALE
 	specuse = list("human")
+
+/datum/sprite_accessory/hair/steward
+	name = "Steward"
+	icon_state = "steward"
+	gender = MALE
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
 /datum/sprite_accessory/hair/swain
 	name = "Swain"
@@ -402,11 +408,7 @@
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
 
-/datum/sprite_accessory/hair/steward
-	name = "Steward"
-	icon_state = "steward"
-	gender = MALE
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
 
 /////////////////////////////
 // GIRLY Hair Definitions  //
@@ -437,14 +439,8 @@
 	under_layer = TRUE
 	specuse = list("human")
 
-/datum/sprite_accessory/hair/buns
-	name = "Buns"
-	icon_state = "buns_f" // original name twinbuns
-	gender = FEMALE
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-/datum/sprite_accessory/hair/lowbun
-	name = "Bun (Low)"
+/datum/sprite_accessory/hair/bun
+	name = "Bun"
 	icon_state = "bun-low"
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
@@ -455,11 +451,20 @@
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
+/datum/sprite_accessory/hair/conscriptf
+	name = "Conscripte"
+	icon_state = "conscript_f"
+	gender = FEMALE
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+
 /datum/sprite_accessory/hair/consort
 	name = "Consort"
 	icon_state = "consort_f"
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+
 
 /datum/sprite_accessory/hair/cotton_elf
 	name = "Cotton"
@@ -478,12 +483,6 @@
 	icon_state = "damsel_f"
 	gender = FEMALE
 	specuse = list("human", "aasimar", "tiefling", "halforc")
-
-/datum/sprite_accessory/hair/emma
-	name = "Emma"
-	icon_state = "emma"
-	gender = FEMALE
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
 /datum/sprite_accessory/hair/empress
 	name = "Empress"
@@ -545,6 +544,12 @@
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
+/datum/sprite_accessory/hair/maid
+	name = "Maid"
+	icon_state = "maid_f"
+	gender = FEMALE
+	specuse = list("human", "dwarf", "aasimar", "tiefling")
+
 /datum/sprite_accessory/hair/majestic_dwarf_F
 	name = "Majestiq"
 	icon_state = "majestic_dwarf"
@@ -556,6 +561,12 @@
 	icon_state = "majestic_f"
 	gender = FEMALE
 	specuse = list("human")
+
+/datum/sprite_accessory/hair/matron
+	name = "Matron"
+	icon_state = "matron"
+	gender = FEMALE
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
 /datum/sprite_accessory/hair/messy
 	name = "Messy"
@@ -630,12 +641,6 @@
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-/datum/sprite_accessory/hair/sideways_ponytail
-	name = "Sideways Ponytail"
-	icon_state = "sideways_ponytail"
-	gender = FEMALE
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
 /datum/sprite_accessory/hair/shrine
 	name = "Shrinekeeper"
 	icon_state = "shrine_f"
@@ -653,6 +658,25 @@
 	icon_state = "squire_f" // original name ponytail_rynn
 	gender = FEMALE
 	specuse = list("human")
+
+/datum/sprite_accessory/hair/singlebraid
+	name = "Single Braid"
+	icon_state = "singlebraid"
+	gender = FEMALE
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+/datum/sprite_accessory/hair/spicy
+	name = "Spicy"
+	icon_state = "spicy"
+	gender = FEMALE
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+/datum/sprite_accessory/hair/stacybun
+	name = "Stacy"
+	icon_state = "stacy_bun"
+	gender = FEMALE
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
 
 /datum/sprite_accessory/hair/tails
 	name = "Tails"
@@ -678,23 +702,11 @@
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-/datum/sprite_accessory/hair/tomboy1
-	name = "Tomboy 1"
-	icon_state = "tomboy_f"
-	gender = FEMALE
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-/datum/sprite_accessory/hair/tomboy3
-	name = "Tomboy 3"
+/datum/sprite_accessory/hair/tomboy
+	name = "Tomboy"
 	icon_state = "rogue_f"
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-/datum/sprite_accessory/hair/twintail
-	name = "Twintail"
-	icon_state = "twintail_floor"
-	gender = FEMALE
-	specuse = list("human", "elf", "aasimar", "tiefling", "halforc")
 
 /datum/sprite_accessory/hair/updo
 	name = "Updo"
@@ -708,59 +720,73 @@
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-/datum/sprite_accessory/hair/singlebraid
-	name = "Single Braid"
-	icon_state = "singlebraid"
-	gender = FEMALE
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
 
 
-/datum/sprite_accessory/hair/head/spicy
-	name = "Spicy"
-	icon_state = "spicy"
-	gender = FEMALE
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-/datum/sprite_accessory/hair/head/stacybun
-	name = "Stacy"
-	icon_state = "stacy_bun"
-	gender = FEMALE
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-
-/datum/sprite_accessory/hair/head/mediumbraid
-	name = "Medium Braid"
-	icon_state = "mediumbraid"
-	gender = FEMALE
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-/datum/sprite_accessory/hair/conscriptf
-	name = "Conscripte"
-	icon_state = "conscript_f"
-	gender = FEMALE
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
 //////////////////////////////
 // UNISEX Hair Definitions  //
 //////////////////////////////
 
-/datum/sprite_accessory/hair/martial
-	name = "Martial"
-	icon_state = "martial"
+/datum/sprite_accessory/hair/baum
+	name = "Baum"
+	icon_state = "baum"
 	gender = NEUTER
-	specuse = list("aasimar")
-
-/datum/sprite_accessory/hair/shaved
-	name = "Shaved"
-	icon_state = "shaved"
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-	gender = NEUTER
-	under_layer = TRUE
 
-/datum/sprite_accessory/hair/runt
-	name = "Runt"
-	icon_state = "runt"
+/datum/sprite_accessory/hair/birdnest
+	name = "Birdnest"
+	icon_state = "birdnest"
+	gender = NEUTER
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+/datum/sprite_accessory/hair/chastity
+	name = "Chastity"
+	icon_state = "chastity"
+	gender = NEUTER
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+/datum/sprite_accessory/hair/dawn
+	name = "Dawn"
+	icon_state = "dawn"
+	gender = NEUTER
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+/datum/sprite_accessory/hair/fluffy
+	name = "Fluffy"
+	icon_state = "fluffy"
+	gender = NEUTER
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+
+
+/datum/sprite_accessory/hair/fluffball
+	name = "Fluffball"
+	icon_state = "fluffball"
+	gender = NEUTER
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+/datum/sprite_accessory/hair/helmet
+	name = "Helmet Hair"
+	icon_state = "helmet"
+	gender = NEUTER
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+/datum/sprite_accessory/hair/herder
+	name = "Herder"
+	icon_state = "herder"
+	gender = NEUTER
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+/datum/sprite_accessory/hair/highlander
+	name = "Highlander"
+	icon_state = "highlander"
+	gender = NEUTER
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+/datum/sprite_accessory/hair/jape
+	name = "Jape"
+	icon_state = "jape"
 	gender = NEUTER
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
@@ -770,59 +796,49 @@
 	gender = NEUTER
 	specuse = list("elf")
 
-/datum/sprite_accessory/hair/head/jape
-	name = "Jape"
-	icon_state = "jape"
+/datum/sprite_accessory/hair/martial
+	name = "Martial"
+	icon_state = "martial"
+	gender = NEUTER
+	specuse = list("aasimar")
+
+
+/datum/sprite_accessory/hair/runt
+	name = "Runt"
+	icon_state = "runt"
 	gender = NEUTER
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-
-/datum/sprite_accessory/hair/shortmessy
-	name = "Messy (Short)"
-	icon_state = "shortmessy"
+/datum/sprite_accessory/hair/royalcurls
+	name = "Royal Curls"
+	icon_state = "royalcurls"
 	gender = NEUTER
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-/datum/sprite_accessory/hair/mediumessy
-	name = "Messy (Medium)"
-	icon_state = "mediummessy"
+/datum/sprite_accessory/hair/shaved
+	name = "Shaved"
+	icon_state = "shaved"
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+	gender = NEUTER
+	under_layer = TRUE
+
+/datum/sprite_accessory/hair/suave
+	name = "Suave"
+	icon_state = "suave"
 	gender = NEUTER
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-
-
-/datum/sprite_accessory/hair/fluffy
-	name = "Fluffy"
-	icon_state = "fluffy"
+/datum/sprite_accessory/hair/towner
+	name = "Towner"
+	icon_state = "towner"
 	gender = NEUTER
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-/datum/sprite_accessory/hair/fluffyshort
-	name = "Fluffy (Short)"
-	icon_state = "fluffyshort"
+/datum/sprite_accessory/hair/trapper
+	name = "Trapper"
+	icon_state = "trapper"
 	gender = NEUTER
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-/datum/sprite_accessory/hair/fluffylong
-	name = "Fluffy (Long)"
-	icon_state = "fluffylong"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-
-/datum/sprite_accessory/hair/dawn
-	name = "Dawn"
-	icon_state = "dawn"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-
-/datum/sprite_accessory/hair/kobeni_1
-	name = "Kobeni"
-	icon_state = "kobeni_2"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
 
 /datum/sprite_accessory/hair/uncombed
 	name = "Uncombed"
@@ -836,89 +852,21 @@
 	gender = NEUTER
 	specuse = list("human", "elf", "aasimar", "tiefling", "halforc")
 
-
-/datum/sprite_accessory/hair/long_over_eye_alt
-	name = "Long Over Eye"
-	icon_state = "long_over_eye_alt"
+/datum/sprite_accessory/hair/wilderness
+	name = "Wilderness"
+	icon_state = "wilderness"
 	gender = NEUTER
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-/datum/sprite_accessory/hair/sabitsuki
-	name = "Sabitsuki"
-	icon_state = "sabitsuki"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-
-
-
-/datum/sprite_accessory/hair/straightshort
-	name = "Straight Short"
-	icon_state = "straightshort"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-
-/datum/sprite_accessory/hair/fluffball
-	name = "Fluffball"
-	icon_state = "fluffball"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-
-/datum/sprite_accessory/hair/halfshave_messy
-	name = "Halfshave Messy"
-	icon_state = "halfshave_messy"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-/datum/sprite_accessory/hair/thickcurly
-	name = "Thick Curly"
-	icon_state = "thickcurly"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-/datum/sprite_accessory/hair/baum
-	name = "Baum"
-	icon_state = "baum"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-/datum/sprite_accessory/hair/head/highlander
-	name = "Highlander"
-	icon_state = "highlander"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-/datum/sprite_accessory/hair/head/royalcurls
-	name = "Royal Curls"
-	icon_state = "royalcurls"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-/datum/sprite_accessory/hair/head/suave
-	name = "Suave"
-	icon_state = "suave"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
-/datum/sprite_accessory/hair/head/ponytailwitcher
+/datum/sprite_accessory/hair/witcher
 	name = "Witcher"
-	icon_state = "ponytail_witcher"
+	icon_state = "witcher"
 	gender = NEUTER
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-/datum/sprite_accessory/hair/head/shorthair6
-	name = "Short Hair (Alt)"
-	icon_state = "shorthair_alt"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
-/datum/sprite_accessory/hair/helmet
-	name = "Helmet Hair"
-	icon_state = "helmet"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
+
 
 /////////////////////////////
 // Facial Hair Definitions //

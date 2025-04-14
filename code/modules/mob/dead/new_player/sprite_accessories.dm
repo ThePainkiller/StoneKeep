@@ -269,10 +269,10 @@
 
 /datum/sprite_accessory/hair/pirate
 	name = "Pirate"
-	icon_state = "pirate"
+	icon_state = "pirate_e"
 	gender = MALE
 	under_layer = TRUE
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+	specuse = list("elf", "tiefling", "halforc")
 
 /datum/sprite_accessory/hair/princely
 	name = "Princely"
@@ -385,7 +385,7 @@
 
 /datum/sprite_accessory/hair/woodsman_elf
 	name = "Woodsman"
-	icon_state = "woodsman_elf"
+	icon_state = "woodsman_e"
 	gender = MALE
 	specuse = list("elf")
 
@@ -455,7 +455,7 @@
 
 /datum/sprite_accessory/hair/consort
 	name = "Consort"
-	icon_state = "consort_f"
+	icon_state = "consort"
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
@@ -473,7 +473,7 @@
 
 /datum/sprite_accessory/hair/damsel
 	name = "Damsel"
-	icon_state = "damsel_f"
+	icon_state = "damsel"
 	gender = FEMALE
 	specuse = list("human", "aasimar", "tiefling", "halforc")
 
@@ -685,7 +685,7 @@
 
 /datum/sprite_accessory/hair/tiedcutf
 	name = "Tied Sidecut"
-	icon_state = "tsidecut_f"
+	icon_state = "tsidecut"
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
@@ -785,6 +785,12 @@
 	gender = NEUTER
 	specuse = list("aasimar")
 
+/datum/sprite_accessory/hair/miller
+	name = "Miller"
+	icon_state = "miller"
+	gender = NEUTER
+	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
+
 /datum/sprite_accessory/hair/runt
 	name = "Runt"
 	icon_state = "runt"
@@ -803,12 +809,6 @@
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 	gender = NEUTER
 	under_layer = TRUE
-
-/datum/sprite_accessory/hair/suave
-	name = "Suave"
-	icon_state = "suave"
-	gender = NEUTER
-	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
 
 /datum/sprite_accessory/hair/towner
 	name = "Towner"

@@ -11,6 +11,9 @@
 | Better Floors |
 \--------------*/
 
+/turf/open/water/river
+	slowdown = 30
+
 /turf/open/floor/wood
 	smooth_icon = 'modular/stonekeep/icons/wood.dmi'
 /turf/open/floor/wood/nosmooth

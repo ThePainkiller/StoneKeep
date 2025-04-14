@@ -31,7 +31,7 @@
 	craftdiff = 4
 
 /datum/anvil_recipe/armor/steeltatami
-	name = "Steel foldeable armor"
+	name = "Steel foldeable armor (Islander)"
 	recipe_name = "a Lamellae Tatami-Do"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/armor/chainmail/tatami
@@ -39,7 +39,7 @@
 
 // huh. We can make these uniquely then. Since we can't make the iron chainmail for the european counterparts?... why?
 /datum/anvil_recipe/armor/irontatami
-	name = "Iron foldeable armor"
+	name = "Iron foldeable armor (Islander)"
 	recipe_name = "a Tatami Karuta-Gane"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/armor/chainmail/iron/tatami
@@ -48,7 +48,7 @@
 	createditem_num = 1
 
 /datum/anvil_recipe/armor/kusari
-	name = "Chainmail Robe (2)"
+	name = "Chainmail Robe (2) (Islander)"
 	recipe_name = "a Kusari-Katabira"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
@@ -72,7 +72,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/oyoroi
-	name = "Compact great armor (3) (c)"
+	name = "Compact great armor (3) (c) (Islander)"
 	recipe_name = "a Incomplete O-Yoroi"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
@@ -80,7 +80,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/oyoroigusoku //costier version. Only really viable if you got what to waste.
-	name = "Full great armor (4) (2c)"
+	name = "Full great armor (4) (2c) (Islander)"
 	recipe_name = "a O-Yoroi Gusoku"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth, /obj/item/natural/cloth)
@@ -88,7 +88,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/sanmaido
-	name = "Three-plate cuirass"
+	name = "Three-plate cuirass (Islander)"
 	recipe_name = "a Sanmai-Do"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/armor/cuirass/sanmaido
@@ -120,7 +120,7 @@
 
 //'feet'
 /datum/anvil_recipe/armor/kusaritabi
-	name = "Chainmail footwear x2"
+	name = "Chainmail footwear x2 (Islander)"
 	recipe_name = "a pair of Kusari-Tabi"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/shoes/boots/armor/light/kusaritabi
@@ -128,7 +128,7 @@
 	createditem_num = 1
 
 /datum/anvil_recipe/armor/suneate
-	name = "Plated shin-guards"
+	name = "Plated shin-guards (Islander)"
 	recipe_name = "some Suneate Footwear"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/shoes/boots/armor/suneate
@@ -203,7 +203,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/zijinguan
-	name = "Plumed Footsoldier helmet x2"
+	name = "Plumed Footsoldier helmet x2 (Islander)"
 	recipe_name = "a pair of Zijinguan helmet"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/head/helmet/zijinguan
@@ -237,7 +237,7 @@
 
 //'mask'
 /datum/anvil_recipe/armor/imenpo
-	name = "Iron faceguard"
+	name = "Iron faceguard (Islander)"
 	recipe_name = "a Iron Menpo"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/face/kaizoku/menpo
@@ -253,14 +253,14 @@
 	craftdiff = 0
 
 /datum/anvil_recipe/armor/smenpo
-	name = "Steel faceguard"
+	name = "Steel faceguard (Islander)"
 	recipe_name = "a Steel Menpo"
 	req_bar = /obj/item/ingot/steel
 	created_item = (/obj/item/clothing/face/kaizoku/menpo/steel/half)
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/hsmenpo
-	name = "Steel half-faceguard x2"
+	name = "Steel half-faceguard x2 (Islander)"
 	recipe_name = "a Face Mask"
 	req_bar = /obj/item/ingot/steel
 	created_item = (/obj/item/clothing/face/kaizoku/menpo/steel)
@@ -316,7 +316,7 @@
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/ihood
-	name = "Chainmail hood x2"
+	name = "Chainmail hood x2 (Islander)"
 	recipe_name = "a pair of Kusari Zukin"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/neck/chaincoif/iron/kusari_zukin
@@ -335,7 +335,7 @@
 	craftdiff = 0
 
 /datum/anvil_recipe/armor/shaidate
-	name = "Plate Thighguards x2"
+	name = "Plate Thighguards x2 (Islander)"
 	recipe_name = "a pair of Chain Chausses"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/pants/chainlegs/sendan
@@ -344,7 +344,7 @@
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/superhaidate
-	name = "Plated Trousers x2"
+	name = "Plated Trousers x2 (Islander)"
 	recipe_name = "a couple of Yoroi-Hakama"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/pants/platelegs/yoroihakama
@@ -354,7 +354,7 @@
 
 //'wrists'
 /datum/anvil_recipe/armor/kote //Protects more limbs, so it is costier.
-	name = "Armored Sleeve"
+	name = "Armored Sleeve (Islander)"
 	recipe_name = "a couple of Kote"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/wrists/bracers/kote
@@ -420,7 +420,7 @@
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/weapon/sword/scimitar/falchion/yuntoudao
 	craftdiff = 2
-
+/*
 /datum/anvil_recipe/weapons/shortjian
 	name = "Short Jian"
 	recipe_name = "a Short Jian"
@@ -428,7 +428,7 @@
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/weapon/sword/short/jian
 	craftdiff = 1
-
+*/
 /datum/anvil_recipe/weapons/wakizashi
 	name = "Wakisashi Zatana"
 	recipe_name = "a Wakizashi"

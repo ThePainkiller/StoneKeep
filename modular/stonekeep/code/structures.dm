@@ -1007,3 +1007,9 @@
 	icon = 'modular/stonekeep/icons/structure.dmi'
 	icon_state = "redcouch_alt_middle"
 
+
+/obj/structure/closet/crate/chest/rotting
+	name = "rotting crate"
+	icon = 'modular/stonekeep/icons/structure.dmi'
+	icon_state = "crate_rotting"
+	base_icon_state = "crate_rotting"

@@ -139,7 +139,7 @@
 /turf/open/floor/dirt/muddie,
 /area/rogue/under/cave/sumpgrotto)
 "qv" = (
-/obj/structure/closet/crate/chest/wicker,
+/obj/structure/closet/crate/chest/rotting,
 /obj/item/clothing/neck/bogcowl,
 /obj/item/storage/backpack/satchel,
 /turf/open/floor/twig,
@@ -267,6 +267,11 @@
 "FJ" = (
 /obj/structure/fluff/walldeco/rags,
 /turf/closed/wall/mineral/tent,
+/area/rogue/under/cave/sumpgrotto)
+"FL" = (
+/obj/structure/closet/crate/chest/rotting,
+/obj/item/needle/thorn,
+/turf/open/floor/naturalstone,
 /area/rogue/under/cave/sumpgrotto)
 "HZ" = (
 /obj/effect/spawner/map_spawner/rockies,
@@ -2655,7 +2660,7 @@ rs
 rs
 ab
 ab
-ab
+FL
 RN
 RN
 ef

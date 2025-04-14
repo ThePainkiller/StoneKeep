@@ -284,12 +284,15 @@
 
 /mob/living/simple_animal/hostile/retaliate/wolf
 	base_intents = list(/datum/intent/simple/critterbite)
+	TOTALEND = 15
 
 /mob/living/simple_animal/hostile/retaliate/bigrat
 	base_intents = list(/datum/intent/simple/critterbite)
+	TOTALEND = 10
 
 /mob/living/simple_animal/hostile/retaliate/spider
 	base_intents = list(/datum/intent/simple/critterbite)
+	TOTALEND = 15
 
 /datum/intent/simple/trollrip
 	name = "horrific bite"
@@ -299,7 +302,7 @@
 	blade_class = BCLASS_CHOP
 	hitsound = "smallslash"
 	chargetime = 0
-	penfactor = 20
+	penfactor = 40
 	swingdelay = 2 SECONDS
 	candodge = TRUE
 	canparry = FALSE
@@ -325,7 +328,7 @@
 	blade_class = BCLASS_CUT
 	hitsound = "smallslash"
 	chargetime = 0
-	penfactor = 5
+	penfactor = 10
 	swingdelay = 2 SECONDS
 	candodge = TRUE
 	canparry = TRUE

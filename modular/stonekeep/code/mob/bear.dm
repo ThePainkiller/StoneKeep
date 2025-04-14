@@ -36,7 +36,7 @@
 	TOTALCON = 14
 	TOTALSTR = 20
 	TOTALSPD = 6
-	TOTALEND = 16
+	TOTALEND = 18
 
 	retreat_distance = 0
 	minimum_distance = 0

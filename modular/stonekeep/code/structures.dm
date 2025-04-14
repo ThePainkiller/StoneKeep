@@ -1013,3 +1013,19 @@
 	icon = 'modular/stonekeep/icons/structure.dmi'
 	icon_state = "crate_rotting"
 	base_icon_state = "crate_rotting"
+
+
+/obj/structure/fluff/walldeco/mines
+	icon = 'modular/stonekeep/icons/structure.dmi'
+	icon_state = "support1"
+	pixel_y = 32
+
+/obj/structure/fluff/walldeco/mines/alt
+	icon_state = "support2"
+
+/obj/structure/fluff/walldeco/mines/wall
+	icon_state = "support3"
+
+/obj/structure/fluff/walldeco/mines/wallbroken
+	icon_state = "support4"
+

@@ -1559,6 +1559,11 @@
 /obj/structure/chair/bench/couch/redright,
 /turf/open/floor/blocks/stonered/tiny,
 /area/rogue/indoors/town/bath/redhouse)
+"cjG" = (
+/obj/structure/flora/rock/pile,
+/obj/structure/fluff/walldeco/mines/alt,
+/turf/open/floor/naturalstone/rough,
+/area/rogue/under/town/caverogue/deep)
 "cjW" = (
 /obj/effect/spawner/map_spawner/kitchenmess,
 /turf/open/floor/tile{
@@ -2541,6 +2546,11 @@
 /obj/item/paper,
 /turf/open/floor/wood,
 /area/rogue/indoors/town/hamlet)
+"dCz" = (
+/obj/item/natural/rock,
+/obj/structure/fluff/walldeco/mines/wallbroken,
+/turf/open/floor/naturalstone,
+/area/rogue/under/cave/abandoned_mine)
 "dDk" = (
 /obj/machinery/light/fueled/wallfire/candle/lamp{
 	pixel_y = -32
@@ -10351,6 +10361,10 @@
 /mob/living/simple_animal/hostile/retaliate/goat,
 /turf/open/floor/grass,
 /area/rogue/outdoors/mountains)
+"nWN" = (
+/obj/structure/fluff/walldeco/mines/alt,
+/turf/open/floor/naturalstone,
+/area/rogue)
 "nWS" = (
 /obj/effect/decal/cleanable/dirt/cobweb{
 	dir = 8
@@ -11789,6 +11803,7 @@
 "pSh" = (
 /obj/effect/decal/cleanable/blood_neu/random,
 /obj/structure/roguerock,
+/obj/structure/fluff/walldeco/mines/alt,
 /turf/open/floor/naturalstone,
 /area/rogue/under/cave/abandoned_mine)
 "pSq" = (
@@ -13522,6 +13537,10 @@
 	dir = 6
 	},
 /area/rogue/indoors/town/bath/redhouse)
+"rUx" = (
+/obj/structure/fluff/walldeco/mines/wall,
+/turf/open/floor/naturalstone,
+/area/rogue/under/cave/abandoned_mine)
 "rVo" = (
 /obj/structure/rack/shelf/biggest,
 /obj/item/flint{
@@ -15486,6 +15505,11 @@
 /obj/structure/chair/stool,
 /turf/open/floor/dirt,
 /area/rogue/outdoors/mountains)
+"uEa" = (
+/obj/item/natural/stone,
+/obj/structure/fluff/walldeco/mines/alt,
+/turf/open/floor/naturalstone,
+/area/rogue/under/cave/abandoned_mine)
 "uEx" = (
 /obj/structure/chair/pew/left{
 	dir = 1
@@ -15509,6 +15533,7 @@
 /area/rogue/outdoors/mountains)
 "uFz" = (
 /obj/structure/roguerock,
+/obj/structure/fluff/walldeco/mines/wall,
 /turf/open/floor/naturalstone,
 /area/rogue)
 "uFE" = (
@@ -15755,6 +15780,10 @@
 	},
 /turf/open/floor/blocks,
 /area/rogue/under/catacombs)
+"uVz" = (
+/obj/structure/fluff/walldeco/mines/alt,
+/turf/open/floor/naturalstone,
+/area/rogue/under/cave/abandoned_mine)
 "uVW" = (
 /obj/structure/fluff/railing/border{
 	dir = 10;
@@ -19191,7 +19220,7 @@ wNn
 wNn
 wNn
 xgx
-rYq
+uEa
 vvy
 vvy
 uYP
@@ -19804,7 +19833,7 @@ xgx
 xgx
 xgx
 xgx
-vvy
+uVz
 vvy
 xgx
 byK
@@ -20201,7 +20230,7 @@ wNn
 wNn
 wNn
 xgx
-vvy
+uVz
 rYq
 sJQ
 xgx
@@ -21603,7 +21632,7 @@ wNn
 wNn
 byK
 xgx
-vvy
+uVz
 rYq
 vvy
 vvy
@@ -21820,7 +21849,7 @@ sJQ
 xgx
 xgx
 xgx
-vvy
+uVz
 evC
 xgx
 xgx
@@ -22834,7 +22863,7 @@ bLm
 vvy
 xgx
 xgx
-vvy
+rUx
 xgx
 xgx
 byK
@@ -23036,7 +23065,7 @@ vvy
 vvy
 xgx
 xgx
-vvy
+rUx
 xgx
 xgx
 byK
@@ -23430,13 +23459,13 @@ wNn
 wNn
 wNn
 xgx
-vvy
+rUx
 xgx
 xgx
 xgx
 xgx
 xgx
-uYP
+dCz
 vvy
 xgx
 xgx
@@ -23632,13 +23661,13 @@ wNn
 wNn
 wNn
 xgx
-vvy
+rUx
 xgx
 xgx
 xgx
 xgx
 xgx
-vvy
+rUx
 vvy
 xgx
 xgx
@@ -24435,7 +24464,7 @@ wNn
 wNn
 wNn
 xgx
-vvy
+uVz
 vvy
 vvy
 vvy
@@ -66250,7 +66279,7 @@ eoD
 xJj
 eoD
 byK
-wxD
+nWN
 fYc
 wxD
 byK
@@ -107662,7 +107691,7 @@ xJj
 eoD
 eoD
 byK
-wyz
+cjG
 byK
 xJj
 eoD

@@ -514,7 +514,7 @@
 /datum/outfit/job/roguetown/human_npc/outlaw/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.STASTR = 10
-	H.STAEND = 10
+	H.STAEND = 13
 
 	shirt = /obj/item/clothing/shirt/undershirt/vagrant
 	if(prob(30))
@@ -649,6 +649,7 @@
 	TOTALCON = 14
 	TOTALSTR = 12
 	TOTALSPD = 10
+	TOTALEND = 20
 	maxHealth = 180
 	health = 180
 	harm_intent_damage = 15
@@ -784,7 +785,7 @@
 	H.STASTR = rand(10,18)
 	H.STASPD = rand(9,18)
 	H.STACON = rand(8,18)
-	H.STAEND = rand(8,18)
+	H.STAEND = rand(12,18)
 	H.STALUC = 18
 	H.STAINT = 7
 	H.set_patron(/datum/patron/divine/xylix)
@@ -845,6 +846,11 @@
 
 
 /mob/living/carbon/human/species/goblin/npc/ambush/Initialize()
+	. = ..()
+	dir = pick(GLOB.cardinals)
+	step(src, dir)
+
+/mob/living/simple_animal/hostile/retaliate/Initialize()
 	. = ..()
 	dir = pick(GLOB.cardinals)
 	step(src, dir)

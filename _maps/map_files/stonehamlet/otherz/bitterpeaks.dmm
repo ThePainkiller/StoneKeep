@@ -439,6 +439,13 @@
 /obj/item/recipe_book/engineering,
 /turf/open/floor/hexstone,
 /area/rogue/indoors/vampire_manor)
+"ib" = (
+/obj/effect/decal/rockedge,
+/obj/effect/decal/rockedge{
+	dir = 9
+	},
+/turf/open/floor/snow/patchy,
+/area/rogue/outdoors/mountains/decap)
 "ik" = (
 /obj/item/natural/rock/iron,
 /obj/effect/decal/rockedge{
@@ -501,6 +508,16 @@
 	},
 /turf/open/floor/naturalstone,
 /area/rogue/outdoors/mountains/deception)
+"jp" = (
+/obj/effect/decal/rockedge{
+	dir = 8
+	},
+/obj/effect/decal/rockedge{
+	dir = 5
+	},
+/obj/effect/decal/rockedge,
+/turf/open/floor/snow/patchy,
+/area/rogue/outdoors/mountains/decap)
 "jv" = (
 /obj/effect/decal/rockedge,
 /obj/effect/decal/rockedge{
@@ -838,6 +855,12 @@
 /turf/open/floor/blocks/moss,
 /area/rogue/under/lavamonastery)
 "pe" = (
+/obj/effect/decal/rockedge{
+	dir = 10
+	},
+/obj/effect/decal/rockedge{
+	dir = 5
+	},
 /turf/open/floor/snow/patchy,
 /area/rogue/outdoors)
 "ph" = (
@@ -963,6 +986,13 @@
 	},
 /turf/open/floor/naturalstone,
 /area/rogue/under/mountains)
+"rR" = (
+/obj/effect/decal/rockedge,
+/obj/effect/decal/rockedge{
+	dir = 5
+	},
+/turf/open/floor/snow/patchy,
+/area/rogue/outdoors/mountains/decap)
 "rW" = (
 /turf/closed/mineral/random/high,
 /area/rogue/under/cavelava)
@@ -1901,6 +1931,16 @@
 	},
 /turf/open/floor/snow/patchy,
 /area/rogue/outdoors/mountains/deception)
+"KO" = (
+/obj/effect/decal/rockedge{
+	dir = 4
+	},
+/obj/effect/decal/rockedge{
+	dir = 9
+	},
+/obj/effect/decal/rockedge,
+/turf/open/floor/snow/patchy,
+/area/rogue/outdoors/mountains/decap)
 "KP" = (
 /obj/item/natural/bundle/stick,
 /turf/open/floor/naturalstone,
@@ -1936,6 +1976,15 @@
 "Lj" = (
 /turf/closed/mineral/bedrock,
 /area/rogue/indoors/cave/bear)
+"Ly" = (
+/obj/effect/decal/rockedge{
+	dir = 5
+	},
+/obj/effect/decal/rockedge{
+	dir = 9
+	},
+/turf/open/floor/snow/patchy,
+/area/rogue/outdoors/mountains/decap)
 "Ma" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/machinery/light/fueled/torchholder/l,
@@ -38936,7 +38985,7 @@ ZZ
 ZZ
 ZZ
 BL
-XX
+XL
 ZF
 XX
 XX
@@ -41154,7 +41203,7 @@ ZZ
 ZZ
 ZZ
 ZZ
-XX
+Mh
 ZF
 ZF
 XX
@@ -47812,7 +47861,7 @@ ZY
 ZY
 ZY
 ZY
-zK
+jp
 ZY
 ZY
 ZY
@@ -47943,7 +47992,7 @@ ZY
 ZY
 ZY
 ZZ
-vj
+rR
 ZY
 ZY
 ZY
@@ -48073,7 +48122,7 @@ ZY
 ZY
 ZY
 ZY
-ZF
+Xp
 ZY
 ZY
 ZY
@@ -48203,8 +48252,8 @@ ZY
 ZY
 ZY
 ZY
-ZF
-ZF
+vj
+Ly
 ZY
 ZY
 ZY
@@ -48333,7 +48382,7 @@ ZY
 ZY
 ZY
 ZZ
-vj
+ib
 ZY
 ZY
 ZY
@@ -48462,7 +48511,7 @@ ZY
 ZY
 ZY
 ZY
-Jz
+KO
 ZY
 ZY
 ZY

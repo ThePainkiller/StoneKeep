@@ -324,6 +324,7 @@
 	canSmoothWith = list(/turf/open/floor/grass,
 						/turf/open/floor/snow,
 						/turf/open/floor/snow/rough)
+	temperature = 250
 
 /turf/open/floor/grass/hell
 	icon = 'icons/turf/floors.dmi'
@@ -342,6 +343,7 @@
 	icon = 'icons/turf/floors.dmi'
 	canSmoothWith = list(
 						/turf/open/floor/snow)
+	temperature = 250
 
 /turf/open/floor/snow/rough
 	icon = 'icons/turf/floors.dmi'

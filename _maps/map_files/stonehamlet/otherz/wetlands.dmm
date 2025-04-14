@@ -1077,6 +1077,11 @@
 "wP" = (
 /turf/open/floor/dirt,
 /area/rogue/outdoors/bog/wetlands)
+"wT" = (
+/obj/structure/flora/grass/water/reeds,
+/obj/effect/spawner/map_spawner/enemy_fifty/honey_spider,
+/turf/open/floor/dirt/muddie,
+/area/rogue/outdoors/bog/wetlands/gator)
 "wW" = (
 /obj/effect/landmark/start/adventurerlate{
 	dir = 4
@@ -70551,12 +70556,12 @@ Kq
 mw
 wJ
 wJ
-wJ
+mx
 WH
 ON
 WH
 WH
-WH
+mx
 WH
 WH
 Cg
@@ -70753,12 +70758,12 @@ wJ
 wJ
 wJ
 wJ
-wJ
+mx
 wJ
 wJ
 wJ
 mw
-WH
+mx
 WH
 WH
 WH
@@ -70960,7 +70965,7 @@ WH
 FC
 WH
 WH
-WH
+mx
 WH
 WH
 Cg
@@ -72171,7 +72176,7 @@ wP
 wP
 wP
 ON
-at
+mx
 mx
 mx
 wP
@@ -73787,7 +73792,7 @@ eC
 WH
 wJ
 FC
-WH
+mx
 mx
 mx
 mx
@@ -73984,7 +73989,7 @@ uY
 kW
 WH
 WH
-WH
+mx
 WH
 wJ
 wJ
@@ -74186,7 +74191,7 @@ uY
 PM
 wP
 WH
-WH
+mx
 WH
 WH
 ON
@@ -74388,7 +74393,7 @@ Hs
 PM
 wP
 WH
-wJ
+mx
 wJ
 WH
 ON
@@ -74590,7 +74595,7 @@ Hs
 PM
 wP
 WH
-WH
+mx
 WH
 WH
 WH
@@ -74792,7 +74797,7 @@ Hs
 PM
 wP
 WH
-ky
+mx
 WH
 WH
 wP
@@ -75196,7 +75201,7 @@ uY
 PM
 at
 wP
-WH
+mx
 WH
 WH
 wJ
@@ -76229,8 +76234,8 @@ Mi
 Mi
 Mi
 Xv
-Xv
-Xv
+oL
+oL
 Xv
 Mi
 Mi
@@ -76431,9 +76436,9 @@ Mi
 Mi
 Mi
 Xv
-kG
-Xv
-Xv
+wT
+oL
+oL
 Xv
 Mi
 Mi
@@ -76633,7 +76638,7 @@ Mi
 Mi
 Mi
 Mi
-Kd
+iC
 Xv
 Kd
 Mi

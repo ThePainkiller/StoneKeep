@@ -25,6 +25,7 @@
 
 /datum/outfit/job/stonekeep/butler/pre_equip(mob/living/carbon/human/H)
 	..()
+	armor = /obj/item/clothing/armor/leather/vest/butler
 	backr = /obj/item/storage/backpack/satchel
 	belt = /obj/item/storage/belt/leather
 	beltl = /obj/item/storage/belt/pouch/coins/mid
@@ -51,10 +52,9 @@
 		pants = /obj/item/clothing/pants/tights/uncolored
 		shirt = /obj/item/clothing/shirt/undershirt/uncolored
 		shoes = /obj/item/clothing/shoes/nobleboot
-		armor = /obj/item/clothing/armor/leather/vest/butler
 
 	else
-		pants = /obj/item/clothing/pants/tights/stockings/white
+//		pants = /obj/item/clothing/pants/tights/stockings/white
 		shirt = /obj/item/clothing/shirt/dress/gen/maid
 		shoes = /obj/item/clothing/shoes/simpleshoes
 		cloak = /obj/item/clothing/cloak/apron

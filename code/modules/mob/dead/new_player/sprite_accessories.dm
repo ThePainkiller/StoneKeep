@@ -476,13 +476,13 @@
 	icon_state = "damsel"
 	gender = FEMALE
 	specuse = list("human", "aasimar", "tiefling", "halforc")
-
+/* just ugly
 /datum/sprite_accessory/hair/empress
 	name = "Empress"
 	icon_state = "empress_f"
 	gender = FEMALE
 	specuse = list("human", "dwarf", "elf", "aasimar", "tiefling", "halforc")
-
+*/
 /datum/sprite_accessory/hair/fancy_femelf
 	name = "Fancy"
 	icon_state = "fancy_elf_f"

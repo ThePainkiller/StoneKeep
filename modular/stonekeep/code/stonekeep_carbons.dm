@@ -249,6 +249,9 @@
 			r_hand = /obj/item/weapon/polearm/spear/stone
 
 // -------------------		SAVAGE ORC LOOTER		--------------------------
+
+
+
 /mob/living/carbon/human/species/orc/skilled/looter
 	name = "savage orc looter"
 
@@ -598,7 +601,10 @@
 
 
 
-/mob/living/carbon/human/species/human/northern/bum/ambush/outlaw
+/mob/living/carbon/human/species/human/northern/bum/ambush/Initialize()
+	. = ..()
+	dir = pick(GLOB.cardinals)
+	step(src, dir)
 
 /mob/living/carbon/human/species/human/northern/bum/ambush/outlaw/after_creation()
 	..()
@@ -723,6 +729,13 @@
 	dodge_prob = 70
 
 
+/mob/living/simple_animal/hostile/Initialize()
+	. = ..()
+	dir = pick(GLOB.cardinals)
+	step(src, dir)
+
+
+
 // ===================================================================================
 /*	..................	The Insane Jester   ................... */
 
@@ -819,3 +832,19 @@
 	icon_state = "skull"
 	headprice = 12
 	adventurer_artefact = TRUE
+
+
+
+/mob/living/carbon/human/species/skeleton/npc/ambush/Initialize()
+	. = ..()
+	dir = pick(GLOB.cardinals)
+	step(src, dir)
+
+/mob/living/carbon/human/species/skeleton/npc/ambush/uneqipped
+	equipped = FALSE
+
+
+/mob/living/carbon/human/species/goblin/npc/ambush/Initialize()
+	. = ..()
+	dir = pick(GLOB.cardinals)
+	step(src, dir)

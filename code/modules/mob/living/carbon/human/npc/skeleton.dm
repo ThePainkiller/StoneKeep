@@ -34,7 +34,7 @@
 	simpmob_defend = 0
 	wander = TRUE
 	attack_speed = -10
-
+	var/equipped = TRUE
 /mob/living/carbon/human/species/skeleton/Initialize()
 	. = ..()
 	cut_overlays()
@@ -210,7 +210,8 @@
 	ADD_TRAIT(src, TRAIT_HEAVYARMOR, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_EASYDISMEMBER, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_CRITICAL_WEAKNESS, TRAIT_GENERIC)
-	equipOutfit(new /datum/outfit/job/species/skeleton/npc/random)
+	if(equipped)
+		equipOutfit(new /datum/outfit/job/species/skeleton/npc/random)
 	dodgetime = 15
 	canparry = TRUE
 	flee_in_pain = FALSE

@@ -43,8 +43,6 @@
 /datum/job/miner,
 
 /datum/job/feldsher,
-/datum/job/farmer,
-/datum/job/grabber,
 /datum/job/templar,
 /datum/job/undertaker,
 /datum/job/men_at_arms,
@@ -52,7 +50,7 @@
 /datum/job/wapprentice,
 /datum/job/inquisitor,
 /datum/job/monk,
-
+/datum/job/gatemaster,
 		)
 /*
 /datum/map_adjustment/stonehamlet/job_change()

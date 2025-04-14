@@ -7,7 +7,7 @@
 	)
 	outfit = /datum/outfit/job/sk_migration/antag/zherald
 	grant_lit_torch = FALSE
-//	antag_datum = /datum/antagonist/zizocultist/leader
+	antag_datum = /datum/antagonist/zizocultist
 
 /datum/migrant_role/sk/zizo/herald/after_spawn(mob/living/carbon/human/character)
 	. = ..()
@@ -86,7 +86,7 @@
 	)
 //	outfit = /datum/outfit/job/sk_migration/antag/zhellgobbo
 	grant_lit_torch = FALSE
-//	antag_datum = /datum/antagonist/hellgoblin
+	antag_datum = /datum/antagonist/zizocultist
 /*
 /datum/outfit/job/sk_migration/antag/zhellgobbo/pre_equip(mob/living/carbon/human/H, visualsOnly, announce, latejoin, datum/outfit/outfit_override, client/preference_source)
 	. = ..()

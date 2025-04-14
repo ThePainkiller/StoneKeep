@@ -152,8 +152,7 @@
 	ambush_types = list(
 				/turf/open/floor/dirt)
 	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/troll = 20,
-				/mob/living/carbon/human/species/skeleton/skilled/fighter = 15,
+				/mob/living/carbon/human/species/skeleton/npc/ambush = 15,
 				/mob/living/carbon/human/species/goblin/npc/ambush/hell = 50)
 
 /area/rogue/outdoors/mountains/decap
@@ -162,9 +161,8 @@
 	ambush_types = list(
 				/turf/open/floor/snow)
 	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/troll = 15,
-				/mob/living/carbon/human/species/skeleton/skilled/unarmed = 25,
-				/mob/living/carbon/human/species/skeleton/skilled/fighter = 25)
+				/mob/living/simple_animal/hostile/retaliate/troll = 5,
+				/mob/living/carbon/human/species/skeleton/npc/ambush = 50)
 	droning_sound = 'sound/music/area/decap.ogg'
 	droning_sound_dusk = null
 	droning_sound_night = null
@@ -220,23 +218,28 @@
 				/mob/living/simple_animal/hostile/retaliate/bigrat = 30,
 				/mob/living/carbon/human/species/goblin/npc/ambush/cave = 5,
 				/mob/living/simple_animal/hostile/retaliate/mole = 10)
+	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
 
 /area/rogue/under/town/caverogue/deep
 	first_time_text = "DEEP MINESHAFT"
+	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
 
 /area/rogue/indoors/towerofwise
 	name = "danger (tower of the wise)"
 	icon_state = "cave"
+	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
 
 /area/rogue/indoors/cave/volf
 	name = "danger (volf cave)"
 	icon_state = "cave"
 	ambush_mobs = list(
 				/mob/living/simple_animal/hostile/retaliate/wolf)
+	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
 
 /area/rogue/indoors/cave/bear
 	name = "danger (bear cave)"
 	icon_state = "cave"
+	droning_sound = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
 
 /area/rogue/indoors/shelter/woods/spider
 	name = "danger (spider nest)"

@@ -278,8 +278,7 @@
 			if(user.mind && !user.buckled)
 				var/drained = max(15 - (user.mind.get_skill_level(/datum/skill/misc/swimming) * 5), 1)
 //				drained += (user.checkwornweight()*2)
-				if(!user.check_armor_skill())
-					drained += 40
+				drained += user.get_encumbrance() * 50
 				if(!user.adjust_stamina(drained))
 					user.Immobilize(30)
 					addtimer(CALLBACK(user, TYPE_PROC_REF(/mob/living, Knockdown), 30), 10)
@@ -727,7 +726,7 @@
 		return
 	if(isliving(AM) || isitem(AM))
 		if(!river_processing)
-			river_processing = addtimer(CALLBACK(src, PROC_REF(process_river)), 5, TIMER_STOPPABLE)
+			river_processing = addtimer(CALLBACK(src, PROC_REF(process_river)), 4, TIMER_STOPPABLE)	// STONEKEEP EDIT 5 to 4
 
 /turf/open/water/river/proc/process_river()
 	river_processing = null

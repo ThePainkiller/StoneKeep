@@ -11,6 +11,9 @@
 | Better Floors |
 \--------------*/
 
+/turf/open/water/river
+	slowdown = 30
+
 /turf/open/floor/wood
 	smooth_icon = 'modular/stonekeep/icons/wood.dmi'
 /turf/open/floor/wood/nosmooth
@@ -338,12 +341,20 @@
 /turf/open/floor/snow
 	icon = 'icons/turf/floors.dmi'
 	canSmoothWith = list(
-						/turf/open/floor/snow/rough)
+						/turf/open/floor/snow)
 
 /turf/open/floor/snow/rough
 	icon = 'icons/turf/floors.dmi'
 
-
+/obj/effect/decal/rockedge
+	name = ""
+	desc = ""
+	icon = 'modular/stonekeep/icons/turfs.dmi'
+	icon_state = "rockedge1"
+	mouse_opacity = 0
+/obj/effect/decal/rockedge/Initialize()
+	. = ..()
+	icon_state = pick("rockedge1", "rockedge2", "rockedge3")
 
 /*	..................   Dirt   ................... */
 

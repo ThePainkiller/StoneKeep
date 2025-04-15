@@ -13,6 +13,7 @@
 	move_to_delay = 2
 	vision_range = 5
 	aggro_vision_range = 5
+	footstep_type = FOOTSTEP_MOB_HEAVY
 
 	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/steak = 2)
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/steak = 4,

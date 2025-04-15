@@ -129,7 +129,7 @@
 	color = "#caa3a3"
 	spawned = list(
 //		/obj/structure/idle_enemy/savage_orc_chieftain = 100
-		/mob/living/carbon/human/species/orc/warlord = 100
+		/mob/living/carbon/human/species/orc/npc/ambush/warlord = 100
 		)
 
 /*	..................   Haunts Enemy    ................... */

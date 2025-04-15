@@ -48,6 +48,18 @@
 	flee_in_pain = FALSE
 	wander = TRUE
 
+/mob/living/carbon/human/species/orc/npc/ambush/warlord/after_creation()
+	..()
+	job = "Warlord Orc"
+	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
+	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
+	equipOutfit(new /datum/outfit/job/npc/orc/warlord)
+	dodgetime = 15
+	canparry = TRUE
+	flee_in_pain = FALSE
+	wander = TRUE
+
+
 /obj/item/bodypart/chest/orc
 	dismemberable = 1
 /obj/item/bodypart/l_arm/orc

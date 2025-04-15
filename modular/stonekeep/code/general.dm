@@ -781,7 +781,7 @@
 
 /obj/structure/fluff/psycross/crafted/shrine/malum/Initialize()
 	. = ..()
-	addtimer(CALLBACK(src, /obj/structure/fluff/psycross/crafted/shrine/malum/proc/has_the_temple_been_purified), 1 MINUTES) // ROGTODO set to 90 minutws once debugged
+	addtimer(CALLBACK(src, /obj/structure/fluff/psycross/crafted/shrine/malum/proc/has_the_temple_been_purified), 60 MINUTES)
 
 /obj/structure/fluff/psycross/crafted/shrine/malum/attackby(obj/item/A, mob/user, params)
 	if(istype(A, /obj/item/ore/coal))

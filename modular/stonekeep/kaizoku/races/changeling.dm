@@ -138,7 +138,7 @@ Future plan:
 	"white - oceanid" = "b8d4de"
 
 	))
-
+/*	This using the older proc causes runtimes, if possible adapt to new below ROGTODO
 /datum/species/abyssariad/changeling/random_name(gender,unique,lastname)
 	var/static/list/male_names = world.file2list("modular/stonekeep/kaizoku/strings/names/abyssnorm.txt")
 	var/static/list/female_names = world.file2list("modular/stonekeep/kaizoku/strings/names//abyssnorf.txt")
@@ -158,3 +158,14 @@ Future plan:
 
 /datum/species/abyssariad/changeling/random_surname()
 	return " [pick(world.file2list("modular/stonekeep/kaizoku/strings/names/abyssnorlast.txt"))]"
+*/
+
+/datum/species/abyssariad/changeling/get_possible_names(gender = MALE)
+	var/static/list/male_names = world.file2list('modular/stonekeep/kaizoku/strings/names/onim.txt')
+	var/static/list/female_names = world.file2list('modular/stonekeep/kaizoku/strings/names/onif.txt')
+	return (gender == FEMALE) ? female_names : male_names
+
+/datum/species/abyssariad/changeling/get_possible_surnames(gender = MALE)
+	var/static/list/last_names = world.file2list('modular/stonekeep/kaizoku/strings/names/abyssnorm.txt')
+	return last_names
+

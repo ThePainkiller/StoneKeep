@@ -196,7 +196,7 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 	var/datum/browser/popup = new(src, "Nautical Oath", "Warning. This is a RP tool, not a guideline or forced directions.", 500, 600)
 	popup.set_content(html_content)
 	popup.open()
-
+/* Seems somewhat redundant?
 /datum/species/abyssariad/handle_speech(datum/source, list/speech_args)
 	var/message = speech_args[SPEECH_MESSAGE]
 	if(message)
@@ -254,7 +254,7 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 					message = replacetextEx(message, " [key]", " [value]")
 
 	speech_args[SPEECH_MESSAGE] = trim(message)
-
+*/
 ////////////////////////////////////
 // 	 Skylancer Unique Perks 	  //
 //   Bird sounds                  //

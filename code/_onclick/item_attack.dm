@@ -105,6 +105,7 @@
 	var/tempatarget = null
 	var/pegleg = 0			//Handles check & slowdown for peglegs. Fuckin' bootleg, literally, but hey it at least works.
 	var/pet_passive = FALSE
+	var/abyssariadraider = FALSE //Code for abyssariad NPCs, solely.
 
 /obj/item/proc/attack(mob/living/M, mob/living/user)
 	if(SEND_SIGNAL(src, COMSIG_ITEM_ATTACK, M, user) & COMPONENT_ITEM_NO_ATTACK)

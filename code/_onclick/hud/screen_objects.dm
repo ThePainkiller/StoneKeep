@@ -675,6 +675,9 @@
 /atom/movable/screen/rogmove/sprint/toggle(mob/user)
 	if(isobserver(user))
 		return
+	if(user.is_flying()) //Another stonekeep change.
+		to_chat(user, "<span class='warning'>My wings cannot get any faster.</span>")
+		return
 	if(user.m_intent == MOVE_INTENT_RUN)
 		user.toggle_rogmove_intent(MOVE_INTENT_WALK)
 	else
@@ -1341,7 +1344,6 @@
 	if (ishuman(usr))
 		var/mob/living/carbon/human/H = usr
 		H.check_for_injuries(H)
-		to_chat(H, "I am [H.get_encumbrance() * 100]% Encumbered")
 
 /atom/movable/screen/mood
 	name = "mood"
@@ -1360,7 +1362,6 @@
 		var/mob/living/carbon/human/H = usr
 		if(modifiers["left"])
 			H.check_for_injuries(H)
-			to_chat(H, "I am [H.get_encumbrance() * 100]% Encumbered")
 		if(modifiers["right"])
 			if(!H.mind)
 				return

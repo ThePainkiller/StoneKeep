@@ -1816,7 +1816,6 @@
 	randomspread = 1
 	spread = 0
 	can_parry = TRUE
-	pin = /obj/item/firing_pin
 	force = 10
 	var/cocked = FALSE
 	cartridge_wording = "bolt"
@@ -1906,7 +1905,7 @@
 	update_icon()
 
 /obj/item/ammo_box/magazine/internal/shot/xxbow
-	ammo_type = /obj/item/ammo_casing/caseless/rogue/bolt
+	ammo_type = /obj/item/ammo_casing/caseless/bolt
 	caliber = "regbolt"
 	max_ammo = 8
 	start_empty = TRUE
@@ -1934,14 +1933,14 @@
 	var/overlay_icon = "normal" //Overlay for normal bolts, or bolts someone else made which the creator forgot to make an overlay for the Repeating Crossbow
 
 	switch(CB.type)
-		if(/obj/item/ammo_casing/caseless/rogue/bolt/pyro)
+		if(/obj/item/ammo_casing/caseless/bolt/pyro)
 			overlay_icon = "fire"
-		if(/obj/item/ammo_casing/caseless/rogue/bolt/poison)
+		if(/obj/item/ammo_casing/caseless/bolt/poison)
 			overlay_icon = "poison"
-		if(/obj/item/ammo_casing/caseless/rogue/bolt/poison/fog)
+		if(/obj/item/ammo_casing/caseless/bolt/poison/fog)
 			overlay_icon = "fog"
 
-	return mutable_appearance('icons/roguetown/kaizoku/weapons/bows.dmi', overlay_icon)
+	return mutable_appearance('modular/stonekeep/kaizoku/icons/weapons/bows.dmi', overlay_icon)
 
 obj/item/gun/ballistic/revolver/grenadelauncher/chukonu/examine(mob/user)
 	. = ..()

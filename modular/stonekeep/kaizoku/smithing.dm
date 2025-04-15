@@ -99,7 +99,7 @@
 	recipe_name = "a Kikko Leather Do"
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/natural/hide, /obj/item/natural/hide)
-	created_item = /obj/item/clothing/armor/leather/studded/kikko
+	created_item = /obj/item/clothing/armor/leather/splint/kikko
 	craftdiff = 1
 //cheaper on iron, but has many sticks. Proper for this armor's context.
 /datum/anvil_recipe/armor/rattanarmor
@@ -165,7 +165,7 @@
 	name = "Hachigane x2"
 	recipe_name = "a pair of Hachinage"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/head/helmet/kaizoku/hachigane
+	created_item = /obj/item/clothing/head/helmet/skullcap/hachigane
 	createmultiple = TRUE
 	createditem_num = 1
 
@@ -173,7 +173,7 @@
 	name = "Iron Woven Rattan Helmet x2 (3s)"
 	recipe_name = "a pair of Rattan Helmets"
 	req_bar = /obj/item/ingot/iron
-	created_item = /obj/item/clothing/head/helmet/kaizoku/rattan
+	created_item = /obj/item/clothing/head/helmet/ironpot/rattan
 	additional_items = list(/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick)
 	createmultiple = TRUE
 	createditem_num = 1
@@ -215,7 +215,7 @@
 	name = "Conical Ashigaru helmet x2"
 	recipe_name = "a pair of Jingasas"
 	req_bar = /obj/item/ingot/steel
-	created_item = /obj/item/clothing/head/helmet/kaizoku/jingasa
+	created_item = /obj/item/clothing/head/helmet/kettle/jingasa
 	createmultiple = TRUE
 	createditem_num = 1
 	craftdiff = 2

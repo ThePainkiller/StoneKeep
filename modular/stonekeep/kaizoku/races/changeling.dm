@@ -37,7 +37,7 @@ Future plan:
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS)
 	inherent_traits = list(TRAIT_NOMOBSWAP)
-	default_features = list("mcolor" = "FFF", "ears" = "Upright", "tail" = "Onetail" )
+	default_features = list("mcolor" = "FFF", "ears" = "Upright", "tail_human" = "Onetail")
 	use_skintones = 1
 	possible_ages = list(AGE_IMMORTAL) //Abyssariads are Immortal. However, if they become stray from Abyssor - they suffer severe dementia, and after some decades, become Dais.
 //	skinned_type = /obj/item/stack/sheet/animalhide/human
@@ -67,8 +67,8 @@ Future plan:
 	// Qualities: +Dense muscles ; higher fast-twitch fiber
 	// =>Disadvantage: -Lower Stationary Acuity; They are better at noticing movements, bad at noticing stationary objects. Bad with bows by nature. Foxes have that IRL because of nightvision. At least they have more reason to have it than Dark Elves.
 	// -Low fat mass, high muscle mass. Streamlined body structure that minimizes resistance and maximizes intense muscular movements.
-	specstats = list("strength" = 0, "perception" = -2, "intelligence" = 2, "constitution" = -1, "endurance" = 1, "speed" = 1, "fortune" = 0) // Don't even bother making each gender different. Abyssariads are equals in championage.
-	specstats_f = list("strength" = 0, "perception" = -2, "intelligence" = 2, "constitution" = -1, "endurance" = 1, "speed" = 1, "fortune" = 0)
+	specstats = list("strength" = 1, "perception" = -2, "intelligence" = 2, "constitution" = -1, "endurance" = 1, "speed" = 1, "fortune" = 0) // Don't even bother making each gender different. Abyssariads are equals in championage.
+	specstats_f = list("strength" = 1, "perception" = -2, "intelligence" = 2, "constitution" = -1, "endurance" = 1, "speed" = 1, "fortune" = 0)
 	enflamed_icon = "widefire"
 	mutanttongue = /obj/item/organ/tongue/kitsune
 //	minrace_pq = 0
@@ -135,48 +135,26 @@ Future plan:
 
 	"white - platinum" = "f8f3f3",
 	"white - silver" = "ddddc8",
-	"white - oceanid" = "141f1f"
+	"white - oceanid" = "b8d4de"
 
 	))
 
 /datum/species/abyssariad/changeling/random_name(gender,unique,lastname)
+	var/static/list/male_names = world.file2list("modular/stonekeep/kaizoku/strings/names/abyssnorm.txt")
+	var/static/list/female_names = world.file2list("modular/stonekeep/kaizoku/strings/names//abyssnorf.txt")
+
+	var/list/names = (gender == FEMALE) ? female_names : male_names
 	var/randname
+
 	if(unique)
-		if(gender == MALE)
-			for(var/i in 1 to 10)
-				randname = pick( world.file2list("strings/rt/names/abyssariad/abyssnorm.txt") )
-				if(!findname(randname))
-					break
-		if(gender == FEMALE)
-			for(var/i in 1 to 10)
-				randname = pick( world.file2list("strings/rt/names/abyssariad/abyssnorf.txt") )
-				if(!findname(randname))
-					break
+		for(var/i in 1 to 10)
+			randname = pick(names)
+			if(!findname(randname))
+				break
 	else
-		if(gender == MALE)
-			randname = pick( world.file2list("strings/rt/names/abyssariad/abyssnorm.txt") )
-		if(gender == FEMALE)
-			randname = pick( world.file2list("strings/rt/names/abyssariad/abyssnorf.txt") )
-	randname += " Clanless"
-	return randname
+		randname = pick(names)
+
+	return "[randname] Clanless"
 
 /datum/species/abyssariad/changeling/random_surname()
-	return " [pick(world.file2list("strings/rt/names/abyssariad/abyssnorlast.txt"))]"
-
-// Commented out. All this was a code FAILURE by my part, and I require help.
-/*
-/datum/species/abyssariad/changeling/can_wag_tongue(mob/living/carbon/human/H)
-	return ("kitsune_tongue" in mutant_bodyparts) || ("waggingkitsune_tongue" in mutant_bodyparts)
-/datum/species/abyssariad/changeling/is_wagging_tongue(mob/living/carbon/human/H)
-	return ("waggingkitsune_tongue" in mutant_bodyparts)
-/datum/species/abyssariad/changeling/start_wagging_tongue(mob/living/carbon/human/H)
-	if("changeling" in mutant_bodyparts)
-		mutant_bodyparts -= "kitsune_tongue"
-		mutant_bodyparts |= "waggingkitsune_tongue"
-	H.update_body()
-/datum/species/abyssariad/changeling/stop_wagging_tongue(mob/living/carbon/human/H)
-	if("waggingkitsune_tongue" in mutant_bodyparts)
-		mutant_bodyparts -= "waggingkitsune_tongue"
-		mutant_bodyparts |= "kitsune_tongue"
-	H.update_body()
-*/
+	return " [pick(world.file2list("modular/stonekeep/kaizoku/strings/names/abyssnorlast.txt"))]"

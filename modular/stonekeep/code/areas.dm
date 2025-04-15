@@ -267,7 +267,7 @@
 	ambush_types = list(
 				/turf/open/water/swamp)
 	ambush_mobs = list(
-				/mob/living/carbon/human/species/skeleton/skilled/unarmed = 30,
+				/mob/living/simple_animal/hostile/skeleton = 30,
 				/mob/living/simple_animal/hostile/retaliate/bigrat = 10)
 	converted_type = /area/rogue/outdoors/caves
 
@@ -325,6 +325,6 @@
 	ambush_types = list(
 				/turf/open/water/swamp)
 	ambush_mobs = list(
-				/mob/living/carbon/human/species/skeleton/skilled/unarmed = 30,
+				/mob/living/simple_animal/hostile/skeleton = 30,
 				/mob/living/simple_animal/hostile/retaliate/bigrat = 10)
 

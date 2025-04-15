@@ -1339,3 +1339,34 @@
 /datum/sprite_accessory/facial_hair/hermit
 	name = "Wise Hermit"
 	icon_state = "facial_moonshiner"
+
+
+/mob/living/simple_animal/hostile/haunt
+	alpha = 180
+	maxHealth = 50
+	health = 50
+	stat_attack = UNCONSCIOUS
+
+	speed = 1
+	move_to_delay = 5 //delay for the automated movement.
+	melee_damage_lower = 15
+	melee_damage_upper = 20
+	speak_emote = list("groans")
+	defdrain = 20
+
+	base_fortune = 11
+	base_constitution = 6
+	base_strength = 6
+	base_speed = 12
+
+	simple_detect_bonus = 20
+
+	defprob = 35
+
+	del_on_deaggro = 30 MINUTES
+	dodgetime = 17
+
+	///this mob was updated to new ai
+	AIStatus = AI_OFF
+	can_have_ai = FALSE
+	ai_controller = /datum/ai_controller/spider

@@ -11,7 +11,6 @@
 		"Dwarf",
 		"Tiefling",
 		"Dark Elf",
-		"Undine"
 	)
 
 	tutorial = "The Grenzelhofts were known for their Jesters, wisemen with a tongue just as sharp as their wit. \

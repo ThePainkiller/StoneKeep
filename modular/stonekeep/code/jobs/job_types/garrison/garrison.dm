@@ -103,7 +103,7 @@ Design philosphy:
 	backr = /obj/item/weapon/shield/wood/rattan
 	beltr = /obj/item/weapon/sword/scimitar/messer/dao
 	beltl = /obj/item/weapon/mace/ararebo
-	backpack_contents = list(/obj/item/storage/keyring/manorguard)
+	backpack_contents = list(/obj/item/storage/keyring/garrison)
 
 	//Stats for class
 	H.mind?.adjust_skillrank(/datum/skill/combat/shields, 3, TRUE)
@@ -134,7 +134,7 @@ Design philosphy:
 	neck = /obj/item/clothing/neck/gorget
 	head = /obj/item/clothing/head/helmet/kettle/jingasa
 	beltr = /obj/item/weapon/sword/scimitar/messer/dao
-	backpack_contents = list(/obj/item/storage/keyring/manorguard)
+	backpack_contents = list(/obj/item/storage/keyring/garrison)
 
 	//Stats for class
 	H.mind?.adjust_skillrank(/datum/skill/combat/polearms, 3, TRUE)
@@ -185,7 +185,7 @@ Design philosphy:
 	wrists = /obj/item/clothing/wrists/bracers/leather/khudagach
 	beltr = /obj/item/ammo_holder/quiver/arrows
 	beltl = /obj/item/weapon/knife/steel/tanto
-	backpack_contents = list(/obj/item/storage/keyring/manorguard)
+	backpack_contents = list(/obj/item/storage/keyring/garrison)
 
 	//Stats for class
 	H.mind?.adjust_skillrank(/datum/skill/combat/bows, 3, TRUE)
@@ -230,7 +230,7 @@ Design philosphy:
 	head = /obj/item/clothing/head/tengai/gasa
 	neck = /obj/item/clothing/neck/chaincoif/karuta_zukin/military
 	beltl = /obj/item/weapon/knife/steel/tanto
-	backpack_contents = list(/obj/item/storage/keyring/manorguard)
+	backpack_contents = list(/obj/item/storage/keyring/garrison)
 
 	H.mind?.adjust_skillrank(/datum/skill/combat/swords, 3, TRUE)
 	H.mind?.adjust_skillrank(/datum/skill/combat/knives, 3, TRUE)

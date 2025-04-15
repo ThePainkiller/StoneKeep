@@ -29,13 +29,6 @@
 	mind.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
 
 // -------------------		UNARMED SKELLY		--------------------------
-/mob/living/carbon/human/species/skeleton/skilled/unarmed
-	name = "animated skeleton"
-
-/mob/living/carbon/human/species/skeleton/skilled/unarmed/after_creation()
-	..()
-	equipOutfit(new /datum/outfit/job/roguetown/species/skeleton/skilled/unarmed)
-
 /datum/outfit/job/roguetown/species/skeleton/skilled/unarmed/pre_equip(mob/living/carbon/human/H)
 	..()
 	if(prob(50))
@@ -60,12 +53,6 @@
 		r_hand = /obj/item/weapon/mace/woodclub
 
 // -------------------		FIGHTER SKELLY		--------------------------
-/mob/living/carbon/human/species/skeleton/skilled/fighter
-	name = "animated skeleton"
-
-/mob/living/carbon/human/species/skeleton/skilled/fighter/after_creation()
-	..()
-	equipOutfit(new /datum/outfit/job/roguetown/species/skeleton/skilled/fighter)
 
 /mob/living/carbon/human/species/skeleton/skilled/fighter/configure_mind()
 	if(!mind)
@@ -128,36 +115,10 @@
 			neck = /obj/item/clothing/neck/chaincoif
 
 
-/mob/living/carbon/human/species/skeleton/skilled/ancient
-	name = "ancient skeleton"
-	skel_outfit = /datum/outfit/job/ancient_skeleton
-
-/mob/living/carbon/human/species/skeleton/skilled/ancient/configure_mind()
-	if(!mind)
-		mind = new /datum/mind(src)
-
-	mind.adjust_skillrank(/datum/skill/combat/polearms, 2, TRUE)
-	mind.adjust_skillrank(/datum/skill/combat/swords, 2, TRUE)
-	mind.adjust_skillrank(/datum/skill/combat/wrestling, 4, TRUE)
-	mind.adjust_skillrank(/datum/skill/combat/unarmed, 4, TRUE)
-	mind.adjust_skillrank(/datum/skill/combat/knives, 2, TRUE)
-	mind.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
-	mind.adjust_skillrank(/datum/skill/combat/shields, 2, TRUE)
-	mind.adjust_skillrank(/datum/skill/combat/whipsflails, 2, TRUE)
-
-/datum/outfit/job/ancient_skeleton/pre_equip(mob/living/carbon/human/H)
-	..()
-	H.STASTR = 12
-	H.base_strength = rand(13,14)
-	H.base_speed = 8
-	H.base_constitution = 9
-	H.base_endurance = 15
-	H.base_intelligence = 1
-
-
 
 // ===================================================================================
 // -------------------		ORC SKILLED CORE		--------------------------
+
 /mob/living/carbon/human/species/orc/skilled
 	initial_language_holder = /datum/language_holder/orc
 

@@ -314,9 +314,6 @@
 	in_use = FALSE
 	update_icon() //the section below handles roles and admin logging
 	var/dat = "[key_name(user)] has despawned [departing_mob == user ? "themselves" : departing_mob], job [departing_mob.job], at [AREACOORD(src)]. Contents despawned along:"
-	if(departing_mob.mind)
-		var/datum/job/mob_job = departing_mob.mind.assigned_role
-		mob_job.adjust_current_positions(-1)
 	if(!length(departing_mob.contents))
 		dat += " none."
 	else
@@ -329,6 +326,7 @@
 	message_admins(dat)
 	log_admin(dat)
 	say(span_notice("[departing_mob == user ? "Out of their own volition, " : "Ushered by [user], "][departing_mob] is departing."))
+	cryo_mob(departing_mob)
 	var/mob/dead/new_player/newguy = new()
 	newguy.ckey = departing_mob.ckey
 	qdel(departing_mob)
@@ -490,7 +488,7 @@
 
 /obj/structure/fluff/walldeco/xylixhint/Initialize()
 	. = ..()
-	if (GLOB.round_id % 2) // if round ID number is uneven
+	if ((GLOB.round_id) % 2) // if round ID number is uneven
 		icon_state = "wall_sad"
 
 /obj/structure/fluff/walldeco/xylixhint_danger

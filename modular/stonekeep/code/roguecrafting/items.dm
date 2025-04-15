@@ -660,7 +660,7 @@
 	result = /obj/item/weapon/surgery/retractor/improv
 	reqs = list(/obj/item/natural/fibers = 1, /obj/item/grown/log/tree/stick = 2)
 	craftdiff = 1
-
+/* back to slapcraft since the recipes are only in the Vanderbook describing painting, too confusing like this
 // ---------	PAINTING		-------------
 /datum/crafting_recipe/roguetown/canvas
 	name = "painting (canvas)"
@@ -681,5 +681,5 @@
 	reqs = list(/obj/item/grown/log/tree/stick = 1,
 		/obj/item/natural/wood/plank = 1)
 	craftdiff = 1
-
+*/
 

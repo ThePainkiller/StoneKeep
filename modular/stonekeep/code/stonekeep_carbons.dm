@@ -823,7 +823,7 @@
 
 /atom/movable/screen/alert/status_effect/buff/xylix_cap
 	name = "I feel lucky"
-	desc = "<span class='nicegreen'>My hat attracts lucky waves from Xylix...</span>\n"
+	desc = "<span class='nicegreen'>My hat makes me feel more in tune with the spirit of Xylix...</span>\n"
 	icon = 'icons/mob/actions/roguespells.dmi'
 	icon_state = ""
 

@@ -129,8 +129,8 @@
 	return message_language.spans
 
 /datum/species/abyssariad/ogrun/random_name(gender,unique,lastname)
-	var/static/list/male_names = world.file2list("modular/stonekeep/kaizoku/strings/names/onim.txt")
-	var/static/list/female_names = world.file2list("modular/stonekeep/kaizoku/strings/names/onif.txt")
+	var/static/list/male_names = world.file2list('modular/stonekeep/kaizoku/strings/names/onim.txt')
+	var/static/list/female_names = world.file2list('modular/stonekeep/kaizoku/strings/names/onif.txt')
 
 	var/list/names = (gender == FEMALE) ? female_names : male_names
 	var/randname
@@ -146,4 +146,16 @@
 	return "[randname] Clanless"
 
 /datum/species/abyssariad/ogrun/random_surname()
-	return " [pick(world.file2list("modular/stonekeep/kaizoku/strings/names/abyssnorm.txt"))]"
+	return " [pick(world.file2list('modular/stonekeep/kaizoku/strings/names/abyssnorm.txt'))]"
+
+
+/*
+/datum/species/abyssariad/ogrun/get_possible_names(gender = MALE)
+	var/static/list/male_names = world.file2list('strings/rt/names/human/humnorm.txt')
+	var/static/list/female_names = world.file2list('strings/rt/names/human/humnorf.txt')
+	return (gender == FEMALE) ? female_names : male_names
+
+/datum/species/abyssariad/ogrun/get_possible_surnames(gender = MALE)
+	var/static/list/last_names = world.file2list('strings/rt/names/human/humnorlast.txt')
+	return last_names
+*/

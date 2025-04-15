@@ -779,6 +779,10 @@
 	var/refueled
 	var/on
 
+/obj/structure/fluff/psycross/crafted/shrine/malum/Initialize()
+	. = ..()
+	addtimer(CALLBACK(src, /obj/structure/fluff/psycross/crafted/shrine/malum/proc/has_the_temple_been_purified), 1 MINUTES) // ROGTODO set to 90 minutws once debugged
+
 /obj/structure/fluff/psycross/crafted/shrine/malum/attackby(obj/item/A, mob/user, params)
 	if(istype(A, /obj/item/ore/coal))
 		if(refueled)
@@ -817,6 +821,24 @@
 				playsound(H, 'modular/stonekeep/sound/triumph_w.ogg', 100, FALSE, -5)
 			else
 				H.apply_status_effect(/datum/status_effect/buff/craft_buff)
+
+/obj/structure/fluff/psycross/crafted/shrine/malum/proc/has_the_temple_been_purified()
+//	if(!on)
+	shrine_not_purified()
+
+/obj/structure/fluff/psycross/crafted/shrine/malum/proc/shrine_not_purified()
+	var/outcome = rand(1,100)
+	switch(outcome)
+		if(1 to 40)
+			var/datum/round_event_control/haunts/HA = new()
+			HA.runEvent()
+		if(41 to 70)
+			var/datum/round_event_control/skellyinvade/SI = new()
+			SI.runEvent()
+		if(71 to 100)
+			var/datum/round_event_control/gobinvade/GI = new()
+			GI.runEvent()
+
 
 
 /obj/structure/chair/pew
@@ -1265,3 +1287,8 @@
 
 /obj/structure/fluff/walldeco/masonflag
 	icon = 'modular/stonekeep/icons/misc.dmi'
+
+
+
+/obj/item/storage/keyring/garrison
+	keys = list(/obj/item/key/manor, /obj/item/key/garrison, /obj/item/key/walls)

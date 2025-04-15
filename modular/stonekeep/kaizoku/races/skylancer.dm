@@ -123,7 +123,7 @@
 	"white - oceanid" = "b8d4de"
 
 	))
-	return message_language.spans
+
 /*	This using the older proc causes runtimes, if possible adapt to new below ROGTODO
 /datum/species/abyssariad/skylancer/random_name(gender,unique,lastname)
 	var/static/list/male_names = world.file2list("modular/stonekeep/kaizoku/strings/names/abyssnorm.txt")

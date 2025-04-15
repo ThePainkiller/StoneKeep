@@ -940,6 +940,14 @@
 
 
 
+/obj/item/reagent_containers/glass/cup/attackby(obj/item/I, mob/living/user, params)
+	. = ..()
+	user.changeNext_move(CLICK_CD_MELEE)
+	if(!reagents.total_volume)
+		if(istype(I,/obj/item/natural/cloth))
+			if(do_after(user, 3 SECONDS, src))
+				user.visible_message("<span class='notice'>[user] cleans [src] with a rag.</span>")
+
 /obj/item/paper/getonmobprop(tag)
 	. = ..()
 	if(tag)
@@ -950,13 +958,6 @@
 				return list("shrink" = 0.3,"sx" = -2,"sy" = -5,"nx" = 4,"ny" = -5,"wx" = 0,"wy" = -5,"ex" = 2,"ey" = -5,"nturn" = 0,"sturn" = 0,"wturn" = 0,"eturn" = 0,"nflip" = 0,"sflip" = 0,"wflip" = 0,"eflip" = 0,"northabove" = 0,"southabove" = 1,"eastabove" = 1,"westabove" = 0)
 
 
-/obj/item/reagent_containers/glass/cup/attackby(obj/item/I, mob/living/user, params)
-	. = ..()
-	user.changeNext_move(CLICK_CD_MELEE)
-	if(!reagents.total_volume)
-		if(istype(I,/obj/item/natural/cloth))
-			if(do_after(user, 3 SECONDS, src))
-				user.visible_message("<span class='notice'>[user] cleans [src] with a rag.</span>")
 
 /obj/item/perfume
 	dropshrink = 0.5

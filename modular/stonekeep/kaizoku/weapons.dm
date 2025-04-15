@@ -1580,7 +1580,7 @@
 
 	return ..()
 
-/obj/structure/firewagon/proc/fire(var/mob/firer)
+/obj/structure/firewagon/proc/fire(mob/firer)
 	for(var/mob/living/carbon/H in hearers(7, src))
 		shake_camera(H, 6, 5)
 		H.blur_eyes(4)
@@ -1775,7 +1775,7 @@
 		icon_state = "handcannon_noram"
 	update_icon_state()
 
-/obj/item/gun/ballistic/revolver/grenadelauncher/handcannon/proc/fire(var/mob/living/user)
+/obj/item/gun/ballistic/revolver/grenadelauncher/handcannon/proc/fire(mob/living/user)
 	if(!chambered)
 		to_chat(user, "<span class='warning'>Unloaded, the handcannon is no better than a overpriced battering stick.</span>")
 		return

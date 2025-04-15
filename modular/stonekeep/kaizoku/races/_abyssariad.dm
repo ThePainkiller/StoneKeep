@@ -461,7 +461,7 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 	update_icon()
 	update_body()
 
-/mob/living/proc/changeling_purification(var/mob/living/L)
+/mob/living/proc/changeling_purification(/mob/living/L)
 	if(!L || !ismob(L) || L.stat < UNCONSCIOUS)
 		return
 
@@ -767,3 +767,4 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 			M.add_nausea(2)
 			M.bleed_rate = min(M.bleed_rate + 2, 8)
 	return ..()
+

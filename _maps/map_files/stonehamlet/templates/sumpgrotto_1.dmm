@@ -26,6 +26,12 @@
 /obj/structure/roguetent/preopen,
 /turf/open/floor/naturalstone,
 /area/rogue/under/cave/sumpgrotto)
+"ds" = (
+/obj/structure/closet/crate/chest/wicker,
+/obj/item/ore/copper,
+/obj/item/ore/copper,
+/turf/open/floor/twig,
+/area/rogue/under/cave/sumpgrotto)
 "ef" = (
 /turf/closed/mineral/bedrock,
 /area/rogue/under/cave/sumpgrotto)
@@ -171,6 +177,10 @@
 /obj/effect/decal/remains/mole,
 /obj/effect/decal/cleanable/blood_neu/random,
 /turf/open/floor/dirt/muddie,
+/area/rogue/under/cave/sumpgrotto)
+"sT" = (
+/obj/machinery/light/fueled/forge,
+/turf/open/floor/naturalstone,
 /area/rogue/under/cave/sumpgrotto)
 "te" = (
 /obj/structure/barricade/rogue,
@@ -340,6 +350,20 @@
 /obj/machinery/light/fueled/torchholder/c,
 /turf/open/floor/twig,
 /area/rogue/under/cave/sumpgrotto)
+"LU" = (
+/obj/machinery/light/fueled/torchholder/c,
+/turf/open/floor/naturalstone,
+/area/rogue/under/cave/sumpgrotto)
+"Mo" = (
+/obj/structure/closet/crate/chest/wicker,
+/obj/item/ore/tin,
+/turf/open/floor/naturalstone,
+/area/rogue/under/cave/sumpgrotto)
+"Mu" = (
+/obj/machinery/anvil,
+/obj/item/weapon/hammer/iron,
+/turf/open/floor/naturalstone,
+/area/rogue/under/cave/sumpgrotto)
 "Ng" = (
 /obj/structure/fluff/railing/fence{
 	dir = 4
@@ -363,7 +387,8 @@
 /turf/open/floor/twig,
 /area/rogue/under/cave/sumpgrotto)
 "Qy" = (
-/obj/structure/closet/crate/chest/wicker,
+/obj/structure/closet/crate/chest/rotting,
+/obj/item/ingot/iron,
 /turf/open/floor/twig,
 /area/rogue/under/cave/sumpgrotto)
 "QK" = (
@@ -444,6 +469,13 @@
 /obj/effect/decal/cleanable/blood_neu/tracks{
 	dir = 4
 	},
+/turf/open/floor/naturalstone,
+/area/rogue/under/cave/sumpgrotto)
+"Zf" = (
+/obj/structure/closet/crate/chest/wicker,
+/obj/item/ore/iron,
+/obj/item/ore/iron,
+/obj/item/ore/iron,
 /turf/open/floor/naturalstone,
 /area/rogue/under/cave/sumpgrotto)
 "ZJ" = (
@@ -3326,7 +3358,7 @@ ab
 ab
 HZ
 ef
-ab
+ef
 ab
 ab
 ef
@@ -3391,10 +3423,10 @@ ab
 ab
 ab
 ab
-ef
-ef
 gp
-ab
+gp
+gp
+LU
 ab
 te
 ef
@@ -3458,9 +3490,9 @@ te
 pZ
 ab
 ab
-ef
-gp
-gp
+sT
+Mu
+eo
 If
 Ay
 yv
@@ -3596,8 +3628,8 @@ ab
 ab
 ab
 ab
-rY
-Qy
+ab
+ds
 ef
 "}
 (48,1,1) = {"
@@ -3664,7 +3696,7 @@ do
 oP
 ab
 ab
-ab
+Zf
 ef
 "}
 (49,1,1) = {"
@@ -3731,7 +3763,7 @@ ab
 oP
 ab
 ab
-ri
+Mo
 ef
 "}
 (50,1,1) = {"
@@ -3797,7 +3829,7 @@ Ay
 ab
 oP
 ab
-ab
+ri
 ef
 ef
 "}

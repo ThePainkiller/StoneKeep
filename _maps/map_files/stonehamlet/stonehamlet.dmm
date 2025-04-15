@@ -6377,6 +6377,10 @@
 /obj/item/clothing/face/feld,
 /turf/open/floor/woodturned,
 /area/rogue/indoors/town/hamlet)
+"idr" = (
+/mob/living/carbon/human/species/orc/npc/ambush,
+/turf/open/floor/metal,
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "iek" = (
 /obj/structure/mineral_door/wood/deadbolt{
 	locked = 1
@@ -14438,6 +14442,10 @@
 /obj/structure/fluff/walldeco/mines/wall,
 /turf/open/floor/naturalstone,
 /area/rogue/under/cave/abandoned_mine)
+"rUY" = (
+/mob/living/carbon/human/species/orc/npc/ambush,
+/turf/open/floor/cobble,
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "rVo" = (
 /obj/structure/rack/shelf/biggest,
 /obj/item/flint{
@@ -58369,7 +58377,7 @@ cRe
 buJ
 buJ
 buJ
-asN
+idr
 vky
 buJ
 buJ
@@ -58560,7 +58568,7 @@ aIA
 aIA
 oTM
 ptt
-ptt
+rUY
 lYt
 yhx
 eYk

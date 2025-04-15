@@ -679,7 +679,7 @@
 	icon_state = "rivermove-dir"
 	icon = 'icons/turf/newwater.dmi'
 	water_level = 3
-	slowdown = 20
+	slowdown = 22
 	swim_skill = TRUE
 	path_weight = 150
 	var/river_processing

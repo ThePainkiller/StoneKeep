@@ -11,22 +11,33 @@
 //	var/gob_outfit = /datum/outfit/job/npc/orc/ambush removed to apply different classes to the orcs
 	ambushable = FALSE
 	base_intents = list(INTENT_HELP, INTENT_DISARM, INTENT_GRAB, /datum/intent/unarmed/claw, /datum/intent/simple/bite, /datum/intent/kick)
-	possible_rmb_intents = list()
 	vitae_pool = 1000 // Not as much vitae from them as humans to avoid vampires cheesing mobs
+
+	flee_in_pain = TRUE
+	stand_attempts = 6
+	a_intent = INTENT_HELP
+	possible_mmb_intents = list(INTENT_STEAL, INTENT_JUMP, INTENT_KICK, INTENT_BITE)
+	possible_rmb_intents = list(/datum/rmb_intent/feint, /datum/rmb_intent/swift, /datum/rmb_intent/riposte, /datum/rmb_intent/weak)
 
 /mob/living/carbon/human/species/orc/npc
 	ai_controller = /datum/ai_controller/human_npc
 	dodgetime = 15 //they can dodge easily, but have a cooldown on it
 	canparry = TRUE
 	flee_in_pain = FALSE
-
 	wander = FALSE
+
+/mob/living/carbon/human/species/orc/npc/ambush
+	simpmob_attack = 40
+	simpmob_defend = 30
+	wander = TRUE
+	attack_speed = 2
+
 
 /mob/living/carbon/human/species/orc/npc/Initialize()
 	. = ..()
 	AddComponent(/datum/component/combat_noise, list("aggro" = 2))
 
-/mob/living/carbon/human/species/orc/ambush/after_creation()
+/mob/living/carbon/human/species/orc/npc/ambush/after_creation()
 	..()
 	job = "Ambush Orc"
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
@@ -158,6 +169,9 @@
 	damage_overlay_type = ""
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | RACE_SWAP | SLIME_EXTRACT
 	var/raceicon = "orc"
+
+
+
 
 /datum/species/orc/update_damage_overlays(mob/living/carbon/human/H)
 	return
@@ -526,3 +540,6 @@
 	flee_in_pain = FALSE
 	wander = TRUE
 	configure_mind()
+
+// obsolete
+/mob/living/carbon/human/species/orc/ambush

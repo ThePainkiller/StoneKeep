@@ -69,8 +69,6 @@
 	steps = null
 /datum/slapcraft_recipe/carpentry/structure/pillory
 	steps = null
-/datum/slapcraft_recipe/carpentry/structure/easel
-	steps = null
 /datum/slapcraft_recipe/carpentry/structure/optable
 	steps = null
 /datum/slapcraft_recipe/carpentry/structure/meathook
@@ -86,12 +84,6 @@
 /datum/repeatable_crafting_recipe/crafting/wshield
 	starting_atom = null
 /datum/repeatable_crafting_recipe/crafting/heatershield
-	starting_atom = null
-/datum/repeatable_crafting_recipe/canvas
-	starting_atom = null
-/datum/repeatable_crafting_recipe/paintbrush
-	starting_atom = null
-/datum/repeatable_crafting_recipe/paint_palette
 	starting_atom = null
 /datum/repeatable_crafting_recipe/survival/cloth
 	starting_atom = null

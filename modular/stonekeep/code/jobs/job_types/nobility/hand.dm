@@ -24,7 +24,7 @@
 
 /datum/job/hand/after_spawn(mob/living/spawned, client/player_client)
 	. = ..()
-	SSfamilytree.AddRoyal(spawned, FAMILY_OMMER)
+//	SSfamilytree.AddRoyal(spawned, FAMILY_OMMER)	Caused sibling + child at once issues ROGTODO?
 	var/mob/living/carbon/human/H = spawned
 	if(GLOB.keep_doors.len > 0)
 		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(know_keep_door_password), H), 50)

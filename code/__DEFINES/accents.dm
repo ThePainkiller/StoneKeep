@@ -6,6 +6,7 @@
 #define ACCENT_STEPPE "Steppe Accent"
 #define ACCENT_HORC "Half-Orc Accent"
 #define ACCENT_GRENZ "Grenzelhoft Acccent"
+#define ACCENT_ABYSSAL "Abyssal Accent"
 
 GLOBAL_LIST_INIT(accent_list, list(
 	ACCENT_NONE = list(),
@@ -20,4 +21,5 @@ GLOBAL_LIST_INIT(accent_list, list(
 //	ACCENT_TIEFLING = strings("spanish_replacement.json", "spanish"),
 //	ACCENT_HORC = strings("halforc_replacement.json", "halforc"),
 	ACCENT_GRENZ = strings("grenz_replacement.json", "grenz"),
+	ACCENT_ABYSSAL = strings("abyssal_replacement.json", "abyssal"),
 ))

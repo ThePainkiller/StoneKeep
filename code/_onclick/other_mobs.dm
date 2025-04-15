@@ -201,8 +201,11 @@
 
 	var/nodmg = FALSE
 	var/dam2do = 10*(user.STASTR/20)
+	var/poisonkiss = FALSE
 	if(HAS_TRAIT(user, TRAIT_STRONGBITE))
 		dam2do *= 2
+	if(HAS_TRAIT(user, TRAIT_CHANGELING_METABOLISM))
+		poisonkiss = TRUE
 	if(!HAS_TRAIT(user, TRAIT_STRONGBITE))
 		if(!affecting.has_wound(/datum/wound/bite))
 			nodmg = TRUE
@@ -398,6 +401,10 @@
 					return
 				if(HAS_TRAIT(src, TRAIT_NO_BITE))
 					to_chat(src, span_warning("I can't bite."))
+					return
+				if(HAS_TRAIT(src, TRAIT_CHANGELING_METABOLISM) && ismob(A))
+					var/mob/living/L = A
+					src.changeling_purification(L)
 					return
 				changeNext_move(mmb_intent.clickcd)
 				face_atom(A)

@@ -29,7 +29,7 @@
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,STUBBLE)
 	inherent_traits = list(TRAIT_NOMOBSWAP)
-	default_features = list("mcolor" = "FFF", "ears" = "Ogrun", "horns" = "Onihorn")
+	default_features = list("mcolor" = "FFF", "ears" = "ogrun", "horns" = "onihorn")
 	mutant_bodyparts = list("ears","horns")
 	use_skintones = 1
 	possible_ages = list(AGE_IMMORTAL) //Abyssariads are Immortal. However, Onis are the newest ones on the fold, and they become Orcs mentally if they stray away from Abyssor.
@@ -116,7 +116,7 @@
 
 	"white - platinum" = "f8f3f3",
 	"white - silver" = "ddddc8",
-	"white - oceanid" = "141f1f"
+	"white - oceanid" = "b8d4de"
 
 
 	))
@@ -127,27 +127,35 @@
 //	if(message_language.type == /datum/language/abyssal)
 //		return list(SPAN_ABYSSAL)
 	return message_language.spans
-
+/*	This using the older proc causes runtimes, if possible adapt to new below ROGTODO
 /datum/species/abyssariad/ogrun/random_name(gender,unique,lastname)
+	var/static/list/male_names = world.file2list('modular/stonekeep/kaizoku/strings/names/onim.txt')
+	var/static/list/female_names = world.file2list('modular/stonekeep/kaizoku/strings/names/onif.txt')
+
+	var/list/names = (gender == FEMALE) ? female_names : male_names
 	var/randname
+
 	if(unique)
-		if(gender == MALE)
-			for(var/i in 1 to 10)
-				randname = pick( world.file2list("strings/rt/names/abyssariad/onim.txt") )
-				if(!findname(randname))
-					break
-		if(gender == FEMALE)
-			for(var/i in 1 to 10)
-				randname = pick( world.file2list("strings/rt/names/abyssariad/onif.txt") )
-				if(!findname(randname))
-					break
+		for(var/i in 1 to 10)
+			randname = pick(names)
+			if(!findname(randname))
+				break
 	else
-		if(gender == MALE)
-			randname = pick( world.file2list("strings/rt/names/abyssariad/onim.txt") )
-		if(gender == FEMALE)
-			randname = pick( world.file2list("strings/rt/names/abyssariad/onif.txt") )
-	randname += " Clanless"
-	return randname
+		randname = pick(names)
+
+	return "[randname] Clanless"
 
 /datum/species/abyssariad/ogrun/random_surname()
-	return " [pick(world.file2list("strings/rt/names/abyssariad/abyssnorm.txt"))]"
+	return " [pick(world.file2list('modular/stonekeep/kaizoku/strings/names/abyssnorm.txt'))]"
+*/
+
+
+/datum/species/abyssariad/ogrun/get_possible_names(gender = MALE)
+	var/static/list/male_names = world.file2list('modular/stonekeep/kaizoku/strings/names/onim.txt')
+	var/static/list/female_names = world.file2list('modular/stonekeep/kaizoku/strings/names/onif.txt')
+	return (gender == FEMALE) ? female_names : male_names
+
+/datum/species/abyssariad/ogrun/get_possible_surnames(gender = MALE)
+	var/static/list/last_names = world.file2list('modular/stonekeep/kaizoku/strings/names/abyssnorm.txt')
+	return last_names
+

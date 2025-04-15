@@ -1,7 +1,12 @@
 #define CTYPE_GOLD "g"
 #define CTYPE_SILV "s"
 #define CTYPE_COPP "c"
+#define CTYPE_PAPE "p"
+#define CTYPE_ZAFF "z"
+#define CTYPE_VELU "v"
+
 #define MAX_COIN_STACK_SIZE 20
+#define MAX_PAPER_STACK_SIZE 35
 
 /obj/item/coin
 	name = ""
@@ -22,6 +27,7 @@
 	var/quantity = 1
 	var/plural_name
 	var/rigged_outcome = 0 //1 for heads, 2 for tails
+	var/is_paper = FALSE //Paper money can be stored in greater quantities. But may not be compatible in machines... for now.
 
 /obj/item/coin/on_consume(mob/living/eater)
 	. = ..()
@@ -371,7 +377,177 @@
 	if(!coin_amount)
 		set_quantity(rand(4,19))
 
+//Kaizoku paper money things.
+
+//SILVER PAPER
+/obj/item/coin/silver/peralo
+	name = "peralo"
+	desc = "Hallowed exorcism seal embossed in abyssal markings and a oyster pearl. Used by foglanders in everyday banter, or by banks for easy storage. Harmful to demons."
+	icon_state = "p1"
+	sellprice = 5
+	base_type = CTYPE_PAPE
+	plural_name = "peralius"
+	icon = 'modular/stonekeep/kaizoku/icons/items/valuables.dmi'
+	is_paper = TRUE
+	dropshrink = 1
+
+/obj/item/coin/silver/peralo/update_icon()
+	..()
+	drop_sound = 'sound/foley/dropsound/paper_drop.ogg'
+
+
+	if(quantity == 1)
+		name = initial(name)
+		desc = initial(desc)
+		return
+
+	name = plural_name
+	desc = ""
+	dropshrink = 1
+	switch(quantity)
+		if(2)
+			icon_state = "[base_type]2"
+		if(3 to 5)
+			icon_state = "[base_type]5"
+		if(6 to 10)
+			icon_state = "[base_type]10"
+		if(11 to 20)
+			icon_state = "[base_type]20"
+		if(21 to 35)
+			icon_state = "[base_type]35"
+
+/obj/item/coin/silver/peralo/Initialize()
+	. = ..()
+	set_quantity(rand(4,19))
+
+/obj/item/coin/silver/peralo/attack_self(mob/living/user)
+	return
+
+/obj/item/coin/silver/peralo/pickup(mob/user)
+	. = ..()
+	var/mob/living/carbon/human/H = user
+	if(ishuman(H))
+		if((H.faction && "orcs" in H.faction) || (H.dna?.species?.id == "tiefling") || (H.mob_biotypes & MOB_UNDEAD))
+			to_chat(H, "<span class='span_warning'>The seal brings icy dread through your veins.</span>")
+			H.Immobilize(10)
+			H.adjustFireLoss(10)
+			H.fire_act(1)
+
+// COPPER PAPER
+
+/obj/item/coin/copper/zaffiro
+	name = "zaffiro"
+	desc = "A thin paper of pressed red kelp fibers and octopuses ink. Usually placed in lanterns to banish spirits, this exorcism seal emits warmth when someone tells lies close to it. Or was supposed to."
+	icon_state = "z1"
+	sellprice = 1
+	base_type = CTYPE_ZAFF
+	plural_name = "zaffiro"
+	icon = 'modular/stonekeep/kaizoku/icons/items/valuables.dmi'
+	is_paper = TRUE
+	dropshrink = 1
+
+/obj/item/coin/copper/zaffiro/update_icon()
+	..()
+	drop_sound = 'sound/foley/dropsound/paper_drop.ogg'
+
+
+	if(quantity == 1)
+		name = initial(name)
+		desc = initial(desc)
+		return
+
+	name = plural_name
+	desc = ""
+	dropshrink = 1
+	switch(quantity)
+		if(2)
+			icon_state = "[base_type]2"
+		if(3 to 5)
+			icon_state = "[base_type]5"
+		if(6 to 10)
+			icon_state = "[base_type]10"
+		if(11 to 20)
+			icon_state = "[base_type]20"
+		if(21 to 35)
+			icon_state = "[base_type]35"
+
+/obj/item/coin/copper/zaffiro/Initialize()
+	. = ..()
+	set_quantity(rand(4,19))
+
+/obj/item/coin/copper/zaffiro/attack_self(mob/living/user)
+	return
+
+/obj/item/coin/copper/zaffiro/pickup(mob/user)
+	. = ..()
+	var/mob/living/carbon/human/H = user
+	if(ishuman(H))
+		if((H.faction && "orcs" in H.faction) || (H.dna?.species?.id == "tiefling") || (H.mob_biotypes & MOB_UNDEAD))
+			to_chat(H, "<span class='span_warning'>The seal brings icy dread through your veins.</span>")
+			H.Immobilize(5)
+			H.adjustFireLoss(5)
+			H.fire_act(1)
+
+//GOLD PAPER
+
+/obj/item/coin/gold/velumo
+	name = "velumo"
+	desc = "Hallowed veil with crushed gems and gold dust on the edges, it was first made to bribe ancestral sentries for safe dreams, but its spiritual power contained within turns demons into seafoam, and it reflects on its value. Has the same value as a golden coin."
+	icon_state = "v1"
+	sellprice = 10
+	base_type = CTYPE_VELU
+	plural_name = "velumius"
+	icon = 'modular/stonekeep/kaizoku/icons/items/valuables.dmi'
+	is_paper = TRUE
+	dropshrink = 1
+
+
+/obj/item/coin/gold/velumo/update_icon()
+	..()
+	drop_sound = 'sound/foley/dropsound/paper_drop.ogg'
+
+
+	if(quantity == 1)
+		name = initial(name)
+		desc = initial(desc)
+		return
+
+	name = plural_name
+	desc = ""
+	dropshrink = 1
+	switch(quantity)
+		if(2)
+			icon_state = "[base_type]2"
+		if(3 to 5)
+			icon_state = "[base_type]5"
+		if(6 to 10)
+			icon_state = "[base_type]10"
+		if(11 to 20)
+			icon_state = "[base_type]20"
+		if(21 to 35)
+			icon_state = "[base_type]35"
+
+/obj/item/coin/gold/velumo/Initialize()
+	. = ..()
+	set_quantity(rand(4,19))
+
+/obj/item/coin/gold/velumo/attack_self(mob/living/user)
+	return
+
+/obj/item/coin/gold/velumo/pickup(mob/user)
+	. = ..()
+	var/mob/living/carbon/human/H = user
+	if(ishuman(H))
+		if((H.faction && "orcs" in H.faction) || (H.dna?.species?.id == "tiefling") || (H.mob_biotypes & MOB_UNDEAD))
+			to_chat(H, "<span class='span_warning'>The seal brings icy dread through your veins.</span>")
+			H.Immobilize(15)
+			H.adjustFireLoss(15)
+			H.fire_act(1)
+
 #undef CTYPE_GOLD
 #undef CTYPE_SILV
 #undef CTYPE_COPP
+#undef CTYPE_ZAFF
 #undef MAX_COIN_STACK_SIZE
+#undef CTYPE_PAPE
+#undef MAX_PAPER_STACK_SIZE

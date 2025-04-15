@@ -132,7 +132,7 @@ Design philosphy:
 	armor = /obj/item/clothing/armor/chainmail/tatami
 	shirt = /obj/item/clothing/armor/gambeson/ruankai
 	neck = /obj/item/clothing/neck/gorget
-	head = /obj/item/clothing/head/helmet/kaizoku/jingasa
+	head = /obj/item/clothing/head/helmet/kettle/jingasa
 	beltr = /obj/item/weapon/sword/scimitar/messer/dao
 	backpack_contents = list(/obj/item/storage/keyring/manorguard)
 

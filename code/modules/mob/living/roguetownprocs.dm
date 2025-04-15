@@ -152,6 +152,12 @@
 					offhand_defense += (offhand.wdefense * 10)
 					if(istype(offhand, /obj/item/weapon/shield))
 						force_shield = TRUE
+			if(istype(offhand, /obj/item/weapon) && istype(mainhand, /obj/item/weapon))
+				var/obj/item/weapon/OH = offhand
+				var/obj/item/weapon/MH = mainhand
+				if(OH.dual_wield && MH.dual_wield && MH.type == OH.type) //Is it the same weapon?
+					var/dual_wield_bonus = OH.dual_wield * OH.wdefense //Same weapon, check for their dual_wield bonus if it exists.
+					offhand_defense += dual_wield_bonus
 			if(!force_shield)
 				if(mainhand_defense >= offhand_defense)
 					highest_defense += mainhand_defense

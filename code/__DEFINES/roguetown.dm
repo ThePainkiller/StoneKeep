@@ -1,8 +1,8 @@
 //used in various places
-#define ALL_RACES_LIST					list("human", "rakshari", "dwarf", "elf", "tiefling", "aasimar", "halforc", "orc", "zizombie", "kobold")
+#define ALL_RACES_LIST			list("human", "rakshari", "dwarf", "elf", "tiefling", "aasimar", "halforc", "orc", "zizombie", "abyssariad") //Stonekeep change. Placed here for the sake of uncompatibility with the modularization.
 
 /// All playable races from character selection menu.
-#define RACES_PLAYER_ALL				list("Humen", "Rakshari", "Half-Elf", "Dark Elf", "Elf", "Dwarf", "Tiefling", "Half-Orc", "Aasimar", "Kobold")
+#define RACES_PLAYER_ALL				list("Humen", "Rakshari", "Half-Elf", "Dark Elf", "Elf", "Dwarf", "Tiefling", "Half-Orc", "Aasimar", "Kobold", "Changeling", "Undine", "Skylancer", "Ogrun") //Stonekeep change. Placed here for the sake of uncompatibility with the modularization.
 
 /// Races not considered discriminated against in Vanderlin. Used for nobility, guards, etc.
 #define RACES_PLAYER_NONDISCRIMINATED	list("Humen", "Half-Elf", "Elf", "Dwarf", "Aasimar")
@@ -12,7 +12,6 @@
 #define RACES_PLAYER_NONEXOTIC			list("Humen", "Half-Elf", "Dark Elf", "Elf", "Dwarf", "Tiefling", "Half-Orc", "Aasimar")
 ///Races that lack lux
 #define RACES_PLAYER_LUXLESS			list("Kobold", "Rakshari", "Dark Elf", "Tiefling", "Half-Orc", "Dark Elf")
-
 /// Races who are affiliated with Grenzelhoft or Psydon specifically.
 #define RACES_PLAYER_GRENZ				list("Humen", "Dwarf", "Aasimar")
 /// Elves and Half-Elves

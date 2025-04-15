@@ -230,7 +230,7 @@
 // ======================================================================
 /*	..................   Cat   ................... */
 /mob/living/simple_animal/pet/cat
-	TOTALSTR = 2
+	base_strength = 2
 	botched_butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/mince/beef = 1)
 	butcher_results = list(/obj/item/reagent_containers/food/snacks/flayedcat = 1)
 	perfect_butcher_results = list(/obj/item/reagent_containers/food/snacks/flayedcat = 1)
@@ -284,15 +284,15 @@
 
 /mob/living/simple_animal/hostile/retaliate/wolf
 	base_intents = list(/datum/intent/simple/critterbite)
-	TOTALEND = 15
+	base_endurance = 15
 
 /mob/living/simple_animal/hostile/retaliate/bigrat
 	base_intents = list(/datum/intent/simple/critterbite)
-	TOTALEND = 10
+	base_endurance = 10
 
 /mob/living/simple_animal/hostile/retaliate/spider
 	base_intents = list(/datum/intent/simple/critterbite)
-	TOTALEND = 15
+	base_endurance = 15
 
 /datum/intent/simple/trollrip
 	name = "horrific bite"
@@ -406,9 +406,9 @@
 	speak_chance = 5
 	turns_per_move = 1
 	move_to_delay = 1
-	TOTALCON = 14
-	TOTALSTR = 6
-	TOTALSPD = 15
+	base_constitution = 14
+	base_strength = 6
+	base_speed = 15
 	maxHealth = 80
 	health = 80
 	harm_intent_damage = 15

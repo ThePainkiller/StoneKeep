@@ -889,7 +889,9 @@
 /turf/closed/wall/mineral/wooddark,
 /area/rogue/indoors/town/manor/stone)
 "bpC" = (
-/obj/effect/mob_spawn/human/orc/corpse/dwarfinvasion,
+/obj/structure/remains/human{
+	name = "orc remains"
+	},
 /obj/effect/decal/cleanable/blood_neu/random,
 /obj/effect/decal/shadow_floor,
 /turf/open/floor/metal{
@@ -1952,7 +1954,9 @@
 /area/rogue/outdoors/exposed/townhamlet)
 "cDP" = (
 /obj/effect/decal/cleanable/blood_neu/random,
-/obj/effect/mob_spawn/human/orc/corpse/dwarfinvasion,
+/obj/structure/remains/human{
+	name = "orc remains"
+	},
 /turf/open/floor/metal{
 	icon_state = "plating2"
 	},
@@ -3675,7 +3679,9 @@
 	},
 /area/rogue/indoors/town/clinic_large)
 "eFS" = (
-/obj/effect/mob_spawn/human/orc/corpse/dwarfinvasion,
+/obj/structure/remains/human{
+	name = "orc remains"
+	},
 /obj/effect/decal/cleanable/blood_neu/random,
 /turf/open/floor/metal,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
@@ -7038,7 +7044,9 @@
 /turf/closed/wall/mineral/stone,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "iYl" = (
-/obj/effect/mob_spawn/human/orc/corpse/dwarfinvasion,
+/obj/structure/remains/human{
+	name = "orc remains"
+	},
 /turf/open/floor/metal{
 	icon_state = "plating2"
 	},
@@ -7097,7 +7105,9 @@
 /turf/open/floor/dirt/road,
 /area/rogue/outdoors/rtfield/plague_district)
 "jbZ" = (
-/obj/effect/mob_spawn/human/orc/corpse/dwarfinvasion,
+/obj/structure/remains/human{
+	name = "orc remains"
+	},
 /obj/effect/decal/cleanable/blood_neu/random,
 /obj/item/ammo_casing/caseless/arrow/poison,
 /obj/item/gun/ballistic/revolver/grenadelauncher/bow/recurve,
@@ -14219,7 +14229,9 @@
 /area/rogue/indoors/town/tavern/saiga)
 "rFZ" = (
 /obj/effect/decal/cleanable/blood_neu/random,
-/obj/effect/mob_spawn/human/orc/corpse/dwarfinvasion,
+/obj/structure/remains/human{
+	name = "orc remains"
+	},
 /obj/effect/decal/cleanable/blood_neu/tracks{
 	dir = 4
 	},
@@ -14570,6 +14582,11 @@
 	},
 /turf/open/floor/carpet/hamlet,
 /area/rogue/indoors/town/bath/redhouse)
+"sgx" = (
+/obj/item/natural/stone,
+/obj/structure/fluff/walldeco/mines,
+/turf/open/floor/naturalstone,
+/area/rogue/under/cave/abandoned_mine)
 "shl" = (
 /turf/open/floor/wood,
 /area/rogue/indoors/town/clinic_large)
@@ -23607,7 +23624,7 @@ vvy
 rJx
 evC
 xgx
-rYq
+sgx
 rJx
 sJQ
 xgx

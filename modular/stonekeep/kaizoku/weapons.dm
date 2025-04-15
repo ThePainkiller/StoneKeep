@@ -1654,8 +1654,8 @@
 	randomspread = 3
 	spread = 4
 	force = 12
-	experimental_inhand = FALSE
-	experimental_onback = FALSE
+//	experimental_inhand = FALSE	ROGTODO missing icons
+//	experimental_onback = FALSE
 	var/click_delay = 0.5
 	var/obj/item/ramrod/rod
 	cartridge_wording = "ball"

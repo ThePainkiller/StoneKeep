@@ -461,7 +461,8 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 	update_icon()
 	update_body()
 
-/mob/living/proc/changeling_purification(/mob/living/L)
+/mob/living/proc/changeling_purification(/mob/living/carbon/human/L)	// ROGTODO test if this actually works
+	var/mob/living/carbon/human/L
 	if(!L || !ismob(L) || L.stat < UNCONSCIOUS)
 		return
 

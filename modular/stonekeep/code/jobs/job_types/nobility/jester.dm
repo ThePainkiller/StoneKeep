@@ -51,12 +51,13 @@
 		H.mind?.adjust_skillrank(/datum/skill/misc/music, pick(1,2,3,4,5,6), TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/cooking, pick(1,2,3,4,5,6), TRUE)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mockery) // Mock people to your heart's content!
-		H.TOTALINT = rand(1, 20)
-		H.TOTALLUC = rand(1, 20)
-		H.TOTALSTR = rand(1, 20)
-		H.TOTALCON = rand(1, 20)
-		H.TOTALPER = rand(1, 20)
-		H.TOTALSPD = rand(1, 20)
+		H.change_stat(STATKEY_INT, rand(5, 15), TRUE)
+		H.change_stat(STATKEY_LCK, rand(5, 15), TRUE)
+		H.change_stat(STATKEY_STR, rand(5, 15), TRUE)
+		H.change_stat(STATKEY_CON, rand(8, 12), TRUE)
+		H.change_stat(STATKEY_PER, rand(10, 12), TRUE)
+		H.change_stat(STATKEY_SPD, rand(8, 14), TRUE)
+		H.change_stat(STATKEY_END, rand(10, 12), TRUE)
 
 		if(H.STASTR > 16)
 			H.cmode_music = 'sound/music/cmode/nobility/CombatJesterSTR.ogg'

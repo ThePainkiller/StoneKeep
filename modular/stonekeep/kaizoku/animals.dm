@@ -273,9 +273,9 @@
 	melee_damage_upper = 30
 	retreat_distance = 10
 	minimum_distance = 10
-	STASPD = 15
-	STACON = 12
-	STASTR = 11
+	base_constitution = 12
+	base_strength = 10
+	base_speed = 15
 	childtype = /mob/living/simple_animal/hostile/retaliate/saiga/horse/horsekid
 	can_buckle = TRUE
 	buckle_lying = FALSE
@@ -327,9 +327,9 @@
 	melee_damage_lower = 1
 	melee_damage_upper = 6
 
-	STACON = 5
-	STASTR = 5
-	STASPD = 5
+	base_constitution = 5
+	base_strength = 5
+	base_speed = 5
 	defprob = 50
 	pixel_x = -16
 	adult_growth = /mob/living/simple_animal/hostile/retaliate/saiga/horse

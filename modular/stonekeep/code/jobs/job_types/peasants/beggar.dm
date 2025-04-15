@@ -68,23 +68,24 @@
 		H.mind?.adjust_skillrank(/datum/skill/misc/climbing, pick(2,3,4,5), TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/combat/wrestling, pick(1,2,3,4), TRUE) // Street-fu
 		H.mind?.adjust_skillrank(/datum/skill/combat/unarmed, pick(1,2,3), TRUE)
-		H.TOTALLUC = rand(1, 20)
+		H.change_stat(STATKEY_LCK, rand(-2, 2), TRUE)
 	if(prob(5))
 		r_hand = /obj/item/weapon/mace/woodclub
 	if(prob(20))
-		H.change_stat("constitution", 2)
-		H.change_stat("intelligence", -1)
+		H.change_stat(STATKEY_CON, 2)
+		H.change_stat(STATKEY_INT, -1)
 	if(prob(20))
-		H.change_stat("endurance", 3)
-		H.change_stat("constitution", -1)
+		H.change_stat(STATKEY_END, 3)
+		H.change_stat(STATKEY_CON, -1)
 	if(prob(20))
-		H.change_stat("strength", 2)
-		H.change_stat("constitution", -1)
-		H.change_stat("endurance", -1)
-		H.change_stat("intelligence", -1)
-	H.change_stat("intelligence", -2)
-	H.change_stat("constitution", -2)
-	H.change_stat("endurance", -1)
+		H.change_stat(STATKEY_STR, 2)
+		H.change_stat(STATKEY_CON, -1)
+		H.change_stat(STATKEY_END, -1)
+		H.change_stat(STATKEY_INT, -1)
+	H.change_stat(STATKEY_INT, -2)
+	H.change_stat(STATKEY_CON, -2)
+	H.change_stat(STATKEY_END, -1)
+
 
 /datum/outfit/job/vagrant
 	name = "Beggar"

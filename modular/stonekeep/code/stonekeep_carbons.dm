@@ -4,14 +4,6 @@
 	QDEL_NULL(sexcon)
 
 // -------------------		SKELLY SKILLED CORE		--------------------------
-/datum/outfit/job/roguetown/species/skeleton/skilled/pre_equip(mob/living/carbon/human/H)
-	..()
-	H.STASTR = rand(6,8)
-	H.STASPD = rand(8,10)
-	H.STACON = rand(8,10)
-	H.STAEND = 12
-	H.STAINT = 1
-
 /mob/living/carbon/human/species/skeleton/skilled/after_creation()
 	..()
 	configure_mind()
@@ -156,11 +148,11 @@
 /datum/outfit/job/ancient_skeleton/pre_equip(mob/living/carbon/human/H)
 	..()
 	H.STASTR = 12
-	H.TOTALSTR = rand(13,14)
-	H.TOTALSPD = 8
-	H.TOTALCON = 9
-	H.TOTALEND = 15
-	H.TOTALINT = 1
+	H.base_strength = rand(13,14)
+	H.base_speed = 8
+	H.base_constitution = 9
+	H.base_endurance = 15
+	H.base_intelligence = 1
 
 
 
@@ -646,10 +638,10 @@
 	speak_chance = 5
 	turns_per_move = 1
 	move_to_delay = 1
-	TOTALCON = 14
-	TOTALSTR = 12
-	TOTALSPD = 10
-	TOTALEND = 20
+	base_constitution = 14
+	base_strength = 12
+	base_speed = 10
+	base_endurance = 20
 	maxHealth = 180
 	health = 180
 	harm_intent_damage = 15

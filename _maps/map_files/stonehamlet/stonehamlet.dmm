@@ -814,6 +814,11 @@
 /obj/effect/decal/shadow_floor,
 /turf/open/floor/rooftop/dark,
 /area/rogue/outdoors/town/roofs)
+"bhI" = (
+/turf/closed/wall/mineral/decostone/end{
+	dir = 8
+	},
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "bhK" = (
 /obj/machinery/light/fueled/wallfire/candle/lamp/lamptern{
 	pixel_y = -21
@@ -5464,6 +5469,11 @@
 	},
 /turf/open/floor/grass,
 /area/rogue/outdoors/rtfield/hamlet)
+"gZL" = (
+/turf/closed/wall/mineral/decostone/long{
+	dir = 1
+	},
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "gZU" = (
 /obj/effect/decal/cleanable/blood_neu/tracks{
 	dir = 10
@@ -7402,6 +7412,11 @@
 /obj/effect/decal/cleanable/greenglow,
 /turf/open/floor/concrete,
 /area/rogue/indoors/town/magician)
+"jut" = (
+/turf/closed/wall/mineral/decostone/end{
+	dir = 4
+	},
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "jvl" = (
 /obj/structure/table/wood{
 	icon_state = "map6"
@@ -8245,6 +8260,9 @@
 /obj/structure/closet/crate/chest/crate,
 /turf/open/floor/dirt/road,
 /area/rogue/outdoors/exposed/under/basement)
+"kxC" = (
+/turf/closed/wall/mineral/decostone/long,
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "kxZ" = (
 /obj/item/reagent_containers/food/snacks/smallrat,
 /obj/effect/decal/shadow_floor{
@@ -53377,7 +53395,7 @@ lYt
 hNB
 lYX
 buJ
-ksg
+jut
 buJ
 buJ
 ayo
@@ -53580,13 +53598,13 @@ raN
 lYX
 buJ
 ksg
+kxC
+kxC
+kxC
 ksg
-ksg
-ksg
-ksg
-ksg
-ksg
-ksg
+kxC
+kxC
+kxC
 ksg
 fdE
 buJ
@@ -53785,11 +53803,11 @@ auD
 kta
 jNR
 kFU
-ksg
+gZL
 ens
 nyZ
 sFs
-ksg
+gZL
 ptt
 buJ
 ptt
@@ -53987,11 +54005,11 @@ jIw
 jIw
 jIw
 jIw
-ksg
+gZL
 beT
 nyZ
 nyZ
-ksg
+bhI
 ptt
 buJ
 oTM
@@ -54189,7 +54207,7 @@ jIw
 sxM
 jIw
 vVa
-ksg
+gZL
 dCi
 nyZ
 nyZ
@@ -54391,11 +54409,11 @@ jIw
 jIw
 jIw
 jIw
-ksg
+gZL
 nyZ
 nyZ
 kHt
-ksg
+jut
 ptt
 buJ
 oTM
@@ -54593,11 +54611,11 @@ flD
 txO
 dMy
 uXt
-ksg
+gZL
 wxU
 rqD
 nyZ
-ksg
+gZL
 oTM
 buJ
 oTM
@@ -54792,13 +54810,13 @@ ntp
 lYX
 iyx
 ksg
+kxC
+kxC
+kxC
 ksg
-ksg
-ksg
-ksg
-ksg
-ksg
-ksg
+kxC
+kxC
+kxC
 ksg
 jUH
 buJ
@@ -54993,7 +55011,7 @@ lYt
 nvt
 lYX
 buJ
-ksg
+bhI
 buJ
 buJ
 bzz

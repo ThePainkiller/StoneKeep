@@ -258,7 +258,7 @@
 		if(2) //Stolen Tool armed raider
 			r_hand = /obj/item/weapon/mace/copperbludgeon
 		if(3) //Stolen Tool armed raider
-			r_hand = j/item/weapon/polearm/spear/bonespear
+			r_hand = /obj/item/weapon/polearm/spear/bonespear
 			if(prob(30))
 				r_hand = /obj/item/weapon/axe/boneaxe
 		if(4) //armored sword/flail/daggers
@@ -524,5 +524,5 @@
 	wander = TRUE
 	configure_mind()
 
-// obsolete
+// obsolete just kept because vanderlin uses it
 /mob/living/carbon/human/species/orc/ambush

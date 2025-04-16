@@ -835,17 +835,7 @@
 	armor = list("melee" = 5, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 5, "acid" = 0) // I just wanted to give Malumite robes a tiny bit of fire protection because they're craftspeople.
 
 
-/obj/item/clothing/shirt/dress/valorian
-	name = "commoner dress"
-	desc = "A simple deep-blue frock worn in many cities of Valoria."
-	icon = 'modular/stonekeep/icons/clothing.dmi'
-	mob_overlay_icon = 'modular/stonekeep/icons/onmob/clothes.dmi'
-	sleeved = 'modular/stonekeep/icons/onmob/sleeves.dmi'
-	icon_state = "valorian"
-	sellprice = 13
 
-/obj/item/clothing/shirt/dress/gen/sexy
-	icon = 'modular/stonekeep/icons/clothing.dmi'
 
 /obj/item/clothing/armor/gambeson/heavy/dress
 	slot_flags = ITEM_SLOT_ARMOR
@@ -964,14 +954,26 @@
 	color = pick_assoc(GLOB.noble_dyes)
 	..()
 
-/obj/item/clothing/shirt/dress/stewarddress
-	name = "demure dress"
-	desc = "Fashionably fitted with shining bronze buttons."
-
 
 /obj/item/clothing/shirt/tunic/yellow
 	color = CLOTHING_MAGE_YELLOW
 
+
+/obj/item/clothing/shirt/dress/stewarddress
+	name = "demure dress"
+	desc = "Fashionably fitted with shining bronze buttons."
+
+/obj/item/clothing/shirt/dress/valorian
+	name = "commoner dress"
+	desc = "A simple deep-blue frock worn in many cities of Valoria."
+	icon = 'modular/stonekeep/icons/clothing.dmi'
+	mob_overlay_icon = 'modular/stonekeep/icons/onmob/clothes.dmi'
+	sleeved = 'modular/stonekeep/icons/onmob/sleeves.dmi'
+	icon_state = "valorian"
+	sellprice = 13
+
+/obj/item/clothing/shirt/dress/gen/sexy
+	icon = 'modular/stonekeep/icons/clothing.dmi'
 
 //
 //   Velvet Dress
@@ -983,7 +985,7 @@
 	body_parts_covered = CHEST|GROIN|LEGS|VITALS
 	icon = 'modular/stonekeep/icons/clothing.dmi'
 	mob_overlay_icon = 'modular/stonekeep/icons/onmob/clothes.dmi'
-	sleeved = 'modular/stonekeep/icons/onmob/clothes.dmi'
+	sleeved = 'modular/stonekeep/icons/onmob/sleeves.dmi'
 	icon_state = "velvetdress"
 	item_state = "velvetdress"
 //	detail_tag = "_detail"

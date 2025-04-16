@@ -1257,6 +1257,13 @@
 	dir = 9
 	},
 /area/rogue/outdoors/exposed/townhamlet)
+"bNr" = (
+/obj/effect/decal/cleanable/blood_neu/random,
+/obj/effect/decal/shadow_floor{
+	dir = 8
+	},
+/turf/open/floor/blocks,
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "bNP" = (
 /obj/structure/flora/rock/pebbles,
 /obj/effect/decal/rockedge{
@@ -2021,6 +2028,10 @@
 "cJp" = (
 /turf/open/transparent/openspace,
 /area/rogue/indoors/soilsons)
+"cJq" = (
+/obj/machinery/light/fueled/torchholder/r,
+/turf/open/floor/blocks,
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "cJH" = (
 /turf/open/floor/blocks/moss,
 /area/rogue/outdoors/rtfield/plague_district)
@@ -2276,8 +2287,7 @@
 /obj/effect/decal/shadow_floor{
 	dir = 6
 	},
-/obj/effect/spawner/map_spawner/enemy_fifty/orc_warrior,
-/turf/open/floor/concrete,
+/turf/open/floor/blocks,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "dab" = (
 /obj/structure/stairs{
@@ -3801,7 +3811,7 @@
 /obj/effect/decal/shadow_floor{
 	dir = 6
 	},
-/turf/open/floor/concrete,
+/turf/open/floor/blocks,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "ePb" = (
 /obj/structure/fluff/railing/border,
@@ -4690,10 +4700,6 @@
 /obj/machinery/light/fueled/wallfire/candle/l,
 /turf/open/floor/herringbone,
 /area/rogue/indoors/shelter/town/dwarf)
-"fTE" = (
-/obj/machinery/light/fueled/torchholder/l,
-/turf/open/floor/blocks,
-/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "fUV" = (
 /obj/structure/fluff/walldeco/vinez/l,
 /turf/open/floor/grass,
@@ -4852,7 +4858,7 @@
 /area/rogue/outdoors/rtfield/plague_district)
 "ggF" = (
 /obj/machinery/light/fueled/torchholder/l,
-/turf/open/floor/cobble,
+/turf/open/floor/blocks/moss,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "ggO" = (
 /obj/item/grown/log/tree/small,
@@ -6390,8 +6396,8 @@
 /turf/open/floor/woodturned,
 /area/rogue/indoors/town/hamlet)
 "idr" = (
-/mob/living/carbon/human/species/orc/npc/ambush,
-/turf/open/floor/metal,
+/obj/machinery/light/fueled/torchholder/c,
+/turf/open/floor/blocks/moss,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "iek" = (
 /obj/structure/mineral_door/wood/deadbolt{
@@ -6467,7 +6473,7 @@
 /obj/effect/decal/shadow_floor{
 	dir = 8
 	},
-/turf/open/floor/concrete,
+/turf/open/floor/blocks,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "ikb" = (
 /obj/item/reagent_containers/glass/bucket/pot/stone,
@@ -7041,7 +7047,7 @@
 /area/rogue/indoors/town/church)
 "iYa" = (
 /obj/structure/fluff/walldeco/stone,
-/turf/closed/wall/mineral/stone,
+/turf/closed/wall/mineral/craftstone,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "iYl" = (
 /obj/structure/remains/human{
@@ -7443,7 +7449,7 @@
 /obj/effect/decal/shadow_floor{
 	dir = 4
 	},
-/turf/open/floor/concrete,
+/turf/open/floor/blocks,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "jya" = (
 /obj/structure/bars/cemetery/vines,
@@ -8161,6 +8167,9 @@
 /obj/effect/spawner/map_spawner/beartrap_obvious,
 /turf/open/floor/dirt/road,
 /area/rogue/outdoors/rtfield/plague_district)
+"ksg" = (
+/turf/closed/wall/mineral/decostone,
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "kta" = (
 /obj/structure/bars/pipe{
 	dir = 5
@@ -8902,7 +8911,7 @@
 /area/rogue/indoors/town/clinic_large)
 "loP" = (
 /obj/effect/spawner/map_spawner/outpost/dwarf_weapon,
-/turf/open/floor/concrete,
+/turf/open/floor/blocks,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "lpc" = (
 /obj/structure/fake_machine/submission,
@@ -9375,6 +9384,12 @@
 /obj/structure/chimney,
 /turf/open/floor/herringbone,
 /area/rogue/outdoors/town/roofs)
+"lTA" = (
+/obj/effect/decal/shadow_floor{
+	dir = 4
+	},
+/turf/open/floor/blocks,
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "lTJ" = (
 /obj/structure/fluff/railing/border{
 	dir = 8;
@@ -9562,7 +9577,7 @@
 /obj/effect/decal/shadow_floor{
 	dir = 10
 	},
-/turf/open/floor/concrete,
+/turf/open/floor/blocks,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "mdF" = (
 /obj/structure/window/openclose{
@@ -10418,8 +10433,10 @@
 /turf/open/floor/dirt/road,
 /area/rogue/under/town/basement)
 "ndK" = (
-/obj/machinery/light/fueled/torchholder/c,
-/turf/open/water/cleanshallow,
+/obj/effect/decal/shadow_floor{
+	dir = 8
+	},
+/turf/open/floor/blocks,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "ndP" = (
 /turf/open/floor/herringbone,
@@ -10518,7 +10535,7 @@
 /obj/effect/decal/cleanable/blood_neu/tracks{
 	dir = 9
 	},
-/turf/open/floor/concrete,
+/turf/open/floor/blocks,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "nkC" = (
 /obj/structure/bars/cemetery,
@@ -11152,7 +11169,7 @@
 /area/rogue/indoors/town/hamlet)
 "nZM" = (
 /obj/effect/decal/cleanable/blood_neu/random,
-/turf/open/floor/blocks,
+/turf/open/floor/blocks/moss,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "oao" = (
 /obj/machinery/light/fueled/wallfire/candle/blue{
@@ -11600,6 +11617,12 @@
 /obj/machinery/light/fueled/wallfire/candle,
 /turf/open/floor/cobble,
 /area/rogue/indoors/town/tavern/saiga)
+"oBS" = (
+/obj/effect/spawner/map_spawner/enemy_fifty/orc_warrior,
+/turf/open/floor/metal{
+	icon_state = "plating2"
+	},
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "oBT" = (
 /obj/structure/flora/grass,
 /obj/structure/fluff/railing/fence{
@@ -13338,6 +13361,9 @@
 	},
 /turf/open/transparent/openspace,
 /area/rogue/under/town/caverogue/deep)
+"qFR" = (
+/turf/closed/wall/mineral/craftstone,
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "qFT" = (
 /obj/structure/closet/crate/chest/old_crate,
 /obj/item/clothing/cloak/raincloak/mortus,
@@ -13845,7 +13871,7 @@
 	pixel_x = -12;
 	pixel_y = 5
 	},
-/turf/open/floor/concrete,
+/turf/open/floor/blocks,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "rjC" = (
 /obj/structure/table/wood/large_new/red{
@@ -14340,7 +14366,8 @@
 /obj/structure/fluff/walldeco/stone{
 	pixel_y = -32
 	},
-/turf/open/floor/blocks,
+/obj/effect/spawner/map_spawner/enemy_fifty/orc_warrior,
+/turf/open/floor/blocks/moss,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "rLW" = (
 /obj/structure/flora/grass,
@@ -14461,8 +14488,8 @@
 /turf/open/floor/naturalstone,
 /area/rogue/under/cave/abandoned_mine)
 "rUY" = (
-/mob/living/carbon/human/species/orc/npc/ambush,
-/turf/open/floor/cobble,
+/obj/effect/spawner/map_spawner/enemy_fifty/orc_warrior,
+/turf/open/floor/blocks,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "rVo" = (
 /obj/structure/rack/shelf/biggest,
@@ -15081,7 +15108,6 @@
 /obj/effect/decal/shadow_floor{
 	dir = 8
 	},
-/obj/effect/spawner/map_spawner/enemy_fifty/orc_warrior,
 /turf/open/floor/concrete,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "sLU" = (
@@ -16226,7 +16252,7 @@
 	},
 /obj/effect/decal/cleanable/blood_neu/random,
 /obj/effect/spawner/map_spawner/outpost/dwarf_key,
-/turf/open/floor/concrete,
+/turf/open/floor/blocks,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "uov" = (
 /obj/structure/remains/humanc,
@@ -16645,6 +16671,13 @@
 /obj/effect/spawner/map_spawner/hauntz_random,
 /turf/open/floor/grass,
 /area/rogue/outdoors/exposed/manorgarri)
+"uMl" = (
+/obj/structure/bars/pipe{
+	dir = 1;
+	icon_state = "pipe"
+	},
+/turf/closed/wall/mineral/craftstone,
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "uMo" = (
 /turf/open/floor/twig,
 /area/rogue/outdoors/mountains)
@@ -17090,7 +17123,7 @@
 /area/rogue/indoors/town/church/chapel)
 "vky" = (
 /obj/effect/decal/shadow_floor,
-/turf/open/floor/concrete,
+/turf/open/floor/blocks,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "vkU" = (
 /obj/structure/chair/stool,
@@ -17186,6 +17219,14 @@
 /obj/structure/table/wood/bathtub,
 /turf/open/floor/ruinedwood/spiral,
 /area/rogue/indoors)
+"vqk" = (
+/obj/structure/bars/pipe{
+	dir = 1;
+	icon_state = "pipe"
+	},
+/obj/structure/bars/grille,
+/turf/open/floor/blocks,
+/area/rogue/under/catacombs/dwarfoutpost/orcy)
 "vrl" = (
 /obj/item/reagent_containers/glass/bucket/wooden/alter,
 /turf/open/floor/grass,
@@ -18826,9 +18867,8 @@
 /turf/open/floor/blocks,
 /area/rogue/under/catacombs)
 "xBT" = (
-/obj/effect/decal/cleanable/blood_neu/random,
-/obj/effect/spawner/map_spawner/enemy_fifty/orc_warrior,
-/turf/open/floor/concrete,
+/obj/machinery/light/fueled/firebowl/standing,
+/turf/open/water/cleanshallow,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "xCp" = (
 /obj/structure/flora/grass,
@@ -19269,10 +19309,8 @@
 /turf/open/floor/naturalstone,
 /area/rogue/under/catacombs)
 "yhj" = (
-/obj/effect/decal/cleanable/blood_neu/tracks{
-	dir = 4
-	},
-/turf/open/floor/concrete,
+/obj/effect/decal/cleanable/blood_neu/random,
+/turf/open/floor/blocks,
 /area/rogue/under/catacombs/dwarfoutpost/orcy)
 "yhr" = (
 /turf/open/floor/snow/patchy,
@@ -52945,7 +52983,7 @@ lYX
 lYX
 buJ
 oTM
-oTM
+buJ
 oTM
 aIA
 fdE
@@ -53138,7 +53176,7 @@ buJ
 lYX
 buJ
 buJ
-buJ
+ntp
 lYX
 lYX
 lYX
@@ -53147,7 +53185,7 @@ lYX
 lYX
 buJ
 oTM
-ptt
+buJ
 ptt
 aIA
 egW
@@ -53339,7 +53377,7 @@ lYt
 hNB
 lYX
 buJ
-aIA
+ksg
 buJ
 buJ
 ayo
@@ -53349,7 +53387,7 @@ buJ
 buJ
 buJ
 ptt
-ptt
+buJ
 ptt
 aIA
 kRC
@@ -53540,18 +53578,18 @@ byK
 aIA
 raN
 lYX
-ntp
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
+buJ
+ksg
+ksg
+ksg
+ksg
+ksg
+ksg
+ksg
+ksg
+ksg
 fdE
-ptt
+buJ
 ptt
 aIA
 aIA
@@ -53747,26 +53785,26 @@ auD
 kta
 jNR
 kFU
-aIA
+ksg
 ens
 nyZ
 sFs
-aIA
+ksg
 ptt
-oTM
+buJ
 ptt
 ggF
-oTM
-oTM
+bVU
+bVU
 ptt
 ptt
-oTM
-fTE
+bVU
+ggF
 ptt
-oTM
-oTM
-oTM
-fTE
+bVU
+bVU
+bVU
+ggF
 ptt
 aIA
 oHI
@@ -53949,27 +53987,27 @@ jIw
 jIw
 jIw
 jIw
-aIA
+ksg
 beT
 nyZ
 nyZ
-aIA
+ksg
 ptt
+buJ
 oTM
-oTM
-ptt
-ptt
-ptt
-oTM
-oTM
-oTM
-oTM
+bVU
 ptt
 ptt
+bVU
+bVU
+bVU
+bVU
 ptt
 ptt
-oTM
-oTM
+ptt
+ptt
+bVU
+bVU
 aIA
 mys
 lYX
@@ -54151,27 +54189,27 @@ jIw
 sxM
 jIw
 vVa
-aIA
+ksg
 dCi
 nyZ
 nyZ
 oSG
 ptt
-ptt
+buJ
 oTM
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
+qFR
+qFR
+qFR
+qFR
+qFR
+qFR
+qFR
+qFR
+qFR
+qFR
+qFR
 euG
-aIA
+qFR
 aIA
 lYX
 lYX
@@ -54353,15 +54391,15 @@ jIw
 jIw
 jIw
 jIw
-aIA
+ksg
 nyZ
 nyZ
 kHt
-aIA
+ksg
 ptt
-ptt
+buJ
 oTM
-aIA
+qFR
 rHN
 ptt
 lYX
@@ -54555,15 +54593,15 @@ flD
 txO
 dMy
 uXt
-aIA
+ksg
 wxU
 rqD
 nyZ
-aIA
+ksg
 oTM
-ptt
+buJ
 oTM
-aIA
+qFR
 hWi
 ctx
 vWd
@@ -54753,19 +54791,19 @@ aIA
 ntp
 lYX
 iyx
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
+ksg
+ksg
+ksg
+ksg
+ksg
+ksg
+ksg
+ksg
+ksg
 jUH
+buJ
 oTM
-oTM
-aIA
+qFR
 wVf
 lYX
 lYX
@@ -54955,7 +54993,7 @@ lYt
 nvt
 lYX
 buJ
-aIA
+ksg
 buJ
 buJ
 bzz
@@ -54965,7 +55003,7 @@ buJ
 buJ
 buJ
 ptt
-oTM
+buJ
 oTM
 lYt
 fdE
@@ -55167,7 +55205,7 @@ lYX
 lYX
 buJ
 ptt
-oTM
+buJ
 ptt
 aIA
 qoN
@@ -55369,7 +55407,7 @@ lYX
 lYX
 buJ
 oTM
-ptt
+buJ
 ptt
 lYt
 fdE
@@ -55573,7 +55611,7 @@ buJ
 oTM
 ptt
 ptt
-aIA
+qFR
 acS
 lYX
 hxi
@@ -55775,7 +55813,7 @@ aIA
 aIA
 aIA
 sNj
-aIA
+qFR
 dvS
 lYX
 sXK
@@ -55977,7 +56015,7 @@ aIA
 aIA
 lYt
 xty
-aIA
+qFR
 ndV
 lYX
 lYX
@@ -56179,16 +56217,16 @@ aIA
 aIA
 aIA
 piN
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
-aIA
+qFR
+qFR
+qFR
+qFR
+qFR
+qFR
+qFR
+qFR
+qFR
+qFR
 bHI
 ptt
 oTM
@@ -56374,18 +56412,18 @@ ltp
 ltp
 ltp
 aIA
-buJ
-buJ
-cRe
-buJ
-buJ
-buJ
+oTM
+oTM
+vqk
+oTM
+oTM
+oTM
 asN
 vky
-buJ
-buJ
-cRe
-buJ
+oTM
+oTM
+vqk
+oTM
 nkx
 jTw
 tBR
@@ -56576,19 +56614,19 @@ ltp
 ltp
 ltp
 aIA
-buJ
+rUY
 buJ
 cRe
 buJ
 buJ
-iyx
+yhj
 asN
 vky
 buJ
 buJ
 cRe
 buJ
-yhj
+rTr
 aIA
 oTM
 ptt
@@ -56778,10 +56816,10 @@ ltp
 ltp
 ltp
 aIA
-buJ
+oTM
 buJ
 vhF
-ndK
+dPv
 buJ
 rjn
 ncL
@@ -56789,8 +56827,8 @@ vky
 buJ
 dPv
 vhF
-hNB
-yhj
+buJ
+rTr
 aIA
 fdE
 ptt
@@ -56980,19 +57018,19 @@ aIA
 aIA
 aIA
 aIA
-buJ
+oTM
 buJ
 dPv
-dPv
+xBT
 buJ
 loP
 eFS
 vky
 buJ
-dPv
+xBT
 dPv
 buJ
-yhj
+rTr
 aIA
 xcZ
 ptt
@@ -57179,15 +57217,15 @@ aIA
 hKE
 aIA
 aIA
-buJ
-buJ
-eYk
-eYk
+oTM
+oTM
+ndK
+ndK
 eYk
 eYk
 hPp
 eYk
-sLJ
+bNr
 ove
 mdi
 sLJ
@@ -57376,9 +57414,9 @@ wNn
 (189,1,1) = {"
 byK
 aIA
-aIA
-oTM
-oTM
+qFR
+bVU
+bVU
 ptt
 lYt
 hNB
@@ -57579,10 +57617,10 @@ wNn
 byK
 aIA
 iYa
-oTM
-oTM
+bVU
+bVU
 oic
-aIA
+qFR
 buJ
 buJ
 aQj
@@ -57595,7 +57633,7 @@ jIw
 asN
 xSI
 aQj
-jIw
+oBS
 jIw
 jIw
 jIw
@@ -57780,11 +57818,11 @@ wNn
 (191,1,1) = {"
 byK
 aIA
-aIA
+qFR
 ptt
 nZM
 ptt
-aIA
+qFR
 buJ
 hbo
 asN
@@ -57793,14 +57831,14 @@ lha
 lha
 rFZ
 lha
-lha
+lTA
 fpA
 daa
 fOR
 lha
 lha
 lha
-lha
+lTA
 aIA
 aIA
 aIA
@@ -57986,23 +58024,23 @@ lYt
 fdE
 nZM
 ptt
-aIA
+qFR
 buJ
 buJ
 asN
 vky
 buJ
 dPv
-dPv
-buJ
 xBT
+buJ
+yhj
 woR
 vky
 buJ
-dPv
+xBT
 qNp
 buJ
-buJ
+oTM
 aIA
 liU
 ptt
@@ -58184,18 +58222,18 @@ wNn
 (193,1,1) = {"
 byK
 aIA
-aIA
+qFR
 ptt
 nZM
-oTM
-aIA
+bVU
+qFR
 buJ
 buJ
 jbZ
 vky
 buJ
 vhF
-ndK
+dPv
 buJ
 uoi
 ove
@@ -58203,8 +58241,8 @@ vky
 buJ
 dPv
 vhF
-hNB
 buJ
+oTM
 aIA
 bHb
 ptt
@@ -58387,10 +58425,10 @@ wNn
 byK
 aIA
 iYa
-oTM
-oTM
+bVU
+bVU
 rLU
-aIA
+qFR
 buJ
 buJ
 asN
@@ -58399,14 +58437,14 @@ buJ
 cRe
 buJ
 buJ
-buJ
-idr
+rUY
+asN
 vky
 buJ
 buJ
 cRe
 buJ
-buJ
+oTM
 aIA
 liU
 ptt
@@ -58588,27 +58626,27 @@ wNn
 (195,1,1) = {"
 byK
 aIA
-aIA
-oTM
+qFR
+bVU
 ptt
-rUY
+ptt
 lYt
 yhx
 eYk
 asN
 vky
-buJ
-cRe
-buJ
-buJ
-buJ
+oTM
+vqk
+oTM
+oTM
+oTM
 asN
 vky
-buJ
-buJ
-cRe
-buJ
-giP
+oTM
+oTM
+vqk
+oTM
+cJq
 aIA
 dxm
 ptt
@@ -58791,26 +58829,26 @@ wNn
 byK
 aIA
 lYt
-jUH
+idr
 ptt
-oTM
+bVU
 gSg
 xSI
 asN
 asN
 vky
 aIA
-hDd
-aIA
-aIA
-aIA
+uMl
+qFR
+qFR
+qFR
 lKw
-aIA
-aIA
-aIA
-hDd
-aIA
-aIA
+qFR
+qFR
+qFR
+uMl
+qFR
+qFR
 aIA
 aIA
 aIA
@@ -58992,10 +59030,10 @@ wNn
 (197,1,1) = {"
 byK
 aIA
-aIA
-oTM
-oTM
-oTM
+qFR
+bVU
+bVU
+bVU
 gSg
 xSI
 asN
@@ -59200,9 +59238,9 @@ aIA
 aIA
 lYt
 jxY
-lha
-lha
-buJ
+lTA
+lTA
+oTM
 aIA
 asN
 asN

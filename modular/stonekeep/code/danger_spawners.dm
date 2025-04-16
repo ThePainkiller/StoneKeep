@@ -118,7 +118,7 @@
 /*	..................   Savage Orc Enemy    ................... */
 /obj/effect/spawner/map_spawner/enemy_fifty/orc_warrior
 	spawned = list(
-		/datum/outfit/job/npc/orc/ambush = 80,
+		/mob/living/carbon/human/species/orc/npc/ambush = 80,
 		/mob/living/simple_animal/hostile/orc/savage/bow = 20,
 		)
 
@@ -129,7 +129,7 @@
 	color = "#caa3a3"
 	spawned = list(
 //		/obj/structure/idle_enemy/savage_orc_chieftain = 100
-		/mob/living/carbon/human/species/orc/npc/ambush/warlord = 100
+		/mob/living/carbon/human/species/orc/npc/warlord = 100
 		)
 
 /*	..................   Haunts Enemy    ................... */

@@ -24,14 +24,12 @@
 	dodgetime = 15 //they can dodge easily, but have a cooldown on it
 	canparry = TRUE
 	flee_in_pain = FALSE
-	wander = FALSE
-
-/mob/living/carbon/human/species/orc/npc/ambush
 	simpmob_attack = 40
 	simpmob_defend = 30
 	wander = TRUE
 	attack_speed = 2
 
+/mob/living/carbon/human/species/orc/npc/ambush
 
 /mob/living/carbon/human/species/orc/npc/Initialize()
 	. = ..()
@@ -43,22 +41,16 @@
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	equipOutfit(new /datum/outfit/job/npc/orc/ambush)
-	dodgetime = 15
-	canparry = TRUE
-	flee_in_pain = FALSE
-	wander = TRUE
+	ambushable = FALSE
 
-/mob/living/carbon/human/species/orc/npc/ambush/warlord/after_creation()
+/mob/living/carbon/human/species/orc/npc/warlord/after_creation()
 	..()
+	name = "Warlord Orc"
 	job = "Warlord Orc"
 	ADD_TRAIT(src, TRAIT_NOMOOD, TRAIT_GENERIC)
 	ADD_TRAIT(src, TRAIT_NOHUNGER, TRAIT_GENERIC)
 	equipOutfit(new /datum/outfit/job/npc/orc/warlord)
-	dodgetime = 15
-	canparry = TRUE
-	flee_in_pain = FALSE
-	wander = TRUE
-
+	ambushable = FALSE
 
 /obj/item/bodypart/chest/orc
 	dismemberable = 1
@@ -252,45 +244,33 @@
 	H.base_speed = 12
 	H.base_constitution = 13
 	H.base_endurance = 13
+	armor = /obj/item/clothing/armor/leather/hide/orc
+	if(prob(20))
+		armor = /obj/item/clothing/armor/chainmail/iron/orc
+	if(prob(20))
+		head = /obj/item/clothing/head/helmet/leather
+	if(prob(10))
+		head = /obj/item/clothing/head/helmet/orc
 	var/loadout = rand(1,5)
 	switch(loadout)
 		if(1) //Stolen Tool armed raider
 			r_hand = /obj/item/weapon/axe/iron
-			armor = /obj/item/clothing/armor/leather/hide/orc
 		if(2) //Stolen Tool armed raider
-			r_hand = /obj/item/weapon/thresher
-			armor = /obj/item/clothing/armor/leather/hide/orc
+			r_hand = /obj/item/weapon/mace/copperbludgeon
 		if(3) //Stolen Tool armed raider
-			r_hand = /obj/item/weapon/pitchfork//removed the cudgel because it's way too good at knock people out
-			armor = /obj/item/clothing/armor/leather/hide/orc
-			if(prob(10))
-				//head = /obj/item/clothing/head/helmet/orc
-				r_hand = /obj/item/weapon/sickle
-				armor = /obj/item/clothing/armor/leather/hide/orc
-		if(4) //lightly armored sword/flail/daggers
-			if(prob(50))
-				head = /obj/item/clothing/head/helmet/orc
-				r_hand = /obj/item/weapon/mace/spiked
-				armor = /obj/item/clothing/armor/chainmail/iron/orc
-				pants = /obj/item/clothing/armor/leather/hide/orc
-				head = /obj/item/clothing/head/helmet/leather
+			r_hand = /obj/item/weapon/polearm/spear/bonespear
 			if(prob(30))
-				l_hand = /obj/item/weapon/sword/iron
-				armor = /obj/item/clothing/armor/chainmail/iron/orc
-				head = /obj/item/clothing/head/helmet/leather
-			if(prob(23))
-				armor = /obj/item/clothing/armor/chainmail/iron/orc
-				r_hand = /obj/item/weapon/knife/dagger
+				r_hand = /obj/item/weapon/axe/boneaxe
+		if(4) //armored sword/flail/daggers
+			r_hand = /obj/item/weapon/mace/spiked
+			if(prob(20))
+				l_hand = /obj/item/weapon/sword/short
+			if(prob(20))
+				r_hand = /obj/item/weapon/knife/cleaver/combat
 				l_hand = /obj/item/weapon/knife/dagger
-				pants = /obj/item/clothing/armor/leather/hide/orc
-				head = /obj/item/clothing/head/helmet/leather
-			if(prob(80))
-				armor = /obj/item/clothing/armor/chainmail/iron/orc
-				pants = /obj/item/clothing/armor/leather/hide/orc
-				head = /obj/item/clothing/head/helmet/leather
 		if(5) //heavy armored sword/flail/shields
 			if(prob(20))
-				r_hand = /obj/item/weapon/mace//readded the blunt weapon, this time with an very rare "slavist" orc
+				r_hand = /obj/item/weapon/mace
 				l_hand = /obj/item/weapon/whip
 				armor = /obj/item/clothing/armor/plate/orc
 				head = /obj/item/clothing/head/helmet/orc
@@ -311,13 +291,11 @@
 			if(prob(50))
 				r_hand = /obj/item/weapon/sword/iron
 				l_hand = /obj/item/weapon/shield/wood
-				armor = /obj/item/clothing/armor/plate/orc
 				head = /obj/item/clothing/head/helmet/orc
 			else
 				r_hand = /obj/item/weapon/mace/spiked
 				l_hand = /obj/item/weapon/shield/wood
 				armor = /obj/item/clothing/armor/plate/orc
-				head = /obj/item/clothing/head/helmet/orc
 			if(prob(30))
 				r_hand = /obj/item/weapon/sword/scimitar/messer
 				armor = /obj/item/clothing/armor/plate/orc
@@ -517,30 +495,23 @@
 	H.base_speed = 14
 	H.base_constitution = 14
 	H.base_endurance = 14
+	armor = /obj/item/clothing/armor/plate/orc/warlord
+	head = /obj/item/clothing/head/helmet/orc/warlord
 	var/loadout = rand(1,5)
 	switch(loadout)
 		if(1) //Halberd Warlord
-			r_hand = /obj/item/weapon/polearm/halberd
-			armor = /obj/item/clothing/armor/plate/orc/warlord
-			head = /obj/item/clothing/head/helmet/orc/warlord
+			r_hand = /obj/item/weapon/polearm/eaglebeak/lucerne/poleaxe
 		if(2) //Greatsword Warlord
-			r_hand = /obj/item/weapon/sword/long/greatsword
-			armor = /obj/item/clothing/armor/plate/orc/warlord
-			head = /obj/item/clothing/head/helmet/orc/warlord
+			r_hand = /obj/item/weapon/mace/goden
 		if(3) // WE DON'T WANNA GO TO WAR TODAY BUT THE LORD OF THE LASH SAYS "NAY NAY NAY!!" WE'RE GONNA MARCH ALL DAE, ALL DAE, ALL DAE! WHERE THERE'S A WHIP THERE'S A WAY!!
 			r_hand = /obj/item/weapon/whip/antique
 			l_hand = /obj/item/weapon/sword/short
-			armor = /obj/item/clothing/armor/plate/orc/warlord
-			head = /obj/item/clothing/head/helmet/orc/warlord
 		if(4) // Big Sword and Big Shield
-			armor = /obj/item/clothing/armor/plate/orc/warlord
 			r_hand = /obj/item/weapon/sword/scimitar/falchion
-			l_hand = /obj/item/weapon/shield/tower
-			head = /obj/item/clothing/head/helmet/orc/warlord
+			l_hand = /obj/item/weapon/shield/tower/buckleriron
 		if(5) //Anti Knight STR Build
 			r_hand = /obj/item/weapon/flail/sflail
-			armor = /obj/item/clothing/armor/plate/orc/warlord
-			head = /obj/item/clothing/head/helmet/orc/warlord
+
 
 /mob/living/carbon/human/species/orc/warlord/skilled/after_creation() //these ones dont parry, but still get good weapon skills
 	..()
@@ -553,5 +524,5 @@
 	wander = TRUE
 	configure_mind()
 
-// obsolete
+// obsolete just kept because vanderlin uses it
 /mob/living/carbon/human/species/orc/ambush

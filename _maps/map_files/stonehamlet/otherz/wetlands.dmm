@@ -1335,6 +1335,10 @@
 /obj/structure/roguerock,
 /turf/open/floor/grass,
 /area/rogue/outdoors/bog/wetlands)
+"xn" = (
+/obj/effect/spawner/map_spawner/beartrap,
+/turf/open/water/sewer,
+/area/rogue/under/xylix)
 "xo" = (
 /turf/closed/wall/mineral/roofwall/outercorner{
 	dir = 2
@@ -7811,7 +7815,7 @@ UN
 Lx
 Lx
 nZ
-Lx
+xn
 UN
 Lx
 Lx
@@ -8212,10 +8216,10 @@ ym
 aj
 Lx
 Lx
+xn
 Lx
 Lx
-Lx
-Lx
+xn
 Lx
 Lx
 Lx
@@ -8815,13 +8819,13 @@ Zm
 MR
 lo
 lo
-Lx
+xn
 Lx
 fu
+xn
 Lx
 Lx
-Lx
-Lx
+xn
 Lx
 Lx
 Lx
@@ -9421,10 +9425,10 @@ lo
 xG
 xG
 xG
-nZ
 Lx
 Lx
 Lx
+xn
 Lx
 Lx
 Lx
@@ -9623,7 +9627,7 @@ xG
 xG
 xG
 xG
-Lx
+xn
 Lx
 Jf
 nZ
@@ -9632,7 +9636,7 @@ Lx
 Lx
 Jf
 Lx
-Lx
+xn
 Zm
 Zm
 vi

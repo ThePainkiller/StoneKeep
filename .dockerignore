@@ -18,11 +18,11 @@ cfg
 data
 SQL
 tgui/node_modules
-vanderlin.dmb
-vanderlin.int
-vanderlin.rsc
-vanderlin.lk
-vanderlin.dyn.rsc
+stonekeep.dmb
+stonekeep.int
+stonekeep.rsc
+stonekeep.lk
+stonekeep.dyn.rsc
 libmariadb.dll
 rust_g.dll
 appveyor.yml

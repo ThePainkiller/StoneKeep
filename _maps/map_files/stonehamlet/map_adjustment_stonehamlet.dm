@@ -59,3 +59,16 @@
 */
 
 
+	var/list/dorfkingdom = list(
+		/datum/job/lord,
+	)
+
+/datum/map_adjustment/stonehamlet/job_change()
+	. = ..()
+	for(var/datum/job/elf in dorfkingdom)
+		var/datum/job/J = SSjob.GetJobType(elf)
+		J?.allowed_races = list(
+			"Humen",
+			"Dwarf"
+		)
+

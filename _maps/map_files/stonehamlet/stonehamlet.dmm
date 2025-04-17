@@ -14209,7 +14209,7 @@
 /area/rogue/indoors/town/hamlet)
 "rBQ" = (
 /obj/structure/closet/crate/chest/old_crate,
-/obj/item/bath/soap,
+/obj/item/soap/bath,
 /turf/open/floor/woodturned,
 /area/rogue/indoors/town/bath/redhouse)
 "rCp" = (
@@ -15649,7 +15649,7 @@
 	icon_state = "tablewood1"
 	},
 /obj/item/natural/cloth,
-/obj/item/bath/soap,
+/obj/item/soap/bath,
 /obj/machinery/light/fueled/wallfire/candle/weak,
 /turf/open/floor/woodturned,
 /area/rogue/indoors/town/hamlet)

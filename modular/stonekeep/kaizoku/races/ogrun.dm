@@ -29,8 +29,8 @@
 	default_color = "FFFFFF"
 	species_traits = list(EYECOLOR,HAIR,FACEHAIR,LIPS,STUBBLE)
 	inherent_traits = list(TRAIT_NOMOBSWAP)
-	default_features = list("mcolor" = "FFF", "ears" = "ogrun", "horns" = "onihorn")
-	mutant_bodyparts = list("ears","horns")
+	default_features = list("mcolor" = "FFF", "ears" = "Ogrun", "tail_human" = "Onihorn")
+	mutant_bodyparts = list("ears","tail_human")
 	use_skintones = 1
 	possible_ages = list(AGE_IMMORTAL) //Abyssariads are Immortal. However, Onis are the newest ones on the fold, and they become Orcs mentally if they stray away from Abyssor.
 	max_age = 430 //The year Onis became part of the Abyssariads. Roughly after the Blood Apotheosis

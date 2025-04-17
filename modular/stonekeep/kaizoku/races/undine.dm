@@ -144,7 +144,7 @@
 
 
 /datum/species/elf/undine/get_accent_list()
-	return strings("accent/abyssal_replacement.json", "abyssal")
+	return strings("accents/abyssal_replacement.json", "abyssal")
 
 /mob/proc/croak()
 	set name = "Croak"

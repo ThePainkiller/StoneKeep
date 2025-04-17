@@ -16,7 +16,7 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 	C.grant_language(/datum/language/abyssal)
 
 /datum/species/abyssariad/get_accent_list()
-	return strings("accent/abyssal_replacement.json", "abyssal")
+	return strings("accents/abyssal_replacement.json", "abyssal")
 
 ///mob/proc/banzai() //Don't have female 'Banzai' yells for that.
 //	set name = "Banzai"

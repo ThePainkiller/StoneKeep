@@ -126,7 +126,7 @@
 		"Zarkana" = SKIN_COLOR_ARCANA, // - (Dark violet)
 		"Zarconum" = SKIN_COLOR_ZARCONUM, // - (Pink)
 //		"Flayer" = SKIN_COLOR_FLAYER, // - (Purple)
-		"Abyssium" = SKIN_COLOR_ABYSS, // - (Navy blue)
+//		"Abyssium" = SKIN_COLOR_ABYSS, // - (Navy blue)
 		"Castillian" = SKIN_COLOR_CASTILLIAN, // - (Pale red)
 		"Asturias" = SKIN_COLOR_ASTURIAS, // - (Clay red)
 		"Vaquero" = SKIN_COLOR_VAQUERO, // - (Earthly red)

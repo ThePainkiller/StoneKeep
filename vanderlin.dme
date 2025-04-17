@@ -8,7 +8,8 @@
 // END_PREFERENCES
 // BEGIN_INCLUDE
 #include "_maps\_basemap.dm"
-#include "_maps\stonehamlet.dm"
+#include "_maps\map_files\stonehamlet.dm"
+#include "_maps\map_files\stonehamlet\map_adjustment_stonehamlet.dm"
 #include "_maps\templates\arcyne_fortress.dm"
 #include "_maps\templates\bog_shack_small.dm"
 #include "_maps\templates\malum_anvil_dungeon_large.dm"

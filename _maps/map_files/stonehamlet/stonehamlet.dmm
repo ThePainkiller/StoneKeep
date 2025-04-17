@@ -3150,9 +3150,7 @@
 /obj/structure/stairs/stone/reddish{
 	dir = 8
 	},
-/turf/open/water/bath/pool{
-	dir = 8
-	},
+/turf/open/water/bath,
 /area/rogue/indoors/town/bath/redhouse)
 "dYv" = (
 /obj/structure/fluff/railing/border{
@@ -7849,9 +7847,7 @@
 /obj/structure/stairs/stone/reddish{
 	dir = 8
 	},
-/turf/open/water/bath/pool{
-	dir = 10
-	},
+/turf/open/water/bath,
 /area/rogue/indoors/town/bath/redhouse)
 "jYT" = (
 /obj/effect/decal/shadow_floor,
@@ -8031,9 +8027,7 @@
 /obj/structure/stairs/stone/reddish{
 	dir = 4
 	},
-/turf/open/water/bath/pool{
-	dir = 5
-	},
+/turf/open/water/bath,
 /area/rogue/indoors/town/bath/redhouse)
 "kkr" = (
 /obj/structure/table/wood/plain_alt,
@@ -9290,9 +9284,7 @@
 /obj/structure/stairs/stone/reddish{
 	dir = 4
 	},
-/turf/open/water/bath/pool{
-	dir = 4
-	},
+/turf/open/water/bath,
 /area/rogue/indoors/town/bath/redhouse)
 "lNj" = (
 /obj/item/candle/yellow,
@@ -11902,9 +11894,7 @@
 /obj/structure/stairs/stone/reddish{
 	dir = 8
 	},
-/turf/open/water/bath/pool{
-	dir = 9
-	},
+/turf/open/water/bath,
 /area/rogue/indoors/town/bath/redhouse)
 "oSG" = (
 /obj/structure/mineral_door/wood/donjon/stone,
@@ -13088,7 +13078,7 @@
 /turf/open/floor/blocks,
 /area/rogue/indoors/town/church)
 "qnL" = (
-/turf/open/water/bath/pool,
+/turf/open/water/bath,
 /area/rogue/indoors/town/bath/redhouse)
 "qnM" = (
 /obj/structure/fake_machine/hailerboard{
@@ -14497,9 +14487,7 @@
 /obj/structure/stairs/stone/reddish{
 	dir = 4
 	},
-/turf/open/water/bath/pool{
-	dir = 6
-	},
+/turf/open/water/bath,
 /area/rogue/indoors/town/bath/redhouse)
 "rUx" = (
 /obj/structure/fluff/walldeco/mines/wall,
@@ -15787,9 +15775,7 @@
 /turf/open/transparent/openspace,
 /area/rogue/under/town/caverogue/deep)
 "tGL" = (
-/turf/open/water/bath/pool{
-	dir = 1
-	},
+/turf/open/water/bath,
 /area/rogue/indoors/town/bath/redhouse)
 "tGX" = (
 /obj/structure/chair/wood/alt/chair3{
@@ -18095,7 +18081,7 @@
 /turf/open/floor/naturalstone,
 /area/rogue)
 "wxM" = (
-/turf/open/water/bath/pool/mid,
+/turf/open/water/bath,
 /area/rogue/indoors/town/bath/redhouse)
 "wxQ" = (
 /obj/structure/table/wood/large/corner_new{

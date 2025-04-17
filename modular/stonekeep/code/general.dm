@@ -26,7 +26,7 @@
 	add_overlay(mutable_appearance(icon, "bathtub_bathing", ABOVE_MOB_LAYER, GAME_PLANE_UPPER))
 
 
-
+/* cant be arsed to refactor this shit, upstream did a whole soap thing that well use instead fuckit)
 // -------------- SOAP -----------------
 /obj/item/soap
 	name = "soap"
@@ -91,7 +91,7 @@
 		uses -= 1
 		if(uses == 0)
 			qdel(src)
-
+*/
 
 // =================================================================================
 /*------\

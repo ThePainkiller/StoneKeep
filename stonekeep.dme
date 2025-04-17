@@ -8,7 +8,8 @@
 // END_PREFERENCES
 // BEGIN_INCLUDE
 #include "_maps\_basemap.dm"
-#include "_maps\stonehamlet.dm"
+#include "_maps\map_files\stonehamlet.dm"
+#include "_maps\map_files\stonehamlet\map_adjustment_stonehamlet.dm"
 #include "_maps\templates\arcyne_fortress.dm"
 #include "_maps\templates\bog_shack_small.dm"
 #include "_maps\templates\malum_anvil_dungeon_large.dm"
@@ -75,6 +76,7 @@
 #include "code\__DEFINES\lux.dm"
 #include "code\__DEFINES\machines.dm"
 #include "code\__DEFINES\magic.dm"
+#include "code\__DEFINES\map_switch.dm"
 #include "code\__DEFINES\maps.dm"
 #include "code\__DEFINES\materials.dm"
 #include "code\__DEFINES\maths.dm"
@@ -1807,7 +1809,6 @@
 #include "code\modules\jobs\job_types\other\merc_classes\underdweller.dm"
 #include "code\modules\jobs\job_types\other\merc_classes\zybantine.dm"
 #include "code\modules\jobs\job_types\peasants\bard.dm"
-#include "code\modules\jobs\job_types\peasants\bathmaid.dm"
 #include "code\modules\jobs\job_types\peasants\beggar.dm"
 #include "code\modules\jobs\job_types\peasants\butcher.dm"
 #include "code\modules\jobs\job_types\peasants\butler.dm"

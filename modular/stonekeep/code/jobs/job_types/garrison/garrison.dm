@@ -16,8 +16,7 @@ the like.
 		"Humen",
 		"Changeling",
 		"Skylancer",
-		"Ogrun",
-		"Undine"
+		"Ogrun"
 	)
 	allowed_ages = list(AGE_ADULT, AGE_MIDDLEAGED, AGE_IMMORTAL)
 	tutorial = "You are a soldier in the town garrison, an Ashigaru from the Fog Islands. Treaties and alliances matter little to you, your Lord has ordered you to obey the local ruler and their Sheriff, maintaining order."

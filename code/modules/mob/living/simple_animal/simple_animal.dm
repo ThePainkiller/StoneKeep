@@ -229,7 +229,7 @@ GLOBAL_VAR_INIT(farm_animals, FALSE)
 	if(!stat && istype(O, /obj/item/reagent_containers/glass))
 		if(stat == DEAD)
 			return
-		if(udder)
+		if(udder && user.used_intent.type == INTENT_FILL)
 			changeNext_move(20) // milking sound length
 			udder.milkAnimal(O, user)
 			return TRUE

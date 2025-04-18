@@ -1559,46 +1559,51 @@
 /obj/structure/firewagon/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/firewagonrockets))
 		if(loaded)
+			to_chat(user, "<span class='warning'>The firewagon is already loaded!</span>")
 			return
-		user.visible_message("<span class='notice'>\The [user] starts loading \the [I] into \the [src]'s container.</span>")
-		if(!do_after(user, 10 SECONDS, TRUE, src))
+
+		user.visible_message("<span class='notice'>[user] starts loading [I] into [src].</span>")
+		if(!do_after(user, 10 SECONDS, src))
 			return
+
 		I.forceMove(src)
 		loaded = I
-		user.visible_message("<span class='notice'>\The [user] loads \the [I] into \the [src].</span>")
+		user.visible_message("<span class='notice'>[user] loads [I] into [src].</span>")
 		return
 
 	if(istype(I, /obj/item/flashlight/flare/torch))
 		var/obj/item/flashlight/flare/torch/LR = I
 		if(!loaded)
+			to_chat(user, "<span class='warning'>There's nothing to ignite.</span>")
 			return
 		if(LR.on)
 			playsound(src.loc, 'modular/stonekeep/kaizoku/sound/hwanchafire.ogg', 100)
-			user.visible_message("<span class='danger'>\The [user] lights \the [src]!</span>")
+			user.visible_message("<span class='danger'>[user] lights [src]!</span>")
 			fire(user)
 		return
 
-	return ..()
+	..()
 
 /obj/structure/firewagon/proc/fire(mob/firer)
+	if(!loaded)
+		return
+
 	for(var/mob/living/carbon/H in hearers(7, src))
 		shake_camera(H, 6, 5)
 		H.blur_eyes(4)
 		H.playsound_local(get_turf(H), 'sound/foley/tinnitus.ogg', 75, FALSE)
 
 	flick("hwancha_fire", src)
-	if(!loaded)
-		return
 
 	var/pellets = 8
 	var/spread = 30
-	var/projectile_type = /obj/projectile/bullet/arrow //Not a special type of storm-maker? Release the standard.
+	var/projectile_type = /obj/projectile/bullet/reusable/arrow
 
 	if(istype(loaded, /obj/item/firewagonrockets/pyro))
-		projectile_type = /obj/projectile/bullet/arrow/pyro //SPECIAL ATTACK!!!
+		projectile_type = /obj/projectile/bullet/arrow/pyro
 
 	for (var/i = 1, i <= pellets, i++)
-		var/obj/projectile/bullet/arrow/fired_projectile = new projectile_type(get_turf(src))
+		var/obj/projectile/bullet/reusable/arrow/fired_projectile = new projectile_type(get_turf(src))
 		fired_projectile.firer = firer
 		fired_projectile.fired_from = src
 
@@ -1686,7 +1691,7 @@
 	update_icon()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/handcannon/attackby(obj/item/I, mob/user, params)
-	if(istype(I, /obj/projectile/bullet/reusable/bullet))
+	if(istype(I, /obj/item/ammo_casing/caseless/bullet))
 		if(!powdered)
 			to_chat(user, "<span class='warning'>Lacking in blastpowder, you think twice before putting the projectile inside. You don't need to waste your time pulling it out.</span>")
 			return
@@ -1705,17 +1710,15 @@
 		if(powdered)
 			to_chat(user, "<span class='warning'>If you put more gunpowder than it already has, you risk exploding the barrel.</span>")
 			return
-
 		if(I.reagents.get_reagent_amount(/datum/reagent/blastpowder) >= 5)
 			I.reagents.remove_reagent(/datum/reagent/blastpowder, 5)
-
 			powdered = TRUE
 			to_chat(user, "<span class='info'>You pour gunpowder into the handcannon.</span>")
 			playsound(src.loc, 'sound/foley/gunpowder_fill.ogg', 70)
 			update_icon()
 			return
 		else
-			to_chat(user, "<span class='warning'>Not enough blastpowder in [I] to powder the [src].</span>")
+			to_chat(user, "<span class='warning'>Not enough blastpowder to charge it.</span>")
 			return
 
 	else if(istype(I, /obj/item/ramrod))
@@ -1726,19 +1729,19 @@
 			to_chat(user, "<span class='warning'>Already tamped!</span>")
 			return
 		rammed = TRUE
-		to_chat(user, "<span class='info'>You use [I] to tamp down the load in the [src].</span>")
+		to_chat(user, "<span class='info'>You use [I] to tamp down the load.</span>")
 		playsound(src.loc, 'sound/foley/nockarrow.ogg', 70)
 		update_icon()
 		return
 
 	else if(istype(I, /obj/item/flashlight/flare/torch))
 		if(!rammed)
-			to_chat(user, "<span class='warning'>The ball is loose and need to be tampered on the blastpowder within!</span>")
+			to_chat(user, "<span class='warning'>The contents are still loose. You must tamp first!</span>")
 			return
 		fire(user)
 		return
 
-	return ..()
+	..()
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/handcannon/MiddleClick(mob/user, params)
 	. = ..()
@@ -1822,7 +1825,7 @@
 	load_sound = 'sound/foley/nockarrow.ogg'
 	fire_sound = 'sound/combat/Ranged/crossbow-small-shot-02.ogg'
 	associated_skill = /datum/skill/combat/crossbows
-	damfactor = 0.8 //less string power. May decrease it further or see a way to decrease crit chance.
+	damfactor = 0.7 //less string power. May decrease it further or see a way to decrease crit chance.
 
 /obj/item/gun/ballistic/revolver/grenadelauncher/chukonu/attackby(obj/item/A, mob/user, params)
 	if(istype(A, /obj/item/ammo_box) || istype(A, /obj/item/ammo_casing))

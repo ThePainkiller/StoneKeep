@@ -263,7 +263,7 @@ get_accent_list()
 
 // =============================================================================
 // ========================	SPRITE ACCESSORIES	================================
-
+/*
 /datum/sprite_accessory/underwear/male_fundoshi
 	name = "Mendoshi"
 	icon_state = "male_fundoshi"
@@ -272,7 +272,7 @@ get_accent_list()
 	roundstart = TRUE
 	use_static = TRUE
 	icon = 'modular/stonekeep/kaizoku/icons/clothing/underwear.dmi'
-
+*/
 /datum/sprite_accessory/underwear/male_fundoshi/female
 	name = "Femdoshi"
 	icon_state = "female_fundoshi"

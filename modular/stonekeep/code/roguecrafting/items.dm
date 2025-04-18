@@ -301,9 +301,9 @@
 	result = /obj/item/ammo_casing/caseless/bolt/poison/potent
 	reqs = list(/obj/item/ammo_casing/caseless/bolt = 1,
 				/datum/reagent/strongpoison = 5)
-/* kaizoku ROGTODO
+
 /datum/crafting_recipe/roguetown/shinobiarrow
-	name = "shinobi arrow(5)"
+	name = "sedative arrow(5)"
 	result = list(/obj/item/ammo_casing/caseless/arrow/poison/fog,
 			/obj/item/ammo_casing/caseless/arrow/poison/fog,
 			/obj/item/ammo_casing/caseless/arrow/poison/fog,
@@ -329,8 +329,8 @@
 	result = /obj/item/weapon/flail/kusarigama/peasant
 	reqs = list(/obj/item/weapon/sickle/kama = 1,
 				/obj/item/rope/chain = 1)
-	craftdiff = 1
-*/
+	craftdiff = 0 //Any farmer should be able to make this. It's just a sickle and a chain.
+
 /*========= ENGINEEERING CRAFTING ==========*/
 /datum/crafting_recipe/roguetown/mantrap
 	name = "mantrap"

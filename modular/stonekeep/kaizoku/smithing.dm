@@ -8,7 +8,7 @@
 
 //'armor'
 /datum/anvil_recipe/armor/nanbando
-	name = "Barbarian half-plate (3)"
+	name = "Abyssal half-plate (+Bar x3) {Nanbando-sode}"
 	recipe_name = "a Nanban-Dou-Sode"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel,/obj/item/ingot/steel)
@@ -16,14 +16,14 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/nanbandocuirass
-	name = "Barbarian Cuirass"
+	name = "Abyssal cuirass {Nanbando-u}"
 	recipe_name = "a Nanban-Dou"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/armor/cuirass/nanbando
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/nanbandofull
-	name = "Barbarian Fullplate (4)"
+	name = "Abyssal fullplate (+Bar x4) {Nanban-Do-Gusoku}"
 	recipe_name = "a Nanban-Do-Gusoku"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel,/obj/item/ingot/steel,/obj/item/ingot/steel)
@@ -31,7 +31,7 @@
 	craftdiff = 4
 
 /datum/anvil_recipe/armor/steeltatami
-	name = "Steel foldeable armor (Islander)"
+	name = "Steel foldeable armor {Tatami-do}"
 	recipe_name = "a Lamellae Tatami-Do"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/armor/chainmail/tatami
@@ -39,7 +39,7 @@
 
 // huh. We can make these uniquely then. Since we can't make the iron chainmail for the european counterparts?... why?
 /datum/anvil_recipe/armor/irontatami
-	name = "Iron foldeable armor (Islander)"
+	name = "Iron foldeable armor {Karuta-gane}"
 	recipe_name = "a Tatami Karuta-Gane"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/armor/chainmail/iron/tatami
@@ -48,7 +48,7 @@
 	createditem_num = 1
 
 /datum/anvil_recipe/armor/kusari
-	name = "Chainmail Robe (2) (Islander)"
+	name = "Chainmail Robe (+Bar x2) {Kusari-Katabira}"
 	recipe_name = "a Kusari-Katabira"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
@@ -56,7 +56,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/imirror
-	name = "Iron disk chestplate (3)"
+	name = "Iron disk chestplate (+Bar x3) {Melong bzhi}"
 	recipe_name = "a Iron Mirror Armor"
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/ingot/iron,/obj/item/ingot/iron)
@@ -64,7 +64,7 @@
 	craftdiff = 1
 
 /datum/anvil_recipe/armor/mirror
-	name = "Steel disk chestplate (3)"
+	name = "Steel disk chestplate (+Bar x3) {Melong bzhi}"
 	recipe_name = "a Steel Mirror Armor"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel,/obj/item/ingot/steel)
@@ -72,7 +72,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/oyoroi
-	name = "Compact great armor (3) (c) (Islander)"
+	name = "Compact great armor (+Bar x3, +Cloth) {O-yoroi}"
 	recipe_name = "a Incomplete O-Yoroi"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth)
@@ -80,7 +80,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/oyoroigusoku //costier version. Only really viable if you got what to waste.
-	name = "Full great armor (4) (2c) (Islander)"
+	name = "Full great armor (+Bar x4, +Cloth x2) {O-yoroi gusoku}"
 	recipe_name = "a O-Yoroi Gusoku"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/ingot/steel, /obj/item/natural/cloth, /obj/item/natural/cloth)
@@ -88,22 +88,22 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/sanmaido
-	name = "Three-plate cuirass (Islander)"
+	name = "Three-plate cuirass {Sanmai-Do}"
 	recipe_name = "a Sanmai-Do"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/armor/cuirass/sanmaido
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/kikko
-	name = "Turtleshell leather armor (2h)"
-	recipe_name = "a Kikko Leather Do"
+	name = "Turtleshell jacket (+Hide 2x) {Kikko-Gane}"
+	recipe_name = "a Kikko Gane Do"
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/natural/hide, /obj/item/natural/hide)
 	created_item = /obj/item/clothing/armor/leather/splint/kikko
 	craftdiff = 1
 //cheaper on iron, but has many sticks. Proper for this armor's context.
 /datum/anvil_recipe/armor/rattanarmor
-	name = "Iron-woven Rattan armor (2) (4s)"
+	name = "Rattan armor (+Bar x2, +Stick x4) {Teng jia}" //Téng jiǎ
 	recipe_name = "a Rattan Armor"
 	req_bar = /obj/item/ingot/iron
 	additional_items = list(/obj/item/ingot/iron,/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick,/obj/item/grown/log/tree/stick)
@@ -111,7 +111,7 @@
 	craftdiff = 1
 
 /datum/anvil_recipe/armor/kikkoarmor //cheaper brigadine with hide.
-	name = "Turtleshell Full Armor (2) (2h)"
+	name = "Turtleshell Full Armor (+Bar x2, +Hide 2x) {Kikko gusoku}"
 	recipe_name = "a Kikko Gusoku"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel, /obj/item/natural/hide, /obj/item/natural/hide)
@@ -120,7 +120,7 @@
 
 //'feet'
 /datum/anvil_recipe/armor/kusaritabi
-	name = "Chainmail footwear x2 (Islander)"
+	name = "Chainmail footwear x2 {Kusari-Tabi}"
 	recipe_name = "a pair of Kusari-Tabi"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/shoes/boots/armor/light/kusaritabi
@@ -128,7 +128,7 @@
 	createditem_num = 1
 
 /datum/anvil_recipe/armor/suneate
-	name = "Plated shin-guards (Islander)"
+	name = "Plated shin-guards {Suneate}"
 	recipe_name = "some Suneate Footwear"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/shoes/boots/armor/suneate
@@ -136,7 +136,7 @@
 
 //'gloves'
 /datum/anvil_recipe/armor/kikkotekko
-	name = "Turtleshell gauntlets x2"
+	name = "Turtleshell gauntlets x2 {Kikko-Tekko}"
 	recipe_name = "a pair of Steel Kikko Tekko"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/gloves/chain/kikko
@@ -145,7 +145,7 @@
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/ikikkotekko
-	name = "Turtleshell gauntlets x2"
+	name = "Turtleshell gauntlets x2 {Kikko-Tekko}"
 	recipe_name = "a pair of Iron Kikko Tekko"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/gloves/chain/iron/kikko
@@ -154,15 +154,15 @@
 	craftdiff = 0
 
 /datum/anvil_recipe/armor/lamellaetekko
-	name = "Lamellae gauntlets"
-	recipe_name = "some Lamellae Tekko"
+	name = "Lamellae gauntlets {Lamella-Tekko}"
+	recipe_name = "some Lamella Tekko"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/gloves/plate/lamellaetekko
 	craftdiff = 3
 
 //'hats'
 /datum/anvil_recipe/armor/hachigane
-	name = "Hachigane x2"
+	name = "Forehead protector x2 {Hachigane}"
 	recipe_name = "a pair of Hachinage"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/head/helmet/skullcap/hachigane
@@ -170,7 +170,7 @@
 	createditem_num = 1
 
 /datum/anvil_recipe/armor/rattanhelmet
-	name = "Iron Woven Rattan Helmet x2 (3s)"
+	name = "Rattan Helmet x2 (3s) {Teng tiao}"
 	recipe_name = "a pair of Rattan Helmets"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/head/helmet/ironpot/rattan
@@ -195,7 +195,7 @@
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/zunari
-	name = "Zamurai's helmet (2)"
+	name = "Zamurai's helmet (2) {Zunari kabuto}"
 	recipe_name = "a Zunari's Helmet"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
@@ -203,7 +203,7 @@
 	craftdiff = 3
 
 /datum/anvil_recipe/armor/zijinguan
-	name = "Plumed Footsoldier helmet x2 (Islander)"
+	name = "Plumed Footsoldier helmet x2 {Zijinguan}"
 	recipe_name = "a pair of Zijinguan helmet"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/head/helmet/zijinguan
@@ -212,7 +212,7 @@
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/jingasa
-	name = "Conical Ashigaru helmet x2"
+	name = "Conical helmet x2 {Jingasa}"
 	recipe_name = "a pair of Jingasas"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/head/helmet/kettle/jingasa
@@ -221,14 +221,14 @@
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/toseikabuto
-	name = "Tosei-kabuto"
+	name = "Riveted helmet {Tosei-kabuto}"
 	recipe_name = "a Tosei Kabuto"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/head/helmet/sallet/tosei_kabuto
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/toseikabutov
-	name = "Visored tosei-kabuto (2)"
+	name = "Visored riveted helmet {Tosei-kabuto} (2)"
 	recipe_name = "a Visored Tosei Kabuto"
 	req_bar = /obj/item/ingot/steel
 	additional_items = list(/obj/item/ingot/steel)
@@ -237,14 +237,14 @@
 
 //'mask'
 /datum/anvil_recipe/armor/imenpo
-	name = "Iron faceguard (Islander)"
+	name = "Iron faceguard {Men-yoroi}"
 	recipe_name = "a Iron Menpo"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/face/kaizoku/menpo
 	craftdiff = 0
 
 /datum/anvil_recipe/armor/himenpo
-	name = "Iron half-faceguard x2"
+	name = "Iron half-faceguard x2 {Mempo}"
 	recipe_name = "a pair of Compact Menpo"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/face/kaizoku/menpo/half
@@ -253,14 +253,14 @@
 	craftdiff = 0
 
 /datum/anvil_recipe/armor/smenpo
-	name = "Steel faceguard (Islander)"
+	name = "Steel faceguard {Men-yoroi}"
 	recipe_name = "a Steel Menpo"
 	req_bar = /obj/item/ingot/steel
 	created_item = (/obj/item/clothing/face/kaizoku/menpo/steel/half)
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/hsmenpo
-	name = "Steel half-faceguard x2 (Islander)"
+	name = "Steel half-faceguard x2 {Mempo}"
 	recipe_name = "a Face Mask"
 	req_bar = /obj/item/ingot/steel
 	created_item = (/obj/item/clothing/face/kaizoku/menpo/steel)
@@ -307,7 +307,7 @@
 
 //'neck'
 /datum/anvil_recipe/armor/shood
-	name = "Karuta hood x2"
+	name = "Foldable hood x2 {Karuta zukin}"
 	recipe_name = "a pair of Karuta Zukin"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/neck/chaincoif/karuta_zukin
@@ -316,7 +316,7 @@
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/ihood
-	name = "Chainmail hood x2 (Islander)"
+	name = "Chainmail hood x2 {Kuzari zukin}"
 	recipe_name = "a pair of Kusari Zukin"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/neck/chaincoif/iron/kusari_zukin
@@ -326,7 +326,7 @@
 
 //'pants'
 /datum/anvil_recipe/armor/ihaidate
-	name = "Foldable Thighguards x2"
+	name = "Foldable Thighguards x2 {Haidate tatami}"
 	recipe_name = "a pair of Haidate Tatami"
 	req_bar = /obj/item/ingot/iron
 	created_item = /obj/item/clothing/pants/chainlegs/iron/haidate_tatami
@@ -335,8 +335,8 @@
 	craftdiff = 0
 
 /datum/anvil_recipe/armor/shaidate
-	name = "Plate Thighguards x2 (Islander)"
-	recipe_name = "a pair of Chain Chausses"
+	name = "Plate Thighguards x2 {Haidate sendan}"
+	recipe_name = "a pair of Haidate Sendan"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/pants/chainlegs/sendan
 	createmultiple = TRUE
@@ -344,7 +344,7 @@
 	craftdiff = 2
 
 /datum/anvil_recipe/armor/superhaidate
-	name = "Plated Trousers x2 (Islander)"
+	name = "Plated Trousers x2 {Yoroi-hakama}"
 	recipe_name = "a couple of Yoroi-Hakama"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/pants/platelegs/yoroihakama
@@ -354,7 +354,7 @@
 
 //'wrists'
 /datum/anvil_recipe/armor/kote //Protects more limbs, so it is costier.
-	name = "Armored Sleeve (Islander)"
+	name = "Armored Sleeve {Kote}"
 	recipe_name = "a couple of Kote"
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/clothing/wrists/bracers/kote
@@ -420,7 +420,7 @@
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/weapon/sword/scimitar/falchion/yuntoudao
 	craftdiff = 2
-/*
+
 /datum/anvil_recipe/weapons/shortjian
 	name = "Short Jian"
 	recipe_name = "a Short Jian"
@@ -428,7 +428,7 @@
 	req_bar = /obj/item/ingot/steel
 	created_item = /obj/item/weapon/sword/short/jian
 	craftdiff = 1
-*/
+
 /datum/anvil_recipe/weapons/wakizashi
 	name = "Wakisashi Zatana"
 	recipe_name = "a Wakizashi"

@@ -1163,21 +1163,6 @@
 	specuse = ALL_RACES_LIST
 	roundstart = FALSE
 
-//For use on Younglings
-/datum/sprite_accessory/underwear/child
-	name = "Youngling"
-	icon_state = "child"
-	gender = MALE
-	specuse = ALL_RACES_LIST
-	roundstart = FALSE
-
-/datum/sprite_accessory/underwear/child_f
-	name = "FemYoungling"
-	icon_state = "child_f"
-	gender = FEMALE
-	specuse = ALL_RACES_LIST
-	roundstart = FALSE
-
 //#endif
 ////////////////////////////
 // Undershirt Definitions //

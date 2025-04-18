@@ -236,6 +236,11 @@
 		playsound(src, "smallslash", 100, TRUE, -1)
 		if(istype(src, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = src
+			if(poisonkiss)
+				if(prob(50)) // 50% chance of injecting venom on the victim.
+					to_chat(user, "<span class='greentext'>Your internal glands releases venom upon [src]</span>")
+					to_chat(src, "<span class='warning'>Argh! An burning sensation has spread on my veins!</span>")
+					src.reagents.add_reagent(/datum/reagent/poison/changelingtoxin, 5) // Inject 5 units of venomtoxin
 			if(user.mind && mind)
 				if(istype(user.dna.species, /datum/species/werewolf))
 					caused_wound?.werewolf_infect_attempt()
@@ -404,8 +409,8 @@
 					return
 				if(HAS_TRAIT(src, TRAIT_CHANGELING_METABOLISM) && ismob(A))
 					var/mob/living/L = A
-					src.changeling_purification(L)
-					return
+					if(L && L.stat >= UNCONSCIOUS)
+						src.changeling_purification(L)
 				changeNext_move(mmb_intent.clickcd)
 				face_atom(A)
 				A.onbite(src)

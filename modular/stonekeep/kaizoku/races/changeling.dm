@@ -41,6 +41,7 @@ Future plan:
 	use_skintones = 1
 	possible_ages = list(AGE_IMMORTAL) //Abyssariads are Immortal. However, if they become stray from Abyssor - they suffer severe dementia, and after some decades, become Dais.
 //	skinned_type = /obj/item/stack/sheet/animalhide/human
+	toxic_food = VEGETABLES
 	disliked_food = NONE
 	liked_food = MEAT
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | RACE_SWAP | SLIME_EXTRACT

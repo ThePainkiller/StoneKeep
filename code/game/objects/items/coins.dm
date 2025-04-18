@@ -482,7 +482,7 @@
 	. = ..()
 	var/mob/living/carbon/human/H = user
 	if(ishuman(H))
-		if((H.faction && "orcs" in H.faction) || (H.dna?.species?.id == "tiefling") || (H.mob_biotypes & MOB_UNDEAD))
+		if((islist(H.faction) && ("orcs" in H.faction)) || (H.dna?.species?.id == "tiefling") || (H.mob_biotypes & MOB_UNDEAD))
 			to_chat(H, "<span class='span_warning'>The seal brings icy dread through your veins.</span>")
 			H.Immobilize(5)
 			H.adjustFireLoss(5)

@@ -15,7 +15,10 @@
 		"Elf",
 		"Half-Elf",
 		"Dwarf",
-		"Aasimar"
+		"Aasimar",
+		"Changeling",
+		"Skylancer",
+		"Ogrun",
 	)
 	allowed_sexes = list(MALE, FEMALE)
 	cmode_music = 'sound/music/cmode/combat_quarte.ogg'

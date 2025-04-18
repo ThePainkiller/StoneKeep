@@ -10549,6 +10549,9 @@
 	pixel_x = -4;
 	pixel_y = 18
 	},
+/obj/effect/decal/shadow_floor{
+	dir = 4
+	},
 /turf/open/floor/dirt/road,
 /area/rogue/outdoors/exposed/townhamlet)
 "ocQ" = (
@@ -11845,6 +11848,12 @@
 	},
 /turf/open/floor/ruinedwood,
 /area/rogue/outdoors/town/roofs)
+"pLR" = (
+/obj/effect/decal/shadow_floor{
+	dir = 8
+	},
+/turf/open/floor/dirt/road,
+/area/rogue/outdoors/exposed/townhamlet)
 "pMf" = (
 /obj/structure/flora/grass,
 /obj/structure/flora/rock/pebbles,
@@ -14010,6 +14019,10 @@
 	},
 /turf/open/floor/wood,
 /area/rogue/indoors/soilsons)
+"swM" = (
+/obj/effect/decal/shadow_floor,
+/turf/open/floor/dirt/road,
+/area/rogue/outdoors/exposed/townhamlet)
 "sxl" = (
 /obj/structure/table/wood{
 	icon_state = "tablewood1"
@@ -78070,7 +78083,7 @@ bMF
 bMF
 tqV
 aEO
-qoZ
+pLR
 qoZ
 ahK
 ahK
@@ -78273,7 +78286,7 @@ bMF
 wSM
 wAZ
 soP
-qoZ
+swM
 ahK
 ahK
 qoZ
@@ -78475,7 +78488,7 @@ bMF
 wSM
 yaJ
 wRJ
-qoZ
+swM
 ahK
 ahK
 qoZ
@@ -78677,7 +78690,7 @@ pem
 wSM
 yaJ
 wRJ
-qoZ
+swM
 ahK
 ahK
 qoZ
@@ -78879,7 +78892,7 @@ mZc
 aEO
 ncJ
 hok
-qoZ
+swM
 adC
 ahK
 qoZ
@@ -82126,7 +82139,7 @@ kiy
 kiy
 kiy
 kiy
-qoZ
+bgs
 qoZ
 qoZ
 cDn
@@ -82328,7 +82341,7 @@ dvv
 kiy
 kiy
 kiy
-qoZ
+bgs
 qoZ
 qoZ
 vlV
@@ -82530,7 +82543,7 @@ kiy
 kiy
 kiy
 kiy
-qoZ
+bgs
 qoZ
 qoZ
 vlV
@@ -82732,7 +82745,7 @@ gzR
 dbN
 gzR
 gzR
-qoZ
+ahK
 qoZ
 qoZ
 ahK
@@ -83742,7 +83755,7 @@ gzR
 dbN
 gzR
 jbn
-qoZ
+ahK
 qoZ
 qoZ
 ahK
@@ -83944,7 +83957,7 @@ kiy
 kiy
 kiy
 kiy
-qoZ
+bgs
 qoZ
 qoZ
 ahK
@@ -84146,7 +84159,7 @@ jsP
 dbN
 gzR
 jbn
-qoZ
+ahK
 qoZ
 qoZ
 ahK

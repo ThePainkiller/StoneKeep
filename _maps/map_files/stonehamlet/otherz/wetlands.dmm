@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ac" = (
+/obj/structure/table/wood/crafted,
+/turf/open/floor/grass,
+/area/rogue/outdoors/bog/wetlands)
 "af" = (
 /obj/machinery/light/fueled/firebowl/cold,
 /turf/open/floor/grass,
@@ -2246,6 +2250,10 @@
 	},
 /turf/open/floor/cobblemoss,
 /area/rogue/under/xylix)
+"ZW" = (
+/obj/structure/bed/shit,
+/turf/open/floor/cobblemoss,
+/area/rogue/outdoors/bog/wetlands)
 
 (1,1,1) = {"
 VO
@@ -43161,8 +43169,8 @@ Mi
 Mi
 Mi
 Mi
-Mi
-Mi
+Xv
+Xv
 Mi
 Mi
 Mi
@@ -43365,19 +43373,19 @@ Mi
 Mi
 Hs
 Hs
+Xv
 Hs
 Hs
 Hs
 Hs
-Hs
 Mi
 Mi
 Mi
 Mi
 Mi
-Mi
-Mi
-Mi
+Xv
+Xv
+Xv
 Mi
 Mi
 Mi
@@ -43567,8 +43575,8 @@ Hs
 Hs
 Hs
 Hs
-Hs
-PM
+Xv
+Xv
 Hs
 Hs
 Hs
@@ -43576,8 +43584,8 @@ Mi
 Mi
 Mi
 Mi
-Hs
-Hs
+Xv
+Xv
 Mi
 Mi
 Mi
@@ -43770,7 +43778,7 @@ qb
 Hs
 Hs
 Hs
-Hs
+Xv
 Hs
 Hs
 Hs
@@ -43778,7 +43786,7 @@ Mi
 Mi
 Mi
 Hs
-Hs
+Xv
 Hs
 Hs
 Hs
@@ -43972,14 +43980,14 @@ Hs
 Hs
 Hs
 Hs
-Hs
+Xv
 Hs
 Hs
 Mi
 Mi
 Mi
-Hs
-Hs
+Xv
+Xv
 Hs
 Hs
 Hs
@@ -44174,13 +44182,13 @@ Hs
 Hs
 Hs
 Hs
+Xv
 Hs
 Hs
 Hs
 Hs
 Hs
-Hs
-Hs
+Xv
 Hs
 Hs
 Hs
@@ -44376,13 +44384,13 @@ Hs
 Hs
 Hs
 Hs
+Xv
+Xv
 Hs
 Hs
 Hs
 Hs
-Hs
-Hs
-Hs
+Xv
 Hs
 Hs
 Hs
@@ -44579,12 +44587,12 @@ Hs
 Hs
 Hs
 Hs
+Xv
 Hs
 Hs
 Hs
 Hs
-Hs
-Hs
+Xv
 Hs
 Hs
 Hs
@@ -44782,11 +44790,11 @@ Hs
 Hs
 Hs
 Hs
+Xv
 Hs
 Hs
-Hs
-Hs
-Hs
+Xv
+Xv
 Hs
 Hs
 Hs
@@ -44985,9 +44993,9 @@ Hs
 Hs
 Hs
 Hs
-Hs
-Hs
-Hs
+Xv
+Xv
+Xv
 Hs
 Hs
 Hs
@@ -65657,7 +65665,7 @@ wJ
 wJ
 wJ
 wJ
-wJ
+mw
 wJ
 wJ
 wJ
@@ -73472,9 +73480,9 @@ ON
 ON
 wP
 ON
-wP
+GO
 WH
-ON
+ZW
 mx
 wJ
 wJ
@@ -74076,7 +74084,7 @@ ON
 wJ
 wJ
 mx
-wJ
+ac
 wJ
 FC
 ON

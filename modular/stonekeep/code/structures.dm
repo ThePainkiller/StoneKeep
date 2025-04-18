@@ -488,17 +488,17 @@
 
 /obj/structure/fluff/walldeco/xylixhint/Initialize()
 	. = ..()
-	if ((GLOB.round_id) % 2) // if round ID number is uneven
+	if (GLOB.xylix_trickery)
 		icon_state = "wall_sad"
 
 /obj/structure/fluff/walldeco/xylixhint_danger
 	icon_state = "wall_sad"
-	/*
+
 /obj/structure/fluff/walldeco/xylixhint_danger/Initialize()
 	. = ..()
-	if (GLOB.xylix_bad)
+	if (GLOB.xylix_trickery)
 		icon_state = "wall_funny"
-*/
+
 // XYLIX MAZE
 /obj/structure/fluff/statue/xylix
 	desc = "Some mad God no doubt."
@@ -506,13 +506,20 @@
 	icon_state = "xylix_smile"
 	pixel_x = -32
 	pixel_y = 0
-/*
+
 /obj/structure/fluff/statue/xylix/Initialize()
 	. = ..()
-	if (GLOB.xylix_bad == TRUE)
+	if (GLOB.xylix_trickery)
 		icon_state = "xylix_frown"
 
-*/
+/obj/structure/trap/shock/hidden/xylix/Initialize()
+	. = ..()
+	if (!GLOB.xylix_trickery)
+		qdel(src)
+
+
+
+
 /obj/structure/trap/bomb/hidden
 	alpha = 5
 /obj/structure/trap/poison/hidden

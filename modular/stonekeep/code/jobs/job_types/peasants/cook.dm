@@ -12,7 +12,9 @@
 		"Humen",
 		"Half-Elf",
 		"Dwarf",
-		"Tiefling"
+		"Tiefling",
+		"Undine",
+		"Ogrun"
 	)
 	tutorial = "Slice, chop, and into the pot... you work closely with the innkeep to prepare meals for all the hungry mouths. You've spent more nites than you can count cutting meat and vegetables until your fingers are bloody and raw, but it's honest work."
 

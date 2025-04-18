@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ac" = (
+/obj/structure/table/wood/crafted,
+/turf/open/floor/grass,
+/area/rogue/outdoors/bog/wetlands)
 "af" = (
 /obj/machinery/light/fueled/firebowl/cold,
 /turf/open/floor/grass,
@@ -1124,6 +1128,10 @@
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/dirt,
 /area/rogue/outdoors/bog)
+"tl" = (
+/obj/structure/trap/shock/hidden/xylix,
+/turf/open/floor/cobblemoss,
+/area/rogue/under/xylix)
 "tn" = (
 /obj/structure/closet/dirthole/closed/loot,
 /turf/open/floor/dirt,
@@ -1336,7 +1344,7 @@
 /turf/open/floor/grass,
 /area/rogue/outdoors/bog/wetlands)
 "xn" = (
-/obj/effect/spawner/map_spawner/beartrap,
+/obj/effect/spawner/map_spawner/fiftyfifty_hidden_beartrap,
 /turf/open/water/sewer,
 /area/rogue/under/xylix)
 "xo" = (
@@ -1506,6 +1514,10 @@
 /obj/structure/flora/tree/neu/acacia,
 /turf/open/floor/dirt/muddie,
 /area/rogue/outdoors/bog/wetlands)
+"CE" = (
+/obj/structure/trap/shock/hidden/xylix,
+/turf/open/floor/blocks/moss,
+/area/rogue/under/xylix)
 "CU" = (
 /obj/structure/bars/pipe{
 	dir = 4
@@ -2246,6 +2258,10 @@
 	},
 /turf/open/floor/cobblemoss,
 /area/rogue/under/xylix)
+"ZW" = (
+/obj/structure/bed/shit,
+/turf/open/floor/cobblemoss,
+/area/rogue/outdoors/bog/wetlands)
 
 (1,1,1) = {"
 VO
@@ -7814,7 +7830,7 @@ Lx
 UN
 Lx
 Lx
-nZ
+Lx
 xn
 UN
 Lx
@@ -8024,7 +8040,7 @@ Lx
 fu
 fu
 xG
-fu
+CE
 vi
 fu
 vi
@@ -8214,7 +8230,7 @@ xG
 Zm
 ym
 aj
-Lx
+xn
 Lx
 xn
 Lx
@@ -8222,13 +8238,13 @@ Lx
 xn
 Lx
 Lx
-Lx
+nZ
 fu
-fu
-vi
 fu
 vi
 xG
+vi
+tl
 vi
 vi
 fu
@@ -8426,7 +8442,7 @@ fu
 Lx
 Lx
 fu
-xG
+tl
 vi
 xG
 vi
@@ -8617,7 +8633,7 @@ lo
 xG
 Zm
 Zm
-nZ
+Lx
 Lx
 Lx
 Lx
@@ -8626,7 +8642,7 @@ fu
 Lx
 Lx
 Lx
-nZ
+Lx
 lo
 lo
 xG
@@ -8827,7 +8843,7 @@ Lx
 Lx
 xn
 Lx
-Lx
+xn
 Lx
 Zm
 Zm
@@ -9037,8 +9053,8 @@ fu
 vi
 xG
 xG
-fu
-xG
+CE
+tl
 vi
 vi
 fu
@@ -9432,7 +9448,7 @@ xn
 Lx
 Lx
 Lx
-nZ
+Lx
 Lx
 Lx
 Zm
@@ -9441,7 +9457,7 @@ Sp
 vi
 vi
 vi
-xG
+tl
 xG
 xG
 xG
@@ -9630,7 +9646,7 @@ xG
 xn
 Lx
 Jf
-nZ
+Lx
 Lx
 Lx
 Lx
@@ -43161,8 +43177,8 @@ Mi
 Mi
 Mi
 Mi
-Mi
-Mi
+Xv
+Xv
 Mi
 Mi
 Mi
@@ -43365,19 +43381,19 @@ Mi
 Mi
 Hs
 Hs
+Xv
 Hs
 Hs
 Hs
 Hs
-Hs
 Mi
 Mi
 Mi
 Mi
 Mi
-Mi
-Mi
-Mi
+Xv
+Xv
+Xv
 Mi
 Mi
 Mi
@@ -43567,8 +43583,8 @@ Hs
 Hs
 Hs
 Hs
-Hs
-PM
+Xv
+Xv
 Hs
 Hs
 Hs
@@ -43576,8 +43592,8 @@ Mi
 Mi
 Mi
 Mi
-Hs
-Hs
+Xv
+Xv
 Mi
 Mi
 Mi
@@ -43770,7 +43786,7 @@ qb
 Hs
 Hs
 Hs
-Hs
+Xv
 Hs
 Hs
 Hs
@@ -43778,7 +43794,7 @@ Mi
 Mi
 Mi
 Hs
-Hs
+Xv
 Hs
 Hs
 Hs
@@ -43972,14 +43988,14 @@ Hs
 Hs
 Hs
 Hs
-Hs
+Xv
 Hs
 Hs
 Mi
 Mi
 Mi
-Hs
-Hs
+Xv
+Xv
 Hs
 Hs
 Hs
@@ -44174,13 +44190,13 @@ Hs
 Hs
 Hs
 Hs
+Xv
 Hs
 Hs
 Hs
 Hs
 Hs
-Hs
-Hs
+Xv
 Hs
 Hs
 Hs
@@ -44376,13 +44392,13 @@ Hs
 Hs
 Hs
 Hs
+Xv
+Xv
 Hs
 Hs
 Hs
 Hs
-Hs
-Hs
-Hs
+Xv
 Hs
 Hs
 Hs
@@ -44579,12 +44595,12 @@ Hs
 Hs
 Hs
 Hs
+Xv
 Hs
 Hs
 Hs
 Hs
-Hs
-Hs
+Xv
 Hs
 Hs
 Hs
@@ -44782,11 +44798,11 @@ Hs
 Hs
 Hs
 Hs
+Xv
 Hs
 Hs
-Hs
-Hs
-Hs
+Xv
+Xv
 Hs
 Hs
 Hs
@@ -44985,9 +45001,9 @@ Hs
 Hs
 Hs
 Hs
-Hs
-Hs
-Hs
+Xv
+Xv
+Xv
 Hs
 Hs
 Hs
@@ -65657,7 +65673,7 @@ wJ
 wJ
 wJ
 wJ
-wJ
+mw
 wJ
 wJ
 wJ
@@ -73472,9 +73488,9 @@ ON
 ON
 wP
 ON
-wP
+GO
 WH
-ON
+ZW
 mx
 wJ
 wJ
@@ -74076,7 +74092,7 @@ ON
 wJ
 wJ
 mx
-wJ
+ac
 wJ
 FC
 ON

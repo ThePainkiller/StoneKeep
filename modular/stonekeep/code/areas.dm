@@ -272,7 +272,7 @@
 	converted_type = /area/rogue/outdoors/caves
 
 /area/rogue/under/xylix
-	name = "xylix maze"
+	name = "dungeon (xylix maze)"
 	icon_state = "cavewet"
 	first_time_text = "The Maze"
 	spookysounds = SPOOKY_CAVE
@@ -292,19 +292,12 @@
 	droning_sound_night = 'modular/stonekeep/kaizoku/sound/ambience/Nebula.ogg'
 
 /area/rogue/under/catacombs/dwarfoutpost
-	name = "underrock outpost"
+	name = "dungeon (outpost)"
 	first_time_text = "Underrock Outpost"
 	ambush_types = list(
 				/turf/open/water/swamp)
 	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/lamia = 30,
-				/mob/living/simple_animal/hostile/retaliate/headless = 20)
-
-/area/rogue/under/catacombs/dwarfoutpost/orcy
-	ambush_types = list(
-				/turf/open/water/cleanshallow)
-	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/orc/savage/chopper = 50)
+				/mob/living/simple_animal/hostile/retaliate/lamia = 30)
 
 /area/rogue/under/town/caverogue/saltmine
 	name = "salt mine"

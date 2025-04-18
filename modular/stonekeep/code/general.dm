@@ -1298,3 +1298,4 @@
 
 /obj/item/storage/keyring/garrison
 	keys = list(/obj/item/key/manor, /obj/item/key/garrison, /obj/item/key/walls)
+

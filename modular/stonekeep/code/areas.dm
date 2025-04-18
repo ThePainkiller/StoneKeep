@@ -297,8 +297,7 @@
 	ambush_types = list(
 				/turf/open/water/swamp)
 	ambush_mobs = list(
-				/mob/living/simple_animal/hostile/retaliate/lamia = 30,
-				/mob/living/simple_animal/hostile/retaliate/headless = 20)
+				/mob/living/simple_animal/hostile/retaliate/lamia = 30)
 
 /area/rogue/under/town/caverogue/saltmine
 	name = "salt mine"

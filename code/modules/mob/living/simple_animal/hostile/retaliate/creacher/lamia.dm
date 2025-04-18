@@ -48,6 +48,9 @@
 	var/light_check_delay = 3 SECONDS
 	var/sneak_cooldown = 0
 	var/sneak_cooldown_delay = 30 SECONDS
+	AIStatus = AI_OFF
+	can_have_ai = FALSE
+	ai_controller = /datum/ai_controller/volf
 
 /mob/living/simple_animal/hostile/retaliate/lamia/Initialize()
 	. = ..()

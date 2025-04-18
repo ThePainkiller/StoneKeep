@@ -1128,6 +1128,10 @@
 /obj/structure/closet/crate/chest/wicker,
 /turf/open/floor/dirt,
 /area/rogue/outdoors/bog)
+"tl" = (
+/obj/structure/trap/shock/hidden/xylix,
+/turf/open/floor/cobblemoss,
+/area/rogue/under/xylix)
 "tn" = (
 /obj/structure/closet/dirthole/closed/loot,
 /turf/open/floor/dirt,
@@ -1340,7 +1344,7 @@
 /turf/open/floor/grass,
 /area/rogue/outdoors/bog/wetlands)
 "xn" = (
-/obj/effect/spawner/map_spawner/beartrap,
+/obj/effect/spawner/map_spawner/fiftyfifty_hidden_beartrap,
 /turf/open/water/sewer,
 /area/rogue/under/xylix)
 "xo" = (
@@ -1510,6 +1514,10 @@
 /obj/structure/flora/tree/neu/acacia,
 /turf/open/floor/dirt/muddie,
 /area/rogue/outdoors/bog/wetlands)
+"CE" = (
+/obj/structure/trap/shock/hidden/xylix,
+/turf/open/floor/blocks/moss,
+/area/rogue/under/xylix)
 "CU" = (
 /obj/structure/bars/pipe{
 	dir = 4
@@ -7822,7 +7830,7 @@ Lx
 UN
 Lx
 Lx
-nZ
+Lx
 xn
 UN
 Lx
@@ -8032,7 +8040,7 @@ Lx
 fu
 fu
 xG
-fu
+CE
 vi
 fu
 vi
@@ -8222,7 +8230,7 @@ xG
 Zm
 ym
 aj
-Lx
+xn
 Lx
 xn
 Lx
@@ -8230,13 +8238,13 @@ Lx
 xn
 Lx
 Lx
-Lx
+nZ
 fu
-fu
-vi
 fu
 vi
 xG
+vi
+tl
 vi
 vi
 fu
@@ -8434,7 +8442,7 @@ fu
 Lx
 Lx
 fu
-xG
+tl
 vi
 xG
 vi
@@ -8625,7 +8633,7 @@ lo
 xG
 Zm
 Zm
-nZ
+Lx
 Lx
 Lx
 Lx
@@ -8634,7 +8642,7 @@ fu
 Lx
 Lx
 Lx
-nZ
+Lx
 lo
 lo
 xG
@@ -8835,7 +8843,7 @@ Lx
 Lx
 xn
 Lx
-Lx
+xn
 Lx
 Zm
 Zm
@@ -9045,8 +9053,8 @@ fu
 vi
 xG
 xG
-fu
-xG
+CE
+tl
 vi
 vi
 fu
@@ -9440,7 +9448,7 @@ xn
 Lx
 Lx
 Lx
-nZ
+Lx
 Lx
 Lx
 Zm
@@ -9449,7 +9457,7 @@ Sp
 vi
 vi
 vi
-xG
+tl
 xG
 xG
 xG
@@ -9638,7 +9646,7 @@ xG
 xn
 Lx
 Jf
-nZ
+Lx
 Lx
 Lx
 Lx

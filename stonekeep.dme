@@ -2498,6 +2498,7 @@
 #include "modular\stonekeep\kaizoku\jobs\shinobi.dm"
 #include "modular\stonekeep\kaizoku\jobs\shrinekeeper.dm"
 #include "modular\stonekeep\kaizoku\jobs\sohei.dm"
+#include "modular\stonekeep\kaizoku\jobs\stormforger.dm"
 #include "modular\stonekeep\kaizoku\jobs\toweryakko.dm"
 #include "modular\stonekeep\kaizoku\jobs\wokou.dm"
 #include "modular\stonekeep\kaizoku\jobs\yamabushi.dm"

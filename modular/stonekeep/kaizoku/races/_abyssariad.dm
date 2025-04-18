@@ -461,11 +461,7 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 	update_icon()
 	update_body()
 
-/mob/living/proc/changeling_purification(/mob/living/carbon/human/L)	// ROGTODO test if this actually works
-	var/mob/living/carbon/human/L
-	if(!L || !ismob(L) || L.stat < UNCONSCIOUS)
-		return
-
+/mob/living/proc/changeling_purification(mob/living/L)
 	var/devour_delay
 	if(L.stat == DEAD)
 		devour_delay = 60
@@ -480,49 +476,54 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 	if(!do_after(src, devour_delay, target = L))
 		return
 
-	var/selected = check_zone(src.zone_selected)
-	var/obj/item/bodypart/part = L.get_bodypart(selected)
+	// Attempt human-specific dismemberment
+	if(istype(L, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = L
+		var/selected = check_zone(src.zone_selected)
+		var/obj/item/bodypart/part = H.get_bodypart(selected)
 
-	// Helper to determine if this target is "delicious"
-	var/is_tasty = FALSE
-	if(ismob(L))
-		var/mob/living/carbon/C = L
-		if((C.faction && "orcs" in C.faction) || (C.dna?.species?.id == "tiefling") || (C.mob_biotypes & MOB_UNDEAD))
-			is_tasty = TRUE
+		var/purifying = FALSE
+		if((islist(H.faction) && ("orcs" in H.faction)) || (H.dna?.species?.id == "tiefling") || (H.mob_biotypes & MOB_UNDEAD))
+			purifying = TRUE
 
-	if(part)
-		if(selected in list(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_HEAD))
-			part.dismember()
-			playsound(src.loc, 'sound/combat/dismemberment/dismem (1).ogg', 50, 1)
-			qdel(part)
-			if(is_tasty)
-				to_chat(src, span_bloody("Feast of the righteous, your teeth sinks upon blesmished flesh, corrupted. You drain their qigong- The abyss within is relished."))
-				src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_NUTRITIOUS)
-				src.apply_status_effect(/datum/status_effect/buff/foodbuff)
-			else
-				to_chat(src, span_bloody("Wallowing in guilt as you savours the untained, oh, by misplaced hunger. Unspoiled, non-demonic flesh warrants no delight, only disgrace."))
-				src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_DECENT)
-			return
+		// Handle limb devouring
+		if(part)
+			if(selected in list(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_HEAD))
+				part.dismember()
+				playsound(src.loc, 'sound/combat/dismemberment/dismem (1).ogg', 50, 1)
+				qdel(part)
+				if(purifying)
+					to_chat(src, span_bloody("Feast of the righteous, your teeth sinks upon blemished flesh, corrupted. You drain their qigong—The abyss within is relished."))
+					src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_NUTRITIOUS)
+					src.apply_status_effect(/datum/status_effect/buff/foodbuff)
+				else
+					to_chat(src, span_bloody("Wallowing in guilt as you savour the untainted. Unspoiled, non-demonic flesh warrants no delight, only disgrace."))
+					src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_DECENT)
+				return
 
-		if(selected == BODY_ZONE_CHEST)
-			var/list/remaining = list(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_HEAD)
-			for(var/z in remaining)
-				if(L.get_bodypart(z))
-					to_chat(src, "<span class='warning'>There are many limbs keeping their torso steady. You must start with the edges..</span>")
-					return
+			if(selected == BODY_ZONE_CHEST)
+				var/list/remaining = list(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_HEAD)
+				for(var/z in remaining)
+					if(H.get_bodypart(z))
+						to_chat(src, "<span class='warning'>There are many limbs keeping their torso steady. You must start with the edges..</span>")
+						return
 
-			if(!part.dismember())
-				L.gib()
+				if(!part.dismember())
+					H.gib()
 
-			playsound(src.loc, 'sound/combat/dismemberment/dismem (1).ogg', 50, 1)
-			if(is_tasty)
-				to_chat(src, span_bloody("You devour the rest of the corruptive veil, unleashing what is within with glee."))
-				src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_NUTRITIOUS)
-				src.apply_status_effect(/datum/status_effect/buff/foodbuff)
-			else
-				to_chat(src, span_bloody("You collapse the body of the victim of a sorry fate. Their undeserving organs revealed to the air for the first time."))
-				src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_DECENT)
-			return
+				playsound(src.loc, 'sound/combat/dismemberment/dismem (1).ogg', 50, 1)
+				if(purifying)
+					to_chat(src, span_bloody("You devour the rest of the corruptive veil, unleashing what is within with glee."))
+					src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_NUTRITIOUS)
+					src.apply_status_effect(/datum/status_effect/buff/foodbuff)
+				else
+					to_chat(src, span_bloody("You collapse the body of the victim of a sorry fate. Their undeserving organs revealed to the air for the first time."))
+					src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_DECENT)
+				return
+
+		to_chat(src, span_warning("You gnaw on the spot, but there’s nothing left there to devour."))
+		return
+
 	playsound(src.loc, 'sound/combat/dismemberment/dismem (1).ogg', 50, 1)
 	to_chat(src, span_bloody("You devour the simple creature, the taste is decent, but not what you should be doing with your purifying maws."))
 	src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_DECENT)
@@ -760,12 +761,13 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 	metabolization_rate = REAGENTS_SLOW_METABOLISM
 
 /datum/reagent/poison/changelingtoxin/on_mob_life(mob/living/carbon/M) //Focus on making enemies bleed faster. This is similar to Cottonmouth snakes.
-	if(volume > 0.09)
+	if(volume > 0.09) //Hemotoxin actually breaks your red cells.
 		if(isdwarf(M))
 			M.add_nausea(1)
-			M.bleed_rate = min(M.bleed_rate + 1, 6)
+			M.bleed_rate = min(M.bleed_rate + 1, 6) //Dwarves can take the poison just fine.
 		else
 			M.add_nausea(2)
 			M.bleed_rate = min(M.bleed_rate + 2, 8)
+			M.adjustToxLoss(0.5) //Non-pure, it is not proper to have in your bloodstream.
 	return ..()
 

@@ -971,6 +971,7 @@
 	body_parts_covered = HEAD|HAIR|EARS|MOUTH
 	flags_inv = HIDEEARS|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR //it is not hiding facial hair when put on the neck. No idea how to fix.
 	slot_flags = ITEM_SLOT_NECK|ITEM_SLOT_HEAD
+	alternate_worn_layer = MASK_LAYER
 	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'
 	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head.dmi'
 
@@ -1182,7 +1183,7 @@
 	name = "forehead protector"
 	desc = "The 'Hachigane', a simple, lamellar head protection made for humble monks, ronins and the poor - with the material often gathered from iron panning."
 	icon_state = "hachi-gane"
-	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head64.dmi'
+	mob_overlay_icon = 'modular/stonekeep/kaizoku/icons/clothing/head.dmi'
 	icon = 'modular/stonekeep/kaizoku/icons/clothingicon/head.dmi'
 
 /obj/item/clothing/head/helmet/skullcap/hachigane/thunder

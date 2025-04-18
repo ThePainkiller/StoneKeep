@@ -1,12 +1,12 @@
-# VANDERLIN
+# STONEKEEP 2
 
-[![BYOND Build](https://github.com/Vanderlin-Tales-Of-Wine/Vanderlin/actions/workflows/ci_suite.yml/badge.svg)](https://github.com/Vanderlin-Tales-Of-Wine/Vanderlin/actions/workflows/ci_suite.yml)
+[![BYOND Build](https://github.com/Darkrp-community/OpenKeep/actions/workflows/ci_suite.yml/badge.svg)](https://github.com/Darkrp-community/OpenKeep/actions/workflows/ci_suite.yml)
 
 | Website                   | Link                                           |
 |---------------------------|------------------------------------------------|
-| Discord | [https://discord.com/invite/monkestation](https://discord.com/invite/monkestation) |
-| Code    | [https://github.com/Vanderlin-Tales-Of-Wine/Vanderlin](https://github.com/Vanderlin-Tales-Of-Wine/Vanderlin)    |
-| Wiki    | N/A |
+| Discord          | [https://discord.gg/stonekeep](https://discord.gg/stonekeep) |
+| Code                      | [https://github.com/Darkrp-community/Stonelin](https://github.com/Darkrp-community/Stonelin)    |
+| Wiki (Under Construction)                      | [https://wiki.stonekeep.xyz](https://wiki.stonekeep.xyz) |
 
 ## LICENSE
 

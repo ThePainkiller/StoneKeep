@@ -461,7 +461,7 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 	update_icon()
 	update_body()
 
-/mob/living/proc/changeling_purification(var/mob/living/L)
+/mob/living/proc/changeling_purification(mob/living/L)
 	var/devour_delay
 	if(L.stat == DEAD)
 		devour_delay = 60
@@ -521,11 +521,9 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 					src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_DECENT)
 				return
 
-		// If selected part was invalid or missing
 		to_chat(src, span_warning("You gnaw on the spot, but there’s nothing left there to devour."))
 		return
 
-	// If not a human: devour entire creature as fallback
 	playsound(src.loc, 'sound/combat/dismemberment/dismem (1).ogg', 50, 1)
 	to_chat(src, span_bloody("You devour the simple creature, the taste is decent, but not what you should be doing with your purifying maws."))
 	src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_DECENT)

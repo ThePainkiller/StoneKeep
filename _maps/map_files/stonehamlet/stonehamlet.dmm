@@ -251,6 +251,7 @@
 	pixel_x = 3;
 	pixel_y = 5
 	},
+/obj/item/grown/log/tree/small,
 /turf/open/floor/dirt/road,
 /area/rogue/under/town/basement)
 "asf" = (
@@ -3001,6 +3002,7 @@
 /obj/item/weapon/knife/cleaver{
 	pixel_x = 8
 	},
+/obj/item/kitchen/rollingpin,
 /turf/open/floor/tile{
 	icon_state = "tavern"
 	},
@@ -16908,6 +16910,15 @@
 	},
 /turf/open/floor/woodturned,
 /area/rogue/indoors/town/hamlet)
+"wdj" = (
+/obj/item/key/houses/house4{
+	name = "outlying townhouse key"
+	},
+/obj/structure/closet/crate/chest/neu_iron{
+	name = "spare keys"
+	},
+/turf/open/floor/wood,
+/area/rogue/indoors/town/hamlet)
 "wdA" = (
 /obj/structure/fluff/railing/border{
 	dir = 1;
@@ -17431,9 +17442,6 @@
 	},
 /obj/item/paper/townhouse_deed{
 	name = "northern townhouse deed"
-	},
-/obj/item/key/houses/house4{
-	name = "outlying townhouse key"
 	},
 /turf/open/floor/ruinedwood/spiralfade,
 /area/rogue/indoors/town/hamlet)
@@ -85065,7 +85073,7 @@ qoZ
 ahK
 ahK
 aEO
-oIv
+tkv
 svE
 huR
 tkv
@@ -122845,7 +122853,7 @@ wSz
 wSM
 wSM
 wSM
-wSM
+wdj
 aEO
 pao
 sNs

@@ -104,6 +104,11 @@ Design philosphy:
 	beltr = /obj/item/storage/keyring/servinggirl
 	H.mind?.adjust_skillrank(/datum/skill/craft/cooking, 1, TRUE)
 
+
+/obj/item/soap/bath
+	icon = 'modular/stonekeep/icons/misc.dmi'
+	icon_state = "soap_herbal"
+
 /*
 // Herbal soap
 /obj/item/soap/bath

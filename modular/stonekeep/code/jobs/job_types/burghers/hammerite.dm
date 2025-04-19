@@ -5,19 +5,30 @@
 				if only you had the time to rebuild what has been lost to the ruin of time."
 	faction = FACTION_STATION
 	allowed_sexes = list(MALE, FEMALE)
-	allowed_races = ALL_STONEKEEP_PLAYER_RACES
+	allowed_races = list(
+		"Humen",
+		"Elf",
+		"Half-Elf",
+		"Dwarf",
+		"Aasimar",
+	)
+	job_flags = (JOB_ANNOUNCE_ARRIVAL | JOB_SHOW_IN_CREDITS | JOB_EQUIP_RANK | JOB_NEW_PLAYER_JOINABLE)
 	outfit = /datum/outfit/job/stonekeep/hammerite
-	flag = MINER
-	department_flag = PEASANTS
-	display_order = JDO_MINER
+	flag = SK_MASON
+	department_flag = SERFS
+	display_order = MASON_ORDER
 	give_bank_account = 30
-	total_positions = 0
-	spawn_positions = 0
+	total_positions = 2
+	spawn_positions = 2
+	bypass_lastclass = TRUE
 	min_pq = -50
-	allowed_patrons = list(/datum/patron/divine/malum)
+//	allowed_patrons = list(/datum/patron/divine/malum)
+	cmode_music = 'sound/music/cmode/combat_dwarf.ogg'
 
 /datum/outfit/job/stonekeep/hammerite/pre_equip(mob/living/carbon/human/H)
 	..()
+	if(H.patron != /datum/patron/divine/malum)
+		H.set_patron(/datum/patron/divine/malum)
 	ring = /obj/item/key/guildring
 	pants = /obj/item/clothing/pants/tights/makers
 	armor = /obj/item/clothing/armor/leather/vest/black
@@ -30,7 +41,7 @@
 	backr = /obj/item/weapon/hammer/sledgehammer
 	backl = /obj/item/storage/backpack/backpack
 	head = /obj/item/clothing/head/helmet/leather/minershelm
-	backpack_contents = list(/obj/item/flint = 1, /obj/item/weapon/knife/villager = 1)
+	backpack_contents = list(/obj/item/flint = 1, /obj/item/weapon/knife/villager = 1, /obj/item/key/mason = 1)
 	if(H.mind)
 		H.mind?.adjust_skillrank(/datum/skill/combat/axesmaces, 2, TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/labor/mining, 4, TRUE)

@@ -57,6 +57,7 @@ GLOBAL_LIST_INIT(serf_positions, list(
 	/datum/job/stonekeep/mason::title,
 	/datum/job/stonekeep/nitemaster::title,
 	/datum/job/gaffer::title,
+	/datum/job/stonekeep/hammerite::title,
 	))
 GLOBAL_PROTECT(serf_positions)
 

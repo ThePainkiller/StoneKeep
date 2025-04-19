@@ -219,7 +219,7 @@ SUBSYSTEM_DEF(gamemode)
 	if(last_devotion_check < world.time)
 		refresh_alive_stats()
 		pick_most_devoted()
-		last_devotion_check = world.time + 2 MINUTES
+		last_devotion_check = world.time + 10 MINUTES	// STONEKEEP EDIT 10 instead of 2 minutes apart to switch storyteller
 
 	if(SSticker.HasRoundStarted() && (world.time - SSticker.round_start_time) >= ROUNDSTART_VALID_TIMEFRAME)
 		can_run_roundstart = FALSE

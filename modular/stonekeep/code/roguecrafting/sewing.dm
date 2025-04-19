@@ -582,7 +582,7 @@
 	name = "half cloak"
 	reqs = list(/obj/item/natural/cloth = 2,
 				/obj/item/natural/fibers = 1)
-	output = /obj/item/clothing/cloak/half/random
+	result = /obj/item/clothing/cloak/half/random
 	craftdiff = 3
 
 /datum/crafting_recipe/roguetown/sewing/guardiancape

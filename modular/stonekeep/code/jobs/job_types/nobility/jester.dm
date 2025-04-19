@@ -59,10 +59,9 @@
 	H.base_speed = rand(6, 16)
 	H.base_endurance = rand(10, 12)
 
-		if(H.STASTR > 16)
-			H.cmode_music = 'sound/music/cmode/nobility/CombatJesterSTR.ogg'
-		else
-			H.cmode_music = pick("sound/music/cmode/nobility/CombatJester1.ogg","sound/music/cmode/nobility/CombatJester2.ogg")
+
+	H.recalculate_stats(FALSE)
+
 
 /*		if(H.gender == MALE)
 			if(H.dna?.species)
@@ -80,4 +79,4 @@
 	ADD_TRAIT(H, TRAIT_EMPATH, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
-
+fff

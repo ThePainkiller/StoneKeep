@@ -50,18 +50,18 @@
 		H.mind?.adjust_skillrank(/datum/skill/misc/music, pick(1,2,3,4,5,6), TRUE)
 		H.mind?.adjust_skillrank(/datum/skill/craft/cooking, pick(1,2,3,4,5,6), TRUE)
 		H.mind.AddSpell(new /obj/effect/proc_holder/spell/invoked/mockery) // Mock people to your heart's content!
-		H.change_stat(STATKEY_INT, rand(5, 15), TRUE)
-		H.change_stat(STATKEY_LCK, rand(5, 15), TRUE)
-		H.change_stat(STATKEY_STR, rand(5, 15), TRUE)
-		H.change_stat(STATKEY_CON, rand(8, 12), TRUE)
-		H.change_stat(STATKEY_PER, rand(10, 12), TRUE)
-		H.change_stat(STATKEY_SPD, rand(8, 14), TRUE)
-		H.change_stat(STATKEY_END, rand(10, 12), TRUE)
 
-		if(H.STASTR > 16)
-			H.cmode_music = 'sound/music/cmode/nobility/CombatJesterSTR.ogg'
-		else
-			H.cmode_music = pick("sound/music/cmode/nobility/CombatJester1.ogg","sound/music/cmode/nobility/CombatJester2.ogg")
+	H.base_intelligence = rand(4, 16)
+	H.base_fortune = rand(6, 20)
+	H.base_strength = rand(5, 10)
+	H.base_constitution = rand(7, 14)
+	H.base_perception = rand(6, 18)
+	H.base_speed = rand(6, 16)
+	H.base_endurance = rand(10, 12)
+
+
+	H.recalculate_stats(FALSE)
+
 
 /*		if(H.gender == MALE)
 			if(H.dna?.species)
@@ -79,4 +79,4 @@
 	ADD_TRAIT(H, TRAIT_EMPATH, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_NUTCRACKER, TRAIT_GENERIC)
 	ADD_TRAIT(H, TRAIT_ZJUMP, TRAIT_GENERIC)
-
+fff

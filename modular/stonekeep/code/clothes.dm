@@ -670,6 +670,7 @@
 //................ Steel cuirass ............... //
 /obj/item/clothing/armor/cuirass
 	icon_state = "cuirasse"
+	item_state = "cuirass"
 
 //................ Silk Jacket ............... //
 /obj/item/clothing/armor/leather/jacket/niteman

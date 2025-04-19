@@ -732,7 +732,7 @@
 "bht" = (
 /obj/structure/mineral_door/wood/fancywood{
 	locked = 1;
-	lockid = "hpriest";
+	lockid = null;
 	name = "priest office"
 	},
 /obj/effect/mapping_helpers/door/access/church/priest,
@@ -12206,6 +12206,12 @@
 /obj/structure/roguetent/preopen,
 /turf/open/floor/dirt/road,
 /area/rogue/under/town/basement)
+"qhP" = (
+/obj/structure/bridge_stakes{
+	dir = 8
+	},
+/turf/open/floor/naturalstone,
+/area/rogue/outdoors/mountains)
 "qhZ" = (
 /turf/closed/wall/mineral/decowood,
 /area/rogue/outdoors/rtfield/hamlet)
@@ -12667,6 +12673,12 @@
 	icon_state = "stairs"
 	},
 /turf/open/floor/grass,
+/area/rogue/outdoors/mountains)
+"qJO" = (
+/obj/structure/bridge_stakes{
+	dir = 4
+	},
+/turf/open/floor/naturalstone,
 /area/rogue/outdoors/mountains)
 "qKf" = (
 /obj/structure/fluff/railing/border{
@@ -15764,8 +15776,11 @@
 /turf/open/floor/grass,
 /area/rogue/outdoors/exposed/manorgarri)
 "uMo" = (
-/turf/open/floor/twig,
-/area/rogue/outdoors/mountains)
+/obj/structure/bridge{
+	dir = 4
+	},
+/turf/open/transparent/openspace,
+/area/rogue/outdoors)
 "uMU" = (
 /obj/item/reagent_containers/food/snacks/fish/carp,
 /obj/effect/decal/rockedge,
@@ -16481,7 +16496,7 @@
 /area/rogue/outdoors/exposed/under/basement)
 "vGO" = (
 /obj/structure/mineral_door/wood/green{
-	lockid = "priest";
+	lockid = null;
 	name = "sleeping hall"
 	},
 /obj/effect/mapping_helpers/door/access/church,
@@ -170083,8 +170098,8 @@ shr
 shr
 shr
 vRz
-qgS
-qMp
+sNs
+qJO
 bdv
 shr
 shr
@@ -170285,9 +170300,9 @@ shr
 shr
 shr
 sNs
-qgS
+sNs
 uMo
-gWX
+sNs
 shr
 shr
 shr
@@ -170487,9 +170502,9 @@ shr
 shr
 shr
 sNs
-qgS
+sNs
 uMo
-gWX
+sNs
 sNs
 shr
 shr
@@ -170689,9 +170704,9 @@ shr
 sNs
 sNs
 sNs
-qgS
+sNs
 uMo
-gWX
+sNs
 sNs
 sNs
 shr
@@ -170891,9 +170906,9 @@ sNs
 sNs
 sNs
 sNs
-qgS
+sNs
 uMo
-gWX
+sNs
 sNs
 sNs
 shr
@@ -171093,9 +171108,9 @@ sNs
 sNs
 sNs
 sNs
-qgS
+sNs
 uMo
-gWX
+sNs
 sNs
 sNs
 shr
@@ -171295,9 +171310,9 @@ sNs
 sNs
 sNs
 sNs
-qgS
+sNs
 uMo
-gWX
+sNs
 sNs
 sNs
 shr
@@ -171497,9 +171512,9 @@ sNs
 sNs
 sNs
 sNs
-qgS
+sNs
 uMo
-gWX
+sNs
 sNs
 shr
 shr
@@ -171699,9 +171714,9 @@ sNs
 sNs
 sNs
 sNs
-qgS
+sNs
 uMo
-gWX
+sNs
 shr
 shr
 shr
@@ -171901,7 +171916,7 @@ sNs
 sNs
 sNs
 sNs
-qgS
+sNs
 uMo
 shr
 shr
@@ -172104,7 +172119,7 @@ sNs
 sNs
 sNs
 iNs
-qMp
+qhP
 xJy
 wfj
 shr

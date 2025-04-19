@@ -417,6 +417,12 @@
 	},
 /turf/open/floor/snow,
 /area/rogue/outdoors/mountains/deception)
+"hu" = (
+/obj/structure/bridge_stakes{
+	dir = 4
+	},
+/turf/open/floor/snow/patchy,
+/area/rogue/outdoors/mountains/decap)
 "hA" = (
 /obj/effect/decal/rockedge{
 	dir = 5
@@ -741,6 +747,12 @@
 	},
 /turf/open/floor/cobble,
 /area/rogue/under/lavamonastery)
+"nd" = (
+/obj/structure/bridge_stakes{
+	dir = 8
+	},
+/turf/open/floor/snow/patchy,
+/area/rogue/outdoors/mountains/decap)
 "nm" = (
 /obj/effect/decal/cleanable/dirt/dust,
 /obj/structure/table/wood/plain_alt,
@@ -1306,7 +1318,10 @@
 /turf/closed/mineral/random/med,
 /area/rogue/under/mountains)
 "xQ" = (
-/turf/open/floor/ruinedwood,
+/obj/structure/bridge{
+	dir = 4
+	},
+/turf/open/transparent/openspace,
 /area/rogue/outdoors)
 "xT" = (
 /obj/structure/vampire/bloodpool{
@@ -66432,7 +66447,7 @@ ZY
 ZY
 ZY
 ZB
-ZF
+hu
 XX
 XX
 uK
@@ -67602,7 +67617,7 @@ ZZ
 qu
 ZF
 Jz
-ZF
+nd
 BV
 ZY
 ZY

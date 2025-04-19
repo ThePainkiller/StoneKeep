@@ -17,8 +17,6 @@
 		"Tiefling",
 		"Dark Elf",
 		"Aasimar",
-		"Changeling",
-		"Skylancer",
 		"Rakshari"
 	)
 

@@ -578,7 +578,12 @@
 
 /*.............. recipes requiring skill 3 ..............*/
 
-
+/datum/crafting_recipe/roguetown/sewing/halfcloak
+	name = "half cloak"
+	reqs = list(/obj/item/natural/cloth = 2,
+				/obj/item/natural/fibers = 1)
+	output = /obj/item/clothing/cloak/half/random
+	craftdiff = 3
 
 /datum/crafting_recipe/roguetown/sewing/guardiancape
 	name = "guardianship cape {fl}"

@@ -117,8 +117,8 @@
 	allowed_race = list("human", "tiefling", "aasimar", "abyssariad")
 	sellprice = 150
 
-	armor = list("blunt" = 40, "slash" = 40, "stab" = 40,  "piercing" = 15, "fire" = 0, "acid" = 0)
-	prevent_crits = list(BCLASS_CUT, BCLASS_TWIST)
+	armor = ARMOR_PADDED
+	prevent_crits = list(BCLASS_CUT, BCLASS_TWIST, BCLASS_BITE)
 	max_integrity = 200
 
 
@@ -171,7 +171,7 @@
 	color = null
 	slot_flags = ITEM_SLOT_ARMOR
 	body_parts_covered = CHEST|GROIN|ARMS|LEGS|VITALS
-	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT)
+	prevent_crits = list(BCLASS_CUT, BCLASS_BLUNT, BCLASS_BITE)
 	mob_overlay_icon = 'icons/roguetown/clothing/onmob/shirts.dmi'
 	sleeved = 'icons/roguetown/clothing/onmob/shirts.dmi'
 	r_sleeve_status = SLEEVE_NORMAL

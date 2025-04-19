@@ -22,15 +22,19 @@ Future plan:
 	name = "Changeling"
 	id = "abyssariad"
 	desc = "<b>Storm branched Champions</b><br>\
-	Molded from Abyssor's tumultuous embrace of storm and will, the Changelings are a warrior, demiurgic race \
-	deeply bonded with honor and ethos that intertwines with the tempestuous forces of Abyssor, \
-	never set on a balance, all Changelings are extreme as the storms, with the tendency to be both \
-	hermeticly humble and quick tempered, and know for either loving duel for honor's sake \
-	- or being the most radical martial pacifists on Grimoria. Their society almost crumbled \
-	during The Bloody Apotheosis, but their bronze-age traditions lives on together with a deep \
-	hatred for all things Graggar. Their biology allows high degree of fleshbending, their faces exactly alike masks. \
-	They are noble souls that, when not belonging to military or clerical jobs, usually partakes \
-	in the society's intelligentsia division, usually as astronomers, alchemists and surgeons."
+	Molded by Abyssor's will to battle in Blood Apotheosis to protect Abyssal relics, the changelings are an \
+	honor-bound race wild as the storms, hermetically humble, yet quick tempered. \
+	Their principles are always extreme, such as being the most fierce duelists or martial pacifists, but never in-between. \
+	\n\n\
+	Their mask-like facial bones and fleshbending physiology exposes their predatorial divine making, built to consume \
+	corruption and purify decay, but this leaves them unable to ingest many of the creations of the soil. \
+	Their traditional form is standardized, but some outcasts strays to carve out a distinct physical identity. \
+	\n\n\
+	The Abyssal society was bathed in destruction during the Blood Apotheosis, eternally branding them in fearmongering \
+	against all things graggar. With expeditions coming outwards, many suppress zizoid influence by the sword, or become foreign warriors \
+	known for their extreme loyalty.\
+	\n\n\
+	THIS IS A ESTEEMED BUT DISTRUSTED RACE, SUBJECT TO PUBLIC UNEASE AND HIGHER EXPECTATIONS. <B>PROVE YOUR VALUE AS PURIFIED JEWEL OR DIE IN CORRUPTIVE DISHONOR.</B>"
 
 	skin_tone_wording = "Championage Branch"
 
@@ -162,11 +166,26 @@ Future plan:
 */
 
 /datum/species/abyssariad/changeling/get_possible_names(gender = MALE)
-	var/static/list/male_names = world.file2list('modular/stonekeep/kaizoku/strings/names/onim.txt')
-	var/static/list/female_names = world.file2list('modular/stonekeep/kaizoku/strings/names/onif.txt')
+	var/static/list/male_names = world.file2list('modular/stonekeep/kaizoku/strings/names/abyssnorm.txt')
+	var/static/list/female_names = world.file2list('modular/stonekeep/kaizoku/strings/names/abyssnorf.txt')
 	return (gender == FEMALE) ? female_names : male_names
 
-/datum/species/abyssariad/changeling/get_possible_surnames(gender = MALE)
-	var/static/list/last_names = world.file2list('modular/stonekeep/kaizoku/strings/names/abyssnorm.txt')
-	return last_names
+/datum/species/abyssariad/changeling/random_name(gender = MALE, unique = FALSE)
+	var/list/possible_names = get_possible_names(gender)
+	if(!possible_names || !length(possible_names))
+		return "Nameless Clanless" //This is a fallback in case we get any pesky runtime.
 
+	var/first_name
+	if(!unique)
+		first_name = pick(possible_names)
+	else
+		for(var/i in 1 to 10)
+			first_name = pick(possible_names)
+			if(!findname(first_name))
+				break
+
+	return "[first_name] Clanless"
+
+/datum/species/abyssariad/changeling/get_possible_surnames(gender = MALE)
+	var/static/list/last_names = world.file2list('modular/stonekeep/kaizoku/strings/names/abyssnorlast.txt')
+	return last_names

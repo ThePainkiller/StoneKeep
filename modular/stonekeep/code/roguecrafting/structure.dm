@@ -163,7 +163,7 @@
 	verbage_tp = "constructs"
 	craftdiff = 2
 
-/datum/crafting_recipe/roguetown/structure/carpentry/handcart
+/datum/crafting_recipe/roguetown/structure/handcart
 	name = "handcart"
 	result = /obj/structure/handcart
 	reqs = list(/obj/item/grown/log/tree/small = 3,

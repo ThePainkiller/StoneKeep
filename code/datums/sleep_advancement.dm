@@ -121,7 +121,7 @@
 		to_chat(mind.current, span_boldwarning("Bothered by the stresses of the day my dreams are short..."))
 		dream_dust -= 100
 
-//	grant_inspiration_xp(inspirations)	STONEKEEP edit
+	grant_inspiration_xp(inspirations)
 
 	stress_amount = 0
 	stress_cycles = 0

@@ -13,16 +13,20 @@
 /datum/species/abyssariad/ogrun
 	name = "Ogrun"
 	id = "abyssariad"
-	desc = "<b>Island Branched Champions</b><br>\
-	Created from Abyssor's purifying artifacts under the guide of other Abyssariads, \
-	the Ogrun are a stoic race, with stout and sturdy bodies equal to wide trunked trees. \
-	Just like the islands that sprinkled the ocean's surface, the Onis are individuals \
-	bearing the constant waves and storms of life. It is set in history that Onis were \
-	recovered orcs from the Bloody Apotheosis under the effects of Abyssor's Grey Dreams, \
-	and under mercy instead of carnage, were purified by Abyssal artifacts into the \
-	complete removal of their graggarious demonic corruption, unrooting the evil for the \
-	forevermore. They are rekindled souls that, when not belonging to military or clerical jobs, \
-	usually partakes in the society's industrial division, usually as blacksmiths, artisans and architects."
+	desc = "<b>Island branched Champions</b><br>\
+	Under the guide of Abyssor's creations, orcs invading fog islands became purified entities after Blood Apotheosis. \
+	Just like the islands that sprinkled the ocean's surface, these orcs bears the constant waves and storms of life \
+	as Ogruns, their graggarious essence washed away into a liberted blank slate, bound with their Abyssariad brothers as one.\
+	\n\n\
+	As their evil unrooted, their non-toxified perceptions of the world were rekindled, the beauty of creativity \
+	and flesh made them industrial creatures who use strength as tool for refined work. Their bodies are highly \
+	adaptive, allowing regenerations in a clutch, or making men fear their powerful nature.\
+	\n\n\
+	The Abyssal society was bathed in destruction during the Blood Apotheosis, eternally branding them in fearmongering \
+	against all things graggar. With expeditions coming outwards, many suppress zizoid influence by the sword, or become foreign warriors \
+	known for their extreme loyalty.\
+	\n\n\
+	THIS IS A ESTEEMED BUT DISTRUSTED RACE, SUBJECT TO PUBLIC UNEASE AND HIGHER EXPECTATIONS. <B>PROVE YOUR VALUE AS PURIFIED JEWEL OR DIE IN CORRUPTIVE DISHONOR.</B>"
 
 	skin_tone_wording = "Championage Branch"
 
@@ -149,13 +153,27 @@
 	return " [pick(world.file2list('modular/stonekeep/kaizoku/strings/names/abyssnorm.txt'))]"
 */
 
-
 /datum/species/abyssariad/ogrun/get_possible_names(gender = MALE)
 	var/static/list/male_names = world.file2list('modular/stonekeep/kaizoku/strings/names/onim.txt')
 	var/static/list/female_names = world.file2list('modular/stonekeep/kaizoku/strings/names/onif.txt')
 	return (gender == FEMALE) ? female_names : male_names
 
-/datum/species/abyssariad/ogrun/get_possible_surnames(gender = MALE)
-	var/static/list/last_names = world.file2list('modular/stonekeep/kaizoku/strings/names/abyssnorm.txt')
-	return last_names
+/datum/species/abyssariad/ogrun/random_name(gender = MALE, unique = FALSE)
+	var/list/possible_names = get_possible_names(gender)
+	if(!possible_names || !length(possible_names))
+		return "Nameless Clanless" //This is a fallback in case we get any pesky runtime.
 
+	var/first_name
+	if(!unique)
+		first_name = pick(possible_names)
+	else
+		for(var/i in 1 to 10)
+			first_name = pick(possible_names)
+			if(!findname(first_name))
+				break
+
+	return "[first_name] Clanless"
+
+/datum/species/abyssariad/ogrun/get_possible_surnames(gender = MALE)
+	var/static/list/last_names = world.file2list('modular/stonekeep/kaizoku/strings/names/abyssnorlast.txt')
+	return last_names

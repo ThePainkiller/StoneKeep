@@ -86,6 +86,24 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 	set category = "Noises"
 	emote("throatsing")
 
+/datum/emote/living/throatsing
+	key = "throatsing"
+	message = "murmurs a guttural, throaty warble."
+	emote_type = EMOTE_AUDIBLE
+	only_forced_audio = TRUE
+
+/datum/emote/living/croak
+	key = "croak"
+	message = "croaks."
+	emote_type = EMOTE_AUDIBLE
+	only_forced_audio = TRUE
+
+/datum/emote/living/birdcall
+	key = "birdcall"
+	message = "performs a enthusiastic Skylancer call."
+	emote_type = EMOTE_AUDIBLE
+	only_forced_audio = TRUE
+
 /mob/living/carbon/human/proc/abyssalcombat()
 	set name = "Define War-Anthem"
 	set category = "ABYSSAL"
@@ -105,7 +123,6 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 		return
 	src.cmode_music = list(music_options[battlesong])
 	to_chat(src, "<span class='greentext'>Your War-Anthem is now: [battlesong]</span>")
-
 
 /mob/proc/abyssaltide()
 	set name = "The Nautical Oath"
@@ -461,76 +478,6 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 	update_icon()
 	update_body()
 
-/mob/living/proc/changeling_purification(var/mob/living/L)
-	var/devour_delay
-	if(L.stat == DEAD)
-		devour_delay = 60
-	else if(L.stat == UNCONSCIOUS)
-		devour_delay = 360
-
-	changeNext_move(mmb_intent.clickcd)
-	face_atom(L)
-	visible_message(span_danger("[src] begins grotesquely devouring [L]'s flesh"))
-	playsound(src.loc, 'sound/gore/flesh_eat_03.ogg', 50, 1)
-
-	if(!do_after(src, devour_delay, target = L))
-		return
-
-	// Attempt human-specific dismemberment
-	if(istype(L, /mob/living/carbon/human))
-		var/mob/living/carbon/human/H = L
-		var/selected = check_zone(src.zone_selected)
-		var/obj/item/bodypart/part = H.get_bodypart(selected)
-
-		var/purifying = FALSE
-		if((islist(H.faction) && ("orcs" in H.faction)) || (H.dna?.species?.id == "tiefling") || (H.mob_biotypes & MOB_UNDEAD))
-			purifying = TRUE
-
-		// Handle limb devouring
-		if(part)
-			if(selected in list(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_HEAD))
-				part.dismember()
-				playsound(src.loc, 'sound/combat/dismemberment/dismem (1).ogg', 50, 1)
-				qdel(part)
-				if(purifying)
-					to_chat(src, span_bloody("Feast of the righteous, your teeth sinks upon blemished flesh, corrupted. You drain their qigong—The abyss within is relished."))
-					src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_NUTRITIOUS)
-					src.apply_status_effect(/datum/status_effect/buff/foodbuff)
-				else
-					to_chat(src, span_bloody("Wallowing in guilt as you savour the untainted. Unspoiled, non-demonic flesh warrants no delight, only disgrace."))
-					src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_DECENT)
-				return
-
-			if(selected == BODY_ZONE_CHEST)
-				var/list/remaining = list(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_HEAD)
-				for(var/z in remaining)
-					if(H.get_bodypart(z))
-						to_chat(src, "<span class='warning'>There are many limbs keeping their torso steady. You must start with the edges..</span>")
-						return
-
-				if(!part.dismember())
-					H.gib()
-
-				playsound(src.loc, 'sound/combat/dismemberment/dismem (1).ogg', 50, 1)
-				if(purifying)
-					to_chat(src, span_bloody("You devour the rest of the corruptive veil, unleashing what is within with glee."))
-					src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_NUTRITIOUS)
-					src.apply_status_effect(/datum/status_effect/buff/foodbuff)
-				else
-					to_chat(src, span_bloody("You collapse the body of the victim of a sorry fate. Their undeserving organs revealed to the air for the first time."))
-					src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_DECENT)
-				return
-
-		// If selected part was invalid or missing
-		to_chat(src, span_warning("You gnaw on the spot, but there’s nothing left there to devour."))
-		return
-
-	// If not a human: devour entire creature as fallback
-	playsound(src.loc, 'sound/combat/dismemberment/dismem (1).ogg', 50, 1)
-	to_chat(src, span_bloody("You devour the simple creature, the taste is decent, but not what you should be doing with your purifying maws."))
-	src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_DECENT)
-	L.gib()
-
 //This entire code does not work, as misgendering is happening no matter what.
 /*
 /mob/living/carbon/human/proc/toggle_mimicry(mob/living/carbon/human/target)
@@ -773,3 +720,75 @@ GLOBAL_LIST_INIT(abyssal_readme, world.file2list("strings/rt/abyssaltide.json"))
 			M.adjustToxLoss(0.5) //Non-pure, it is not proper to have in your bloodstream.
 	return ..()
 
+
+/*
+/mob/living/proc/changeling_purification(mob/living/L) //For some reason, using a proc of this code breaks your attempt to eat simple mobs.
+	var/devour_delay
+	if(L.stat == DEAD)
+		devour_delay = 60
+	else if(L.stat == UNCONSCIOUS)
+		devour_delay = 360
+
+	changeNext_move(mmb_intent.clickcd)
+	face_atom(L)
+	visible_message(span_danger("[src] begins grotesquely devouring [L]'s flesh"))
+	playsound(src.loc, 'sound/gore/flesh_eat_03.ogg', 50, 1)
+
+	if(!do_after(src, devour_delay, target = L))
+		return
+
+	// Attempt human-specific dismemberment
+	if(istype(L, /mob/living/carbon/human))
+		var/mob/living/carbon/human/H = L
+		var/selected = check_zone(src.zone_selected)
+		var/obj/item/bodypart/part = H.get_bodypart(selected)
+
+		var/purifying = FALSE
+		if((islist(H.faction) && ("orcs" in H.faction)) || (H.dna?.species?.id == "tiefling") || (H.mob_biotypes & MOB_UNDEAD))
+			purifying = TRUE
+
+		// Handle limb devouring
+		if(part)
+			if(selected in list(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_HEAD))
+				part.dismember()
+				playsound(src.loc, 'sound/combat/dismemberment/dismem (1).ogg', 50, 1)
+				qdel(part)
+				if(purifying)
+					to_chat(src, span_bloody("Feast of the righteous, your teeth sinks upon blemished flesh, corrupted. You drain their qigong—The abyss within is relished."))
+					src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_NUTRITIOUS)
+					src.apply_status_effect(/datum/status_effect/buff/foodbuff)
+				else
+					to_chat(src, span_bloody("Wallowing in guilt as you savour the untainted. Unspoiled, non-demonic flesh warrants no delight, only disgrace."))
+					src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_DECENT)
+				return
+
+			if(selected == BODY_ZONE_CHEST)
+				var/list/remaining = list(BODY_ZONE_L_ARM, BODY_ZONE_R_ARM, BODY_ZONE_L_LEG, BODY_ZONE_R_LEG, BODY_ZONE_HEAD)
+				for(var/z in remaining)
+					if(H.get_bodypart(z))
+						to_chat(src, "<span class='warning'>There are many limbs keeping their torso steady. You must start with the edges..</span>")
+						return
+
+				if(!part.dismember())
+					H.gib()
+
+				playsound(src.loc, 'sound/combat/dismemberment/dismem (1).ogg', 50, 1)
+				if(purifying)
+					to_chat(src, span_bloody("You devour the rest of the corruptive veil, unleashing what is within with glee."))
+					src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_NUTRITIOUS)
+					src.apply_status_effect(/datum/status_effect/buff/foodbuff)
+				else
+					to_chat(src, span_bloody("You collapse the body of the victim of a sorry fate. Their undeserving organs revealed to the air for the first time."))
+					src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_DECENT)
+				return
+
+		// If selected part was invalid or missing
+		to_chat(src, span_warning("You gnaw on the spot, but there’s nothing left there to devour."))
+		return
+	else
+		// If not a human: devour entire creature as fallback
+		playsound(src.loc, 'sound/combat/dismemberment/dismem (1).ogg', 50, 1)
+		to_chat(src, span_bloody("You devour the simple creature, the taste is decent, but not what you should be doing with your purifying maws."))
+		src.reagents.add_reagent(/datum/reagent/consumable/nutriment, SNACK_DECENT)
+		L.gib()
+*/

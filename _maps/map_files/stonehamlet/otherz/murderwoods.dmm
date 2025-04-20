@@ -1167,6 +1167,10 @@
 	},
 /turf/open/floor/dirt/road,
 /area/rogue/outdoors/woods/stone)
+"IP" = (
+/obj/effect/spawner/map_spawner/enemy_fifty/volf,
+/turf/open/floor/grass/mixyel,
+/area/rogue/outdoors/woods/stone)
 "IS" = (
 /obj/structure/flora/newtree,
 /obj/structure/flora/newtree,
@@ -1637,6 +1641,10 @@
 /area/rogue/under/mountains)
 "Wy" = (
 /turf/open/floor/grass/yel,
+/area/rogue/outdoors/woods/stone)
+"WF" = (
+/obj/effect/spawner/map_spawner/enemy_fifty/volf,
+/turf/open/floor/grass,
 /area/rogue/outdoors/woods/stone)
 "WU" = (
 /turf/open/water,
@@ -11511,7 +11519,7 @@ DA
 en
 DA
 DA
-en
+vV
 cR
 cR
 cR
@@ -12521,7 +12529,7 @@ en
 so
 Wy
 DA
-en
+vV
 en
 so
 so
@@ -12723,7 +12731,7 @@ en
 en
 so
 en
-so
+vV
 en
 en
 en
@@ -13336,7 +13344,7 @@ cR
 en
 cR
 DA
-so
+vV
 so
 Wy
 so
@@ -13526,7 +13534,7 @@ xt
 xt
 en
 en
-en
+vV
 xt
 xt
 en
@@ -13741,7 +13749,7 @@ cR
 en
 en
 so
-so
+vV
 cR
 so
 en
@@ -14336,7 +14344,7 @@ so
 so
 DA
 cR
-so
+vV
 cR
 cR
 cR
@@ -14942,8 +14950,8 @@ DA
 so
 so
 Wy
-Wy
-so
+vV
+vV
 VW
 cR
 cR
@@ -15947,7 +15955,7 @@ en
 wF
 BA
 en
-en
+vV
 DA
 en
 so
@@ -23466,7 +23474,7 @@ so
 so
 so
 xt
-xt
+WF
 xt
 kY
 xt
@@ -32413,7 +32421,7 @@ Pn
 CP
 en
 xt
-xt
+WF
 xt
 en
 kr
@@ -32726,7 +32734,7 @@ en
 so
 DA
 so
-so
+IP
 en
 so
 so

@@ -12,7 +12,6 @@
 	allowed_races = list(
 		"Humen",
 		"Elf",
-		"Half-Elf",
 		"Dwarf"
 	)
 	allowed_sexes = list(MALE, FEMALE)

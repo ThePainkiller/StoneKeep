@@ -1299,3 +1299,7 @@
 /obj/item/storage/keyring/garrison
 	keys = list(/obj/item/key/manor, /obj/item/key/garrison, /obj/item/key/walls)
 
+
+/datum/alch_grind_recipe/manabloom
+	valid_input = /obj/item/reagent_containers/food/snacks/produce/manabloom
+	valid_outputs = list(/obj/item/reagent_containers/powder/manabloom = 1)

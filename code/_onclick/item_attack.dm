@@ -153,7 +153,7 @@
 	if(istype(user.rmb_intent, /datum/rmb_intent/strong))
 		user.adjust_stamina(10)
 	if(istype(user.rmb_intent, /datum/rmb_intent/swift))
-		user.adjust_stamina(10)
+		user.adjust_stamina(8)	// STONEKEEP EDIT
 	var/turf/turf_before = get_turf(M)
 	if(M.checkdefense(user.used_intent, user))
 		if(M.d_intent == INTENT_PARRY)

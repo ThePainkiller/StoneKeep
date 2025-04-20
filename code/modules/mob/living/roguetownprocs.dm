@@ -60,7 +60,7 @@
 			return BODY_ZONE_CHEST
 
 /mob/proc/get_generic_parry_drain()
-	return 30
+	return 15	// STOENEKEEP EDIT
 
 /mob/living/proc/checkmiss(mob/living/user)
 	if(user == src)

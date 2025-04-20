@@ -285,14 +285,20 @@
 /mob/living/simple_animal/hostile/retaliate/wolf
 	base_intents = list(/datum/intent/simple/critterbite)
 	base_endurance = 15
+	melee_damage_lower = 14
+	melee_damage_upper = 20
 
 /mob/living/simple_animal/hostile/retaliate/bigrat
 	base_intents = list(/datum/intent/simple/critterbite)
 	base_endurance = 10
+	melee_damage_lower = 10
+	melee_damage_upper = 14
 
 /mob/living/simple_animal/hostile/retaliate/spider
 	base_intents = list(/datum/intent/simple/critterbite)
 	base_endurance = 15
+	melee_damage_lower = 16
+	melee_damage_upper = 22
 
 /datum/intent/simple/trollrip
 	name = "horrific bite"
@@ -312,10 +318,10 @@
 	icon_state = "instrike"
 	attack_verb = list("bites")
 	animname = "blank22"
-	blade_class = BCLASS_CUT
+	blade_class = BCLASS_BITE
 	hitsound = "smallslash"
 	chargetime = 0
-	penfactor = 5
+	penfactor = 10
 	swingdelay = 1.5 SECONDS
 	candodge = TRUE
 	canparry = TRUE

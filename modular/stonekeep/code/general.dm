@@ -296,8 +296,9 @@
 /obj/item/flashlight/flare/torch/weather_act_on(weather_trait, severity)
 	if(weather_trait != PARTICLEWEATHER_RAIN)
 		return
-	if(openflame)
-		extinguish()
+	if(!openflame)
+		return
+	extinguish()
 
 /obj/machinery/light/fueled/firebowl/standing/weather_act_on(weather_trait, severity)
 	if(weather_trait != PARTICLEWEATHER_RAIN)

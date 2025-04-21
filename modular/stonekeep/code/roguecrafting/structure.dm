@@ -187,6 +187,9 @@
 	verbage = "construct"
 	verbage_tp = "constructs"
 	ontile = TRUE
+	reqs = list(/obj/item/grown/log/tree/small=2
+	/obj/item/natural/wood/plank = 2)
+
 /datum/crafting_recipe/roguetown/structure/carpentry/stairsd/TurfCheck(mob/user, turf/T)
 	var/turf/checking = get_step(T, user.dir)
 	if(!checking)

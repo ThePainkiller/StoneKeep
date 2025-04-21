@@ -38,7 +38,7 @@ The word serf means something completely different than what the original maker 
 /datum/job/bandit
 	allowed_races = ALL_STONEKEEP_PLAYER_RACES
 	min_pq = 0
-	cmode_music = 'sound/music/cmode/combat_hellish.ogg'
+	cmode_music = 'modular/stonekeep/sound/cmode/combat_hellish.ogg'
 
 /datum/job/pilgrim
 	flag = SK_PILGRIM	// STONEKEEP EDIT

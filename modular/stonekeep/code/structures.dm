@@ -206,6 +206,7 @@
 	icon = 'modular/stonekeep/icons/temple.dmi'
 	icon_state = "sandstone"
 	pixel_y = 32
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/structure/fluff/walldeco/pillar/doric
 	icon_state = "doric"

@@ -324,10 +324,10 @@
 	name = "bronze lamptern"
 	icon_state = "bronzelamp"
 	item_state = "bronzelamp"
-	desc = "A marvel of engineering that emits a strange green glow."
-	light_outer_range = 9
-	light_power = 2
-	light_color ="#3fff8f"
+	desc = "A sturdy housing for a bright light."
+//	light_outer_range = 9
+//	light_power = 2
+	light_color ="#d8d680"
 	on = FALSE
 	extinguish_prob = 0
 	melting_material = /datum/material/bronze

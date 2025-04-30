@@ -116,7 +116,7 @@
 				if(gender == MALE)
 					if(prob(50))
 						has_stubble = TRUE
-						update_hair()
+						update_body()
 
 
 /mob/living/carbon/human/handle_traits()

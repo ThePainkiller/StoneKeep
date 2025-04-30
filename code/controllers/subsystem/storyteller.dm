@@ -205,7 +205,8 @@ SUBSYSTEM_DEF(gamemode)
 			qdel(event)
 			continue // event isn't good for this map no point in trying to add it to the list
 		control += event //add it to the list of all events (controls)
-		//List of Possible dreams for the Dreamwatcher
+
+		///List of Possible influence dreams for the Dreamwatcher
 		god_dreams = list(
 
 			//Divine Pantheon
@@ -306,93 +307,95 @@ SUBSYSTEM_DEF(gamemode)
 			"Unknown" = list("You feel a presence watching your sleep... old, vast, and unknowable. You do not yet know their name.")
 		)
 
-		//List of possible dreams for the dream watcher
+		///List of possible antag dreams for the dream watcher
 		antag_dreams = list(
-			"Vampire Lord"= list(
+			/datum/antagonist/vampire/lord = list(
 				"...a crown of thorns drips blood in the dark, yet no shadow dares touch the sun...",
 				"...i dream of a king who rules the night, but cowers when Astrata stirs...",
 				"...a crown of blood weighs heavy on an unseen tyrant’s brow..."
 			),
 
-			"Vampire "= list(
+			/datum/antagonist/vampire = list(
 				"...a shadow bends the knee, thirsting only to serve...",
 				"...a heartbeat muffled by obedience, but the hunger remains...",
 				"...fangs with no will, only command..."
 			),
 
-			"Vampire Spawn"= list(
+			/datum/antagonist/vampire/lesser = list(
 				"...fangs glint in the dream-dark, but the face remains hidden...",
 				"...something thirsts nearby,quiet, obedient, waiting...",
 				"...a shadow follows another shadow... one leads... one feeds..."
 			),
 
-			"Verevolf"= list(
+			/datum/antagonist/werewolf = list(
 				"...something howls just beyond the treeline... it’s not the wind...",
 				"...the forest runs red. Pawprints, but no wolves in sight...",
 				"...i dream of teeth and torn flesh... the beast is closer tonight..."
 			),
 
-			"Lesser Verewolf"= list(
+			/datum/antagonist/werewolf/lesser = list(
 				"...smaller footsteps still leave trails of blood in the woods...",
 				"...the forest howls with sorrow and rage...",
 				"...something primal scratches at your mind..."
 			),
-			"Peasant Rebel"= list(
+			/datum/antagonist/prebel = list(
 				"...a whisper stirs in the tavern, torches and pitchforks by nightfall...",
 				"...mud-covered boots tread paths of insurrection...",
 				"...someone sharpens a scythe with justice on their lips..."
 			),
 
-			"Peasant Head Rebel"= list(
+			/datum/antagonist/prebel/leader = list(
 				"...a common man wears the crown of fury...",
 				"...a leader rises not from blood, but from rage...",
 				"...they chant a name... it is not your majesty..."
 			),
-			"Lich"= list(
+			/datum/antagonist/lich = list(
 				"...a cold wind drags whispers from forgotten tombs...",
 				"...a black crown rests on brittle bone... the throne is not empty...",
 				"...every step in this dream leaves bones behind me..."
 			),
 
-			"Aspirant"= list(
+			/datum/antagonist/aspirant = list(
 				"...a noble sleeps with ambition burning like wildfire...",
 				"...the throne creaks under invisible weight...",
 				"...someone dreams not of peace, but of power..."
 			),
 
-			"Zizoid Lackey"= list(
+			/datum/antagonist/zizocultist = list(
 				"...eyes flicker with borrowed madness...",
 				"...they serve a shape they dare not name...",
 				"...something alien tugs at their strings..."
 			),
 
-			"Zizoid Cultist"= list(
+			/datum/antagonist/zizocultist/leader = list(
 				"...a spiral burns behind my eyelids when I close them...",
 				"...a silver tongue hums a hymn to nothing, and you almost sing along...",
 				"...there’s a shape in the dream that shouldn’t exist..."
 			),
 
-			"Bandit" = list(
+			/datum/antagonist/bandit = list(
 				"...coins rattle where no one stands...",
 				"...my pockets feel lighter here...",
 				"...something greedy walks this dream, smiling..."
 			),
 
-			"Assassin"= list(
+			/datum/antagonist/assassin = list(
 				"...a knife glints, vanishes... who held it?",
 				"...a silent breath... a glint of steel... a name forgotten...",
 				"...there’s blood here... fresh, but I saw no violence..."
 			),
 
-			"Dreamer"= list(
+			/datum/antagonist/maniac = list(
 				"...the dream bends unnaturally, as though something, or someone, believes the world is not real...",
 				"...a presence drifts through the dream, disjointed and frantic, as if seeking a truth no one else can see...",
 				"...flickers of false memories, impossible places... someone’s mind is unraveling inside the dream..."
-			)
+				),
+			"Unknown" = list(
+					"... something lingers in the darkness",
+					"... you feel an unseen presence watching",
+					"... the air grows heavy with forgotten whispers"
+				)
 		)
-
-
-
 
 	load_config_vars()
 	load_event_config_vars()
@@ -1275,7 +1278,7 @@ SUBSYSTEM_DEF(gamemode)
 
 	set_storyteller(highest.type)
 
-//To get the most influential God
+///To get the most influential God
 /datum/controller/subsystem/gamemode/proc/get_most_influential(roundstart = FALSE)
 	var/list/storytellers_with_influence = list()
 	var/datum/storyteller/highest

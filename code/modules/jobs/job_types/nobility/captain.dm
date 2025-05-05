@@ -80,6 +80,10 @@
 	ADD_TRAIT(H, TRAIT_KNOWBANDITS, TRAIT_GENERIC)
 	H.verbs |= /mob/proc/haltyell
 
+	if(H.dna?.species)
+		if(H.dna.species.id == "human")
+			H.dna.species.soundpack_m = new /datum/voicepack/male/knight()
+
 /obj/effect/proc_holder/spell/self/convertrole
 	name = "Recruit Beggar"
 	desc = "Recruit someone to your cause."
@@ -197,3 +201,4 @@
 
 
 */
+

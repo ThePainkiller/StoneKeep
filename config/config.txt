@@ -514,5 +514,4 @@ DEFAULT_VIEW_SQUARE 15x15
 ## Uncomment to enable source whitelisting, a comma-separated list (no spaces) of CentCom sources (sourceName).
 ## If enabled, only bans from these servers will be shown to admins using CentCom. The default sources list is an example.
 #CENTCOM_SOURCE_WHITELIST Beestation MRP,TGMC,FTL13
-
 #ELASTIC_MIDDLWEAR_ENABLED

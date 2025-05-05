@@ -397,6 +397,8 @@ SUBSYSTEM_DEF(gamemode)
 				)
 		)
 
+
+
 	load_config_vars()
 	load_event_config_vars()
 
@@ -909,9 +911,11 @@ SUBSYSTEM_DEF(gamemode)
 		message_admins("Attempted to set an invalid storyteller type: [passed_type], force setting to guide instead.")
 		current_storyteller = storytellers[/datum/storyteller/astrata] //if we dont have any then we brick, lets not do that
 		CRASH("Attempted to set an invalid storyteller type: [passed_type].")
+
 	var/datum/storyteller/chosen_storyteller = storytellers[passed_type]
 	chosen_storyteller.times_chosen++
-	current_storyteller = storytellers[passed_type]
+	GLOB.featured_stats[FEATURED_STATS_STORYTELLERS]["entries"][initial(chosen_storyteller.name)] = chosen_storyteller.times_chosen
+	current_storyteller = chosen_storyteller
 
 /// Panel containing information, variables and controls about the gamemode and scheduled event
 /datum/controller/subsystem/gamemode/proc/admin_panel(mob/user)
@@ -1271,14 +1275,14 @@ SUBSYSTEM_DEF(gamemode)
 	if(!highest)
 		return
 
-	if(storytellers_with_influence[highest] > 1)
-		highest.bonus_points -= 1
+	if(storytellers_with_influence[highest] > 1.25)
+		highest.bonus_points -= 1.25
 
-	lowest.bonus_points += 1
+	lowest.bonus_points += 1.25
 
 	set_storyteller(highest.type)
 
-///To get the most influential God
+/// To get the most influential God
 /datum/controller/subsystem/gamemode/proc/get_most_influential(roundstart = FALSE)
 	var/list/storytellers_with_influence = list()
 	var/datum/storyteller/highest
@@ -1294,25 +1298,56 @@ SUBSYSTEM_DEF(gamemode)
 		highest = initalized_storyteller
 	return highest
 
-
 /// Refreshes statistics regarding alive statuses of certain professions or antags, like nobles
 /datum/controller/subsystem/gamemode/proc/refresh_alive_stats(roundstart = FALSE)
 	if(SSticker.current_state == GAME_STATE_FINISHED)
 		return
 
 	GLOB.patron_follower_counts.Cut()
+
+	GLOB.vanderlin_round_stats[STATS_TOTAL_POPULATION] = 0
+	GLOB.vanderlin_round_stats[STATS_PSYCROSS_USERS] = 0
 	GLOB.vanderlin_round_stats[STATS_ALIVE_NOBLES] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_GARRISON] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_CLERGY] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_TRADESMEN] = 0
 	GLOB.vanderlin_round_stats[STATS_ILLITERATES] = 0
 	GLOB.vanderlin_round_stats[STATS_WEREVOLVES] = 0
+	GLOB.vanderlin_round_stats[STATS_VAMPIRES] = 0
 	GLOB.vanderlin_round_stats[STATS_DEADITES_ALIVE] = 0
+
 	GLOB.vanderlin_round_stats[STATS_CLINGY_PEOPLE] = 0
 	GLOB.vanderlin_round_stats[STATS_ALCOHOLICS] = 0
 	GLOB.vanderlin_round_stats[STATS_JUNKIES] = 0
 	GLOB.vanderlin_round_stats[STATS_KLEPTOMANIACS] = 0
 	GLOB.vanderlin_round_stats[STATS_GREEDY_PEOPLE] = 0
 	GLOB.vanderlin_round_stats[STATS_PARENTS] = 0
-	GLOB.vanderlin_round_stats[STATS_ALIVE_TIEFLINGS] = 0
 	GLOB.vanderlin_round_stats[STATS_PACIFISTS] = 0
+	GLOB.vanderlin_round_stats[STATS_MARRIED] = 0
+
+	GLOB.vanderlin_round_stats[STATS_MALE_POPULATION] = 0
+	GLOB.vanderlin_round_stats[STATS_FEMALE_POPULATION] = 0
+	GLOB.vanderlin_round_stats[STATS_OTHER_GENDER] = 0
+
+	GLOB.vanderlin_round_stats[STATS_CHILD_POPULATION] = 0
+	GLOB.vanderlin_round_stats[STATS_ADULT_POPULATION] = 0
+	GLOB.vanderlin_round_stats[STATS_MIDDLEAGED_POPULATION] = 0
+	GLOB.vanderlin_round_stats[STATS_ELDERLY_POPULATION] = 0
+	GLOB.vanderlin_round_stats[STATS_IMMORTAL_POPULATION] = 0
+
+	// Races count
+	GLOB.vanderlin_round_stats[STATS_ALIVE_TIEFLINGS] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_NORTHERN_HUMANS] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_DWARVES] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_DARK_ELVES] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_SNOW_ELVES] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_HALF_ELVES] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_HALF_ORCS] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_KOBOLDS] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_RAKSHARI] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_AASIMAR] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_HOLLOWKINS] = 0
+	GLOB.vanderlin_round_stats[STATS_ALIVE_HARPIES] = 0
 
 	for(var/client/client in GLOB.clients)
 		if(roundstart)
@@ -1327,14 +1362,47 @@ SUBSYSTEM_DEF(gamemode)
 		if(!roundstart)
 			if(living.patron)
 				GLOB.patron_follower_counts[living.patron.name]++
+				if(living.job == "Monarch")
+					GLOB.vanderlin_round_stats[STATS_MONARCH_PATRON] = "[living.patron.name]"
 		if(living.mind.has_antag_datum(/datum/antagonist/werewolf))
 			GLOB.vanderlin_round_stats[STATS_WEREVOLVES]++
+		if(living.mind.has_antag_datum(/datum/antagonist/vampire))
+			GLOB.vanderlin_round_stats[STATS_VAMPIRES]++
 		if(living.mind.has_antag_datum(/datum/antagonist/zombie) || living.mind.has_antag_datum(/datum/antagonist/skeleton) || living.mind.has_antag_datum(/datum/antagonist/lich))
 			GLOB.vanderlin_round_stats[STATS_DEADITES_ALIVE]++
 		if(ishuman(living))
 			var/mob/living/carbon/human/human_mob = client.mob
+			GLOB.vanderlin_round_stats[STATS_TOTAL_POPULATION]++
+			for(var/obj/item/clothing/neck/current_item in human_mob.get_equipped_items(TRUE))
+				if(current_item.type in list(/obj/item/clothing/neck/psycross, /obj/item/clothing/neck/psycross/silver, /obj/item/clothing/neck/psycross/g))
+					GLOB.vanderlin_round_stats[STATS_PSYCROSS_USERS]++
+					break
+			switch(human_mob.gender)
+				if(MALE)
+					GLOB.vanderlin_round_stats[STATS_MALE_POPULATION]++
+				if(FEMALE)
+					GLOB.vanderlin_round_stats[STATS_FEMALE_POPULATION]++
+				else
+					GLOB.vanderlin_round_stats[STATS_OTHER_GENDER]++
+			switch(human_mob.age)
+				if(AGE_CHILD)
+					GLOB.vanderlin_round_stats[STATS_CHILD_POPULATION]++
+				if(AGE_ADULT)
+					GLOB.vanderlin_round_stats[STATS_ADULT_POPULATION]++
+				if(AGE_MIDDLEAGED)
+					GLOB.vanderlin_round_stats[STATS_MIDDLEAGED_POPULATION]++
+				if(AGE_OLD)
+					GLOB.vanderlin_round_stats[STATS_ELDERLY_POPULATION]++
+				if(AGE_IMMORTAL)
+					GLOB.vanderlin_round_stats[STATS_IMMORTAL_POPULATION]++
 			if(human_mob.is_noble())
 				GLOB.vanderlin_round_stats[STATS_ALIVE_NOBLES]++
+			if(human_mob.mind.assigned_role.title in GLOB.garrison_positions)
+				GLOB.vanderlin_round_stats[STATS_ALIVE_GARRISON]++
+			if(human_mob.mind.assigned_role.title in GLOB.church_positions)
+				GLOB.vanderlin_round_stats[STATS_ALIVE_CLERGY]++
+			if((human_mob.mind.assigned_role.title in GLOB.serf_positions) || (human_mob.mind.assigned_role.title in GLOB.peasant_positions) || (human_mob.mind.assigned_role.title in GLOB.company_positions))
+				GLOB.vanderlin_round_stats[STATS_ALIVE_TRADESMEN]++
 			if(!human_mob.is_literate())
 				GLOB.vanderlin_round_stats[STATS_ILLITERATES]++
 			if(human_mob.has_flaw(/datum/charflaw/clingy))
@@ -1347,14 +1415,40 @@ SUBSYSTEM_DEF(gamemode)
 				GLOB.vanderlin_round_stats[STATS_KLEPTOMANIACS]++
 			if(human_mob.has_flaw(/datum/charflaw/greedy))
 				GLOB.vanderlin_round_stats[STATS_GREEDY_PEOPLE]++
-			if(HAS_TRAIT_NOT_FROM(src, TRAIT_PACIFISM, "hugbox"))
+			if(HAS_TRAIT_NOT_FROM(human_mob, TRAIT_PACIFISM, "hugbox"))
 				GLOB.vanderlin_round_stats[STATS_PACIFISTS]++
-			if(istiefling(human_mob))
-				GLOB.vanderlin_round_stats[STATS_ALIVE_TIEFLINGS]++
 			if(human_mob.family_datum)
 				var/family_role = human_mob.family_datum.family[human_mob]
 				if(family_role in list(FAMILY_FATHER, FAMILY_MOTHER))
 					GLOB.vanderlin_round_stats[STATS_PARENTS]++
+				if(human_mob.IsWedded() || (family_role in list(FAMILY_FATHER, FAMILY_MOTHER)))
+					GLOB.vanderlin_round_stats[STATS_MARRIED]++
+
+			// Races
+			if(istiefling(human_mob))
+				GLOB.vanderlin_round_stats[STATS_ALIVE_TIEFLINGS]++
+			if(ishumannorthern(human_mob))
+				GLOB.vanderlin_round_stats[STATS_ALIVE_NORTHERN_HUMANS]++
+			if(isdwarf(human_mob))
+				GLOB.vanderlin_round_stats[STATS_ALIVE_DWARVES]++
+			if(isdarkelf(human_mob))
+				GLOB.vanderlin_round_stats[STATS_ALIVE_DARK_ELVES]++
+			if(issnowelf(human_mob))
+				GLOB.vanderlin_round_stats[STATS_ALIVE_SNOW_ELVES]++
+			if(ishalfelf(human_mob))
+				GLOB.vanderlin_round_stats[STATS_ALIVE_HALF_ELVES]++
+			if(ishalforc(human_mob))
+				GLOB.vanderlin_round_stats[STATS_ALIVE_HALF_ORCS]++
+			if(iskobold(human_mob))
+				GLOB.vanderlin_round_stats[STATS_ALIVE_KOBOLDS]++
+			if(israkshari(human_mob))
+				GLOB.vanderlin_round_stats[STATS_ALIVE_RAKSHARI]++
+			if(isaasimar(human_mob))
+				GLOB.vanderlin_round_stats[STATS_ALIVE_AASIMAR]++
+			if(ishollowkin(human_mob))
+				GLOB.vanderlin_round_stats[STATS_ALIVE_HOLLOWKINS]++
+			if(isharpy(human_mob))
+				GLOB.vanderlin_round_stats[STATS_ALIVE_HARPIES]++
 
 /// Returns follower modifier for the given storyteller
 /datum/controller/subsystem/gamemode/proc/get_storyteller_follower_modifier(datum/storyteller/chosen_storyteller)

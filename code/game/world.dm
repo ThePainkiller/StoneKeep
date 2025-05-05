@@ -409,7 +409,6 @@ GLOBAL_PROTECT(tracy_init_reason)
 		s += "<b>GAME STATUS:</b> IN LOBBY"
 	else
 		s += "<b>GAME STATUS:</b> PLAYING"
-#endif
 	status = s
 	return s
 
